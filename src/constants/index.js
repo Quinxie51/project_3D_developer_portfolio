@@ -25,7 +25,12 @@ import {
   threejs,
 } from "../assets";
 
+// constants.js
 export const navLinks = [
+  {
+    id: "home",
+    title: "Home",
+  },
   {
     id: "about",
     title: "About",
@@ -35,10 +40,15 @@ export const navLinks = [
     title: "Work",
   },
   {
+    id: "project",
+    title: "Projects",
+  },
+  {
     id: "contact",
     title: "Contact",
   },
 ];
+
 
 const services = [
   {

@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
 import avatar from "../assets/3d avatar.gif"; // Import your avatar GIF
+import AnimatedText from "./AnimatedText"; // Import the new component
 
 const Hero = () => {
   return (
@@ -19,8 +20,7 @@ const Hero = () => {
             Hi, I'm <span className="text-[#915EFF]">Quinxie</span>
           </h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-            I develop software engineer, user <br className="sm:block hidden" />
-            interfaces and web applications
+            I'm a <AnimatedText />
           </p>
         </div>
       </div>
