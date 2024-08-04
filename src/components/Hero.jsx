@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
-import { EarthCanvas } from "./canvas"; // Import EarthCanvas component
+import { ComputersCanvas, EarthCanvas } from "./canvas"; // Import EarthCanvas component
 import AnimatedText from "./AnimatedText"; // Import the new component
 
 const Hero = () => {
@@ -20,12 +20,12 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Add the EarthCanvas here with absolute positioning */}
+      {/* Add the ComputersCanvas here with absolute positioning */}
       <div
         className="absolute"
-        style={{ top: "170px", right: "100px", width: "500px", height: "500px" }}
+        style={{ top: "300", right: "100px", width: "1000px", height: "1000px" }} // Increased size
       >
-        <EarthCanvas />
+        <ComputersCanvas />
       </div>
 
       <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
