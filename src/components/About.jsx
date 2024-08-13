@@ -51,7 +51,7 @@ const About = () => {
     and frameworks like React and Flutter, alongside a keen interest in AR/VR development. 
     I thrive in collaborative environments, working closely with clients and teams to design and build 
     innovative, scalable, and user-centric solutions that drive impact. 
-    Let's team up to transform your vision into reality!
+    Team up to transform your vision into reality!
       </motion.p>
 
       <div className='mt-20 flex flex-wrap gap-10'>
