@@ -190,41 +190,41 @@ const testimonials = [
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "PastPort",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "A mobile app that revolutionizes History Education",
     tags: [
       {
-        name: "react",
+        name: "dart",
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
+        name: "flutter",
         color: "green-text-gradient",
       },
       {
-        name: "tailwind",
+        name: "sqline",
         color: "pink-text-gradient",
       },
     ],
     image: carrent,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://devpost.com/software/pastport-ihxy6p",
   },
   {
-    name: "Job IT",
+    name: "Expiro",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "Mobile applications that keeps track of your food's expired dates",
     tags: [
       {
-        name: "react",
+        name: "flutter",
         color: "blue-text-gradient",
       },
       {
-        name: "restapi",
+        name: "dart",
         color: "green-text-gradient",
       },
       {
-        name: "scss",
+        name: "css",
         color: "pink-text-gradient",
       },
     ],

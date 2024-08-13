@@ -1,13 +1,13 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
-import { ComputersCanvas, StarsCanvas } from "./canvas"; // Import StarsCanvas
-import AnimatedText from "./AnimatedText"; 
+import { ComputersCanvas, StarsCanvas } from "./canvas";
+import AnimatedText from "./AnimatedText";
 
 const Hero = () => {
   return (
     <section className="relative w-full h-screen mx-auto">
-      <StarsCanvas /> {/* Add StarsCanvas here */}
+      <StarsCanvas /> {/* Use StarsCanvas as background */}
       <div
         className={`absolute inset-0 top-[200px] max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5`}
       >
@@ -23,7 +23,7 @@ const Hero = () => {
 
       <div
         className="absolute"
-        style={{ top: "500", right: "100px", width: "1000px", height: "1000px" }} 
+        style={{ top: "500", right: "100px", width: "1000px", height: "1000px" }}
       >
         <ComputersCanvas />
       </div>
