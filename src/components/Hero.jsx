@@ -23,7 +23,7 @@ const Hero = () => {
       {/* Add the ComputersCanvas here with absolute positioning */}
       <div
         className="absolute"
-        style={{ top: "300", right: "100px", width: "1000px", height: "1000px" }} // Increased size
+        style={{ top: "500", right: "100px", width: "1000px", height: "1000px" }} // Increased size
       >
         <ComputersCanvas />
       </div>
