@@ -1,13 +1,12 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
-import { ComputersCanvas, StarsCanvas } from "./canvas";
-import AnimatedText from "./AnimatedText";
+import { ComputersCanvas, EarthCanvas } from "./canvas"; // Import EarthCanvas component
+import AnimatedText from "./AnimatedText"; // Import the new component
 
 const Hero = () => {
   return (
     <section className="relative w-full h-screen mx-auto">
-      <StarsCanvas /> {/* Use StarsCanvas as background */}
       <div
         className={`absolute inset-0 top-[200px] max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5`}
       >
@@ -21,9 +20,10 @@ const Hero = () => {
         </div>
       </div>
 
+      {/* Add the ComputersCanvas here with absolute positioning */}
       <div
         className="absolute"
-        style={{ top: "500", right: "100px", width: "1000px", height: "1000px" }}
+        style={{ top: "500", right: "100px", width: "1000px", height: "1000px" }} // Increased size
       >
         <ComputersCanvas />
       </div>
