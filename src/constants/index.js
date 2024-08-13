@@ -56,15 +56,15 @@ const services = [
     icon: web,
   },
   {
-    title: "React Native Developer",
+    title: " Software Developer",
     icon: mobile,
   },
   {
-    title: "Backend Developer",
+    title: "UX/UI Designer",
     icon: backend,
   },
   {
-    title: "Content Creator",
+    title: "AI Engineer",
     icon: creator,
   },
 ];
@@ -91,7 +91,7 @@ const technologies = [
     icon: reactjs,
   },
   {
-    name: "Redux Toolkit",
+    name: "Flutter",
     icon: redux,
   },
   {
