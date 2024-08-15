@@ -15,10 +15,9 @@ import {
   git,
   figma,
   docker,
-  meta,
-  starbucks,
-  tesla,
-  shopify,
+  edge,
+  augustana,
+  skimble,
   pastport,
   expiro,
   orbit,
@@ -128,7 +127,7 @@ const experiences = [
   {
     title: "Web Developer",
     company_name: "Edge Center",
-    icon: starbucks,
+    icon: edge,
     iconBg: "#383E56",
     date: "Sept 2022 - March 2023",
     points: [
@@ -139,7 +138,7 @@ const experiences = [
   {
     title: "AI Research Assistant",
     company_name: "Augustana College",
-    icon: tesla,
+    icon: augustana,
     iconBg: "#E6DEDD",
     date: "April 2023 - July 2023",
     points: [
@@ -150,7 +149,7 @@ const experiences = [
   {
     title: "AI Project Management Intern",
     company_name: "Skimble",
-    icon: shopify,
+    icon: skimble,
     iconBg: "#383E56",
     date: "June 2024 - Present",
     points: [

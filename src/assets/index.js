@@ -21,10 +21,9 @@ import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
 
-import meta from "./company/meta.png";
-import shopify from "./company/shopify.png";
-import starbucks from "./company/starbucks.png";
-import tesla from "./company/tesla.png";
+import skimble from "./company/skimble.jpg";
+import edge from "./company/edge.jpg";
+import augustana from "./company/augustana.png";
 
 import pastport from "./pastport.jpg";
 import expiro from "./expiro.png";
@@ -52,10 +51,9 @@ export {
   tailwind,
   typescript,
   threejs,
-  meta,
-  shopify,
-  starbucks,
-  tesla,
+  skimble,
+  edge,
+  augustana,
   pastport,
   expiro,
   orbit,
