@@ -15,13 +15,13 @@ const Computers = ({ isMobile }) => {
         const originalMaterial = child.material;
 
         child.material = new THREE.MeshStandardMaterial({
-          map: originalMaterial.map, // Copy texture map
-          emissiveMap: originalMaterial.emissiveMap || originalMaterial.map, // Copy emissive map or use texture map
-          emissive: new THREE.Color(0xffffff), // Set emissive color to white
-          emissiveIntensity: 1, // Adjust emissive intensity as needed
+          map: originalMaterial.map,
+          emissiveMap: originalMaterial.emissiveMap || originalMaterial.map,
+          emissive: new THREE.Color(0xffffff), // Set the emissive color
+          emissiveIntensity: 1, // Increase the emissive intensity for a stronger glow
           side: THREE.DoubleSide, // Render both sides if needed
-          transparent: originalMaterial.transparent, // Keep transparency settings
-          opacity: originalMaterial.opacity, // Keep opacity settings
+          transparent: true, // Enable transparency
+          opacity: 1, // Adjust opacity (1 is fully opaque, 0 is fully transparent)
           alphaTest: 0.5, // Adjust alpha test value as needed
           depthWrite: false, // Adjust depth write settings for transparency
         });
@@ -54,9 +54,11 @@ const Computers = ({ isMobile }) => {
       <pointLight intensity={1} />
       <primitive
         object={scene}
-        scale={isMobile ? 1.2 : 1.3} // Adjusted scale to make the model larger
-        position={isMobile ? [0, 0, -2.2] : [2, 0.5, 0]} // Adjusted position to move the model up
-        rotation={[Math.PI / 4, Math.PI, Math.PI/2, ]} // Adjusted rotation to tilt the model along the y-axis
+        scale={isMobile ? 1.6 : 1.7} // Adjusted scale to make the model larger
+        position={isMobile ? [4, 2, 0] : [3, 0, 0]} // Adjusted position to move the model up
+        rotation={[Math.PI / 3, 0, 0]} 
+        //position={isMobile ? [0, 0, -2.2] : [2, 0.5, 0]} // Adjusted position to move the model up
+        //rotation={[Math.PI / 4, Math.PI, Math.PI/2, ]} // Adjusted rotation to tilt the model along the y-axis
       />
     </group>
   );

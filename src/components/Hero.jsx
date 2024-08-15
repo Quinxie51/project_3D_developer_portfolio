@@ -17,13 +17,24 @@ const Hero = () => {
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
             I'm a <AnimatedText />
           </p>
+          {/* Add Resume Button */}
+          <div className="mt-20">
+            <a
+              href="path/to/your/resume.pdf" // Replace with the actual path to your resume
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block px-6 py-3 bg-[#915EFF] text-white font-semibold rounded-lg shadow-lg"
+            >
+              My Resume
+            </a>
+          </div>
         </div>
       </div>
 
       {/* Add the ComputersCanvas here with absolute positioning */}
       <div
         className="absolute"
-        style={{ top: "500", right: "100px", width: "1000px", height: "1000px" }} // Increased size
+        style={{ top: "50px", right: "100px", width: "1000px", height: "1000px" }} // Increased size
       >
         <ComputersCanvas />
       </div>
