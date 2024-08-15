@@ -54,9 +54,9 @@ const Computers = ({ isMobile }) => {
       <pointLight intensity={1} />
       <primitive
         object={scene}
-        scale={isMobile ? 1.4 : 1.5} // Adjusted scale to make the model larger
+        scale={isMobile ? 1.2 : 1.3} // Adjusted scale to make the model larger
         position={isMobile ? [0, 0, -2.2] : [2, 0.5, 0]} // Adjusted position to move the model up
-        rotation={[Math.PI / 4, Math.PI / 20, Math.PI/2, ]} // Adjusted rotation to tilt the model along the y-axis
+        rotation={[Math.PI / 4, Math.PI, Math.PI/2, ]} // Adjusted rotation to tilt the model along the y-axis
       />
     </group>
   );

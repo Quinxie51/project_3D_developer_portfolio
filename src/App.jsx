@@ -4,22 +4,22 @@ import { About, Contact, Experience, Hero, Navbar, Tech, Works, StarsCanvas } fr
 const App = () => {
   return (
     <BrowserRouter>
-      <div className='relative z-0 bg-primary'>
-        <div className='bg-hero-pattern bg-cover bg-no-repeat bg-center'>
+      <div className="relative z-0 bg-primary">
+        <StarsCanvas /> {/* Apply StarsCanvas globally */}
+        <div className="relative z-10">
           <Navbar />
-          {/*<StarsCanvas />*/}
           <Hero />
         </div>
         <About />
-        <Works /> {/* Render Works component here */}
+        <Works />
         <Experience />
         <Tech />
-        <div className='relative z-0'>
+        <div className="relative z-10">
           <Contact />
         </div>
       </div>
     </BrowserRouter>
   );
-}
+};
 
 export default App;
