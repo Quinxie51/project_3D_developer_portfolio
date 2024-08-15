@@ -36,7 +36,7 @@ const Hero = () => {
         className="absolute"
         style={{ top: "50px", right: "100px", width: "1000px", height: "1000px" }} // Increased size
       >
-        <ComputersCanvas />
+        {/* <ComputersCanvas /> */}
       </div>
 
       <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">

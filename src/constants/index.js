@@ -19,9 +19,9 @@ import {
   starbucks,
   tesla,
   shopify,
-  carrent,
-  jobit,
-  tripguide,
+  pastport,
+  expiro,
+  orbit,
   threejs,
 } from "../assets";
 
@@ -207,7 +207,7 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: carrent,
+    image: pastport,
     source_code_link: "https://devpost.com/software/pastport-ihxy6p",
   },
   {
@@ -228,16 +228,16 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: jobit,
-    source_code_link: "https://github.com/",
+    image: expiro,
+    source_code_link: "https://devpost.com/software/expiro-fgp3nq?ref_content=user-portfolio&ref_feature=in_progress",
   },
   {
-    name: "Trip Guide",
+    name: "Orbit Guardian",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "Fiction world: an application to help the citizens of Hackunia survive the harsh alien invasion",
     tags: [
       {
-        name: "nextjs",
+        name: "reactjs",
         color: "blue-text-gradient",
       },
       {
@@ -245,12 +245,12 @@ const projects = [
         color: "green-text-gradient",
       },
       {
-        name: "css",
+        name: "leaflet.js",
         color: "pink-text-gradient",
       },
     ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
+    image: orbit,
+    source_code_link: "https://devpost.com/software/orbit-guardians",
   },
 ];
 

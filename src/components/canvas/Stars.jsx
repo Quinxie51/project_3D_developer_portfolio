@@ -5,11 +5,16 @@ import * as random from "maath/random/dist/maath-random.esm";
 
 const Stars = (props) => {
   const ref = useRef();
-  const [sphere] = useState(() => random.inSphere(new Float32Array(5000), { radius: 1.2 }));
+  const [sphere] = useState(() => {
+    console.log("Generating star positions"); // Debugging: Check when star positions are generated
+    return random.inSphere(new Float32Array(5000), { radius: 1.2 });
+  });
 
   useFrame((state, delta) => {
-    ref.current.rotation.x -= delta / 10;
-    ref.current.rotation.y -= delta / 15;
+    if (ref.current) {
+      ref.current.rotation.x -= delta / 10;
+      ref.current.rotation.y -= delta / 15;
+    }
   });
 
   return (
@@ -28,6 +33,20 @@ const Stars = (props) => {
 };
 
 const StarsCanvas = () => {
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    console.log("StarsCanvas mounted"); // Debugging: Check when StarsCanvas is mounted
+    setIsMounted(true); // Ensure the component mounts after the initial render
+  }, []);
+
+  if (!isMounted) {
+    console.log("StarsCanvas not yet mounted"); // Debugging: Check if the component is not yet mounted
+    return null;
+  }
+
+  console.log("Rendering StarsCanvas"); // Debugging: Confirm when the canvas is being rendered
+
   return (
     <div className='w-full h-full fixed inset-0 z-[-1]' style={{ overflow: 'hidden' }}>
       <Canvas camera={{ position: [0, 0, 1] }}>
