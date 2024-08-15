@@ -20,7 +20,7 @@ const Hero = () => {
           {/* Add Resume Button */}
           <div className="mt-20">
             <a
-              href="path/to/your/resume.pdf" // Replace with the actual path to your resume
+              href="src\assets\Quinxie_Doan_Resume (2).pdf" // Replace with the actual path to your resume
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block px-6 py-3 bg-[#915EFF] text-white font-semibold rounded-lg shadow-lg"
