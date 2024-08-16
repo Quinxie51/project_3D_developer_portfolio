@@ -19,8 +19,8 @@ const Hero = () => {
           </p>
           {/* Add Resume Button */}
           <div className="mt-20">
-            <a
-              href="src\assets\Quinxie_Doan_Resume (2).pdf" // Replace with the actual path to your resume
+          <a
+              href="https://drive.google.com/file/d/1-ntgFbUvVx1QzBhJhtPa0L2otZOOalux/view?usp=drive_link" // Replace with the actual URL to your resume
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block px-6 py-3 bg-[#915EFF] text-white font-semibold rounded-lg shadow-lg"
@@ -36,7 +36,7 @@ const Hero = () => {
         className="absolute"
         style={{ top: "50px", right: "100px", width: "1000px", height: "1000px" }} // Increased size
       >
-        {/* <ComputersCanvas /> */}
+        <ComputersCanvas />
       </div>
 
       <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">

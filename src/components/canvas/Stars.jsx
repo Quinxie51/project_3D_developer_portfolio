@@ -48,7 +48,7 @@ const StarsCanvas = () => {
   console.log("Rendering StarsCanvas"); // Debugging: Confirm when the canvas is being rendered
 
   return (
-    <div className='w-full h-full fixed inset-0 z-[-1]' style={{ overflow: 'hidden' }}>
+    <div className='w-full h-full fixed inset-0 z-[-1]' style={{ overflow: 'hidden', pointerEvents: 'none' }}>
       <Canvas camera={{ position: [0, 0, 1] }}>
         <Suspense fallback={null}>
           <Stars />
