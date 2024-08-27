@@ -5,25 +5,30 @@ import * as THREE from "three";
 import CanvasLoader from "../Loader";
 
 const Computers = ({ isMobile }) => {
-  const { scene, materials, animations } = useGLTF("./desktop_pc/scene.gltf");
+  const { scene, animations } = useGLTF("./desktop_pc/scene.gltf");
   const group = useRef();
   const mixer = useRef();
+  const [tilt, setTilt] = useState(0);
 
   useEffect(() => {
     scene.traverse((child) => {
       if (child.isMesh) {
         const originalMaterial = child.material;
 
-        child.material = new THREE.MeshStandardMaterial({
+        child.material = new THREE.MeshPhysicalMaterial({
           map: originalMaterial.map,
+          normalMap: originalMaterial.normalMap,
+          roughnessMap: originalMaterial.roughnessMap,
+          metalnessMap: originalMaterial.metalnessMap,
           emissiveMap: originalMaterial.emissiveMap || originalMaterial.map,
-          emissive: new THREE.Color(0xffffff), // Set the emissive color
-          emissiveIntensity: 1, // Increase the emissive intensity for a stronger glow
-          side: THREE.DoubleSide, // Render both sides if needed
-          transparent: true, // Enable transparency
-          opacity: 1, // Adjust opacity (1 is fully opaque, 0 is fully transparent)
-          alphaTest: 0.5, // Adjust alpha test value as needed
-          depthWrite: false, // Adjust depth write settings for transparency
+          emissive: new THREE.Color(0xffffff),
+          emissiveIntensity: 0.5,
+          side: THREE.DoubleSide,
+          transparent: true,
+          opacity: 0.9,
+          depthWrite: true,
+          clearcoat: 1.0,
+          clearcoatRoughness: 0.1,
         });
       }
     });
@@ -36,29 +41,34 @@ const Computers = ({ isMobile }) => {
     }
   }, [animations, scene]);
 
-  useFrame((_, delta) => {
+  useFrame((state, delta) => {
     mixer.current?.update(delta);
+
+    // Update the tilt value based on time
+    const time = state.clock.getElapsedTime();
+    setTilt(Math.sin(time) * 0.1); // Adjust the amplitude of tilt here
+    if (group.current) {
+      group.current.rotation.x = tilt;
+    }
   });
 
   return (
     <group ref={group} dispose={null}>
-      <hemisphereLight intensity={0.15} groundColor='black' />
+      <hemisphereLight intensity={0.35} groundColor="black" />
       <spotLight
         position={[-20, 50, 10]}
-        angle={0.12}
+        angle={0.15}
         penumbra={1}
-        intensity={1}
+        intensity={2}
         castShadow
         shadow-mapSize={1024}
       />
-      <pointLight intensity={1} />
+      <pointLight intensity={1.5} position={[10, 10, 10]} />
       <primitive
         object={scene}
-        scale={isMobile ? 1.6 : 1.7} // Adjusted scale to make the model larger
-        position={isMobile ? [4, 2, 0] : [3, 0, 0]} // Adjusted position to move the model up
-        rotation={[Math.PI / 3, 0, 0]} 
-        //position={isMobile ? [0, 0, -2.2] : [2, 0.5, 0]} // Adjusted position to move the model up
-        //rotation={[Math.PI / 4, Math.PI, Math.PI/2, ]} // Adjusted rotation to tilt the model along the y-axis
+        scale={isMobile ? 1.6 : 1.7}
+        position={isMobile ? [4, 2, 0] : [4, 0.5, 0]}
+        rotation={[Math.PI / 5, 0, 0]}
       />
     </group>
   );
@@ -81,7 +91,7 @@ const ComputersCanvas = () => {
 
   return (
     <Canvas
-      frameloop='always' // Change this to 'always' for continuous animation
+      frameloop="always"
       shadows
       dpr={[1, 2]}
       camera={{ position: [20, 3, 5], fov: 25 }}
