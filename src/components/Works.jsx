@@ -49,7 +49,17 @@ const ProjectCard = ({
         </div>
 
         <div className='mt-5'>
-          <h3 className='text-white font-bold text-[24px]'>{name}</h3>
+          {/* Add hover effect for underline */}
+          <h3 className='text-white font-bold text-[24px]'>
+            <a
+              href={source_code_link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:underline" // Add this class for hover effect
+            >
+              {name}
+            </a>
+          </h3>
           <p className='mt-2 text-secondary text-[14px]'>{description}</p>
         </div>
 
@@ -67,6 +77,7 @@ const ProjectCard = ({
     </motion.div>
   );
 };
+
 
 const Works = () => {
   return (

@@ -8,8 +8,8 @@ const App = () => {
         <StarsCanvas /> {/* Apply StarsCanvas globally */}
         <div className="relative z-10">
           <Navbar />
-          <Hero />
         </div>
+        <Hero />
         <About />
         <Works />
         <Experience />
