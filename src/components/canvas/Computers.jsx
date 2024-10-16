@@ -66,7 +66,7 @@ const Computers = ({ isMobile }) => {
       <primitive
         object={scene}
         scale={isMobile ? 0.8 : 1.7}  // Adjust for smaller screen
-        position={isMobile ? [7.5, -0.9, 0] : [4, 0.5, 0]}  // Move for mobile
+        position={isMobile ? [8.5, -0.9, 0] : [4, 0.5, 0]}  // Move for mobile
         rotation={[Math.PI / 6, 0, 0]}
       />
     </group>

@@ -6,7 +6,7 @@ import CanvasLoader from "../Loader";
 
 const Earth = () => {
   const earth = useGLTF("./planet/scene.gltf"); // Ensure the path is correct
-  return <primitive object={earth.scene} scale={2.5} position-y={0} rotation-y={0} />;
+  return <primitive object={earth.scene} scale={2.0} position-y={0} rotation-y={0} />; // Adjust scale to 1.5
 };
 
 const EarthCanvas = () => {
@@ -20,7 +20,7 @@ const EarthCanvas = () => {
         fov: 45,
         near: 0.1,
         far: 200,
-        position: [-4, 3, 6],
+        position: [0, 3, 6],
       }}
     >
       <Suspense fallback={<CanvasLoader />}>
