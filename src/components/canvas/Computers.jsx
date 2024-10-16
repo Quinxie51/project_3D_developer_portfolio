@@ -44,9 +44,8 @@ const Computers = ({ isMobile }) => {
   useFrame((state, delta) => {
     mixer.current?.update(delta);
 
-    // Update the tilt value based on time
     const time = state.clock.getElapsedTime();
-    setTilt(Math.sin(time) * 0.1); // Adjust the amplitude of tilt here
+    setTilt(Math.sin(time) * 0.1);
     if (group.current) {
       group.current.rotation.x = tilt;
     }
@@ -66,9 +65,9 @@ const Computers = ({ isMobile }) => {
       <pointLight intensity={1.5} position={[10, 10, 10]} />
       <primitive
         object={scene}
-        scale={isMobile ? 1.6 : 1.7}
-        position={isMobile ? [4, 2, 0] : [4, 0.5, 0]}
-        rotation={[Math.PI / 5, 0, 0]}
+        scale={isMobile ? 1.2 : 1.7}  // Adjust for smaller screen
+        position={isMobile ? [6, -1, 0] : [4, 0.5, 0]}  // Move for mobile
+        rotation={[Math.PI / 6, 0, 0]}
       />
     </group>
   );
@@ -78,7 +77,7 @@ const ComputersCanvas = () => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    const mediaQuery = window.matchMedia("(max-width: 500px)");
+    const mediaQuery = window.matchMedia("(max-width: 800px)"); // Adjusted for wider range of devices
     setIsMobile(mediaQuery.matches);
     const handleMediaQueryChange = (event) => {
       setIsMobile(event.matches);
@@ -94,7 +93,10 @@ const ComputersCanvas = () => {
       frameloop="always"
       shadows
       dpr={[1, 2]}
-      camera={{ position: [20, 3, 5], fov: 25 }}
+      camera={{
+        position: isMobile ? [15, 2, 5] : [20, 3, 5],  // Adjust camera for mobile
+        fov: isMobile ? 35 : 25,  // Widen field of view for mobile
+      }}
       gl={{ preserveDrawingBuffer: true }}
     >
       <Suspense fallback={<CanvasLoader />}>
