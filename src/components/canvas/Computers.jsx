@@ -65,7 +65,7 @@ const Computers = ({ isMobile }) => {
       <pointLight intensity={1.5} position={[10, 10, 10]} />
       <primitive
         object={scene}
-        scale={isMobile ? 0.8 : 1.7}  // Adjust for smaller screen
+        scale={isMobile ? 0.5 : 1.7}  // Adjust for smaller screen
         position={isMobile ? [8.5, -0.9, 0] : [4, 0.5, 0]}  // Move for mobile
         rotation={[Math.PI / 6, 0, 0]}
       />
