@@ -1,6 +1,6 @@
 import { BrowserRouter } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { About, Contact, Experience, Hero, Tech, Works, StarsCanvas, CosmicParticlesCanvas } from "./components";
+import { About, Contact, Experience, Hero, Tech, Works, StarsCanvas } from "./components";
 import CosmicLoader from "./components/CosmicLoader";
 import CosmicCursor from "./components/CosmicCursor";
 
@@ -28,7 +28,6 @@ const App = () => {
       <div className="relative z-0 min-h-screen">
         {/* Enhanced Cosmic Background */}
         <StarsCanvas />
-        <CosmicParticlesCanvas />
         
         {/* Cosmic Cursor */}
         <CosmicCursor />

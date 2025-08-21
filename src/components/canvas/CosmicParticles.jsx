@@ -28,7 +28,7 @@ const CosmicParticles = ({ count = 10000, color = "#ffffff", size = 0.02 }) => {
           sizeAttenuation={true}
           depthWrite={false}
           blending={1}
-          opacity={0.3}
+          opacity={0.8}
         />
       </Points>
     </group>
@@ -56,11 +56,11 @@ const InteractiveParticles = ({ count = 5000, color = "#FFD700" }) => {
       <PointMaterial
         transparent
         color={color}
-        size={0.015}
+        size={0.025}
         sizeAttenuation={true}
         depthWrite={false}
         blending={1}
-        opacity={0.4}
+        opacity={0.8}
       />
     </Points>
   );
@@ -98,7 +98,7 @@ const EnergyField = ({ color = "#00FFFF", intensity = 1 }) => {
       <PointMaterial
         transparent
         color={color}
-        size={0.02}
+        size={0.05}
         sizeAttenuation={true}
         depthWrite={false}
         blending={1}
