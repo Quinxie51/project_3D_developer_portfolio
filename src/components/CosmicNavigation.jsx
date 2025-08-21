@@ -11,10 +11,8 @@ const CosmicNavigation = () => {
 
   const navItems = [
     { id: "home", label: "Home", icon: "🌌" },
-    { id: "about", label: "About", icon: "⭐" },
-    { id: "project", label: "Works", icon: "🚀" },
-    { id: "work", label: "Experience", icon: "🌍" },
-    { id: "tech", label: "Tech", icon: "⚡" },
+    { id: "projects", label: "Projects", icon: "🚀" },
+    { id: "about", label: "About Me", icon: "⭐" },
     { id: "contact", label: "Contact", icon: "📡" },
   ];
 
@@ -53,13 +51,9 @@ const CosmicNavigation = () => {
       if (scrollPosition < 300) {
         setActiveSection("home");
       } else if (scrollPosition < 800) {
-        setActiveSection("about");
+        setActiveSection("projects");
       } else if (scrollPosition < 1300) {
-        setActiveSection("project");
-      } else if (scrollPosition < 1800) {
-        setActiveSection("work");
-      } else if (scrollPosition < 2300) {
-        setActiveSection("tech");
+        setActiveSection("about");
       } else {
         setActiveSection("contact");
       }
