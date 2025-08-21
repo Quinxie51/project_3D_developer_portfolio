@@ -7,7 +7,7 @@ const Stars = (props) => {
   const ref = useRef();
   const [sphere] = useState(() => {
     console.log("Generating star positions"); // Debugging: Check when star positions are generated
-    return random.inSphere(new Float32Array(5000), { radius: 1.2 });
+    return random.inSphere(new Float32Array(2000), { radius: 1.2 });
   });
 
   useFrame((state, delta) => {
@@ -23,9 +23,10 @@ const Stars = (props) => {
         <PointMaterial
           transparent
           color='#f272c8'
-          size={0.002}
+          size={0.001}
           sizeAttenuation={true}
           depthWrite={false}
+          opacity={0.6}
         />
       </Points>
     </group>
