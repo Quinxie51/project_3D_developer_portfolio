@@ -1,54 +1,86 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { About, Contact, Hero, Projects, FullStackProjects, UIUXProjects, CreativeProjects, StarsCanvas } from "./components";
-import CosmicLoader from "./components/CosmicLoader";
-import CosmicCursor from "./components/CosmicCursor";
+import { motion } from "framer-motion";
+import { Leva } from "leva";
+import Airlock from "./components/scenes/Airlock";
+import BridgeScene from "./components/scenes/Bridge";
+import ProjectBay from "./components/scenes/ProjectBay";
+import About from "./components/About";
+import Contact from "./components/Contact";
+import useStore from "./lib/store";
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
+  const { isAudioOn } = useStore();
 
   useEffect(() => {
-    // Simulate loading time for cosmic experience
+    // Simulate loading time for space experience
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 3000);
+    }, 2000);
 
     return () => clearTimeout(timer);
   }, []);
 
   if (isLoading) {
-    return <CosmicLoader />;
+    return (
+      <div className="w-full h-screen bg-space-bg flex items-center justify-center">
+        <div className="text-center">
+          <div className="text-6xl mb-4 animate-pulse">🚀</div>
+          <h1 className="text-3xl font-space-grotesk font-bold text-white mb-4">
+            Initializing Starship Quinxie
+          </h1>
+          <div className="w-64 h-2 bg-space-light rounded-full overflow-hidden">
+            <motion.div
+              className="h-full bg-gradient-to-r from-cyan-400 to-blue-500"
+              initial={{ width: "0%" }}
+              animate={{ width: "100%" }}
+              transition={{ duration: 2 }}
+            />
+          </div>
+          <p className="text-cyan-400 font-mono text-sm mt-4">
+            Loading systems...
+          </p>
+        </div>
+      </div>
+    );
   }
 
   return (
     <BrowserRouter>
-      {/* Fixed Cosmic Background - Never Disappears */}
-      <div className="cosmic-background-fixed" />
+      {/* Fixed Space Background */}
+      <div className="space-background-fixed" />
       
       <div className="relative z-0 min-h-screen">
-        {/* Enhanced Cosmic Background */}
-        <StarsCanvas />
-        
-        {/* Cosmic Cursor */}
-        <CosmicCursor />
-        
         <Routes>
-          {/* Main Portfolio Page */}
-          <Route path="/" element={
-            <>
-              <Hero />
-              <Projects />
-              <About />
-              <Contact />
-            </>
-          } />
+          {/* Landing Airlock - Default Home Page */}
+          <Route path="/" element={<Airlock />} />
           
-          {/* Project Category Pages */}
-          <Route path="/fullstack-projects" element={<FullStackProjects />} />
-          <Route path="/uiux-projects" element={<UIUXProjects />} />
-          <Route path="/creative-projects" element={<CreativeProjects />} />
+          {/* Bridge Hub */}
+          <Route path="/bridge" element={<BridgeScene />} />
+          
+          {/* Project Bay */}
+          <Route path="/projects" element={<ProjectBay />} />
+          
+          {/* About Page */}
+          <Route path="/about" element={<About />} />
+          
+          {/* Contact Page */}
+          <Route path="/contact" element={<Contact />} />
+          
+          {/* Catch-all route - redirect to home page */}
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </div>
+
+      {/* Development Tools */}
+      {process.env.NODE_ENV === 'development' && (
+        <Leva
+          titleBar={{
+            title: "Starship Quinxie Controls",
+          }}
+        />
+      )}
     </BrowserRouter>
   );
 };

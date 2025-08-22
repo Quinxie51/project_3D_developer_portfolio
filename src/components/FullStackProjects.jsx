@@ -5,43 +5,51 @@ import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
 
-const ProjectCard = ({ title, description, image, technologies, link }) => (
-  <motion.div
-    variants={fadeIn("up", "spring", 0.5, 0.75)}
-    className="w-full"
-  >
-    <div className="bg-tertiary p-6 rounded-2xl shadow-card">
-      <div className="relative w-full h-[200px] mb-4">
-        <img
-          src={image}
-          alt={title}
-          className="w-full h-full object-cover rounded-xl"
-        />
+const ProjectCard = ({ title, description, image, technologies, projectId }) => {
+  const navigate = useNavigate();
+
+  const handleProjectClick = () => {
+    navigate(`/project/${projectId}`);
+  };
+
+  return (
+    <motion.div
+      variants={fadeIn("up", "spring", 0.5, 0.75)}
+      className="w-full"
+    >
+      <div className="bg-tertiary p-6 rounded-2xl shadow-card">
+        <div className="relative w-full h-[200px] mb-4">
+          <img
+            src={image}
+            alt={title}
+            className="w-full h-full object-cover rounded-xl"
+          />
+        </div>
+        
+        <h3 className="text-white text-[20px] font-bold mb-2">{title}</h3>
+        <p className="text-secondary text-[14px] mb-4">{description}</p>
+        
+        <div className="flex flex-wrap gap-2 mb-4">
+          {technologies.map((tech, index) => (
+            <span
+              key={index}
+              className="text-[12px] bg-purple-500/20 text-purple-300 px-2 py-1 rounded-full"
+            >
+              {tech}
+            </span>
+          ))}
+        </div>
+        
+        <button
+          onClick={handleProjectClick}
+          className="text-purple-400 text-[14px] font-semibold hover:text-purple-300 transition-colors"
+        >
+          View Project →
+        </button>
       </div>
-      
-      <h3 className="text-white text-[20px] font-bold mb-2">{title}</h3>
-      <p className="text-secondary text-[14px] mb-4">{description}</p>
-      
-      <div className="flex flex-wrap gap-2 mb-4">
-        {technologies.map((tech, index) => (
-          <span
-            key={index}
-            className="text-[12px] bg-purple-500/20 text-purple-300 px-2 py-1 rounded-full"
-          >
-            {tech}
-          </span>
-        ))}
-      </div>
-      
-      <a
-        href={link}
-        className="text-purple-400 text-[14px] font-semibold hover:text-purple-300 transition-colors"
-      >
-        View Project →
-      </a>
-    </div>
-  </motion.div>
-);
+    </motion.div>
+  );
+};
 
 const FullStackProjects = () => {
   const navigate = useNavigate();
@@ -51,42 +59,42 @@ const FullStackProjects = () => {
       description: "A full-featured online shopping platform with user authentication, payment processing, and admin dashboard.",
       image: "https://via.placeholder.com/400x200/4F46E5/FFFFFF?text=E-Commerce+Platform",
       technologies: ["React", "Node.js", "MongoDB", "Stripe", "AWS"],
-      link: "#"
+      projectId: "ecommerce-platform"
     },
     {
       title: "Task Management App",
       description: "Collaborative project management tool with real-time updates, file sharing, and team communication.",
       image: "https://via.placeholder.com/400x200/7C3AED/FFFFFF?text=Task+Management+App",
       technologies: ["Vue.js", "Express", "PostgreSQL", "Socket.io", "Docker"],
-      link: "#"
+      projectId: "task-management-app"
     },
     {
       title: "Social Media Dashboard",
       description: "Analytics dashboard for social media management with data visualization and scheduling features.",
       image: "https://via.placeholder.com/400x200/EC4899/FFFFFF?text=Social+Media+Dashboard",
       technologies: ["Angular", "Python", "Redis", "Chart.js", "Heroku"],
-      link: "#"
+      projectId: "social-media-dashboard"
     },
     {
       title: "Real-time Chat Application",
       description: "Instant messaging app with group chats, file sharing, and video calling capabilities.",
       image: "https://via.placeholder.com/400x200/06B6D4/FFFFFF?text=Chat+Application",
       technologies: ["React", "Socket.io", "MongoDB", "WebRTC", "Firebase"],
-      link: "#"
+      projectId: "chat-application"
     },
     {
       title: "Inventory Management System",
       description: "Comprehensive inventory tracking system with barcode scanning, reporting, and supplier management.",
       image: "https://via.placeholder.com/400x200/10B981/FFFFFF?text=Inventory+System",
       technologies: ["Next.js", "Prisma", "MySQL", "Redis", "Vercel"],
-      link: "#"
+      projectId: "inventory-system"
     },
     {
       title: "Learning Management Platform",
       description: "Educational platform with course creation, student progress tracking, and interactive assessments.",
       image: "https://via.placeholder.com/400x200/F59E0B/FFFFFF?text=Learning+Platform",
       technologies: ["React", "Django", "PostgreSQL", "AWS S3", "Nginx"],
-      link: "#"
+      projectId: "learning-platform"
     }
   ];
 

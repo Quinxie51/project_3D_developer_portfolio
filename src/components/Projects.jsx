@@ -54,21 +54,21 @@ const Projects = () => {
       description: "Complete web applications with frontend and backend integration, databases, and deployment solutions.",
       icon: "⚡",
       color: "green-pink-gradient",
-      link: "/fullstack-projects"
+      link: "/projects/fullstack"
     },
     {
       title: "UI/UX Projects",
       description: "User interface designs, user experience prototypes, and interactive design systems.",
       icon: "🎨",
       color: "blue-pink-gradient",
-      link: "/uiux-projects"
+      link: "/projects/uiux"
     },
     {
       title: "Creative Projects",
       description: "Innovative and experimental projects showcasing creative coding and unique solutions.",
       icon: "✨",
       color: "purple-pink-gradient",
-      link: "/creative-projects"
+      link: "/projects/creative"
     }
   ];
 
