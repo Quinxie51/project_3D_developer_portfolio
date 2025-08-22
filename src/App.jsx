@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Leva } from "leva";
 import Airlock from "./components/scenes/Airlock";
-import BridgeScene from "./components/scenes/Bridge";
 import ProjectBay from "./components/scenes/ProjectBay";
 import About from "./components/About";
 import Contact from "./components/Contact";
@@ -14,7 +13,6 @@ const App = () => {
   const { isAudioOn } = useStore();
 
   useEffect(() => {
-    // Simulate loading time for space experience
     const timer = setTimeout(() => {
       setIsLoading(false);
     }, 2000);
@@ -48,32 +46,18 @@ const App = () => {
 
   return (
     <BrowserRouter>
-      {/* Fixed Space Background */}
       <div className="space-background-fixed" />
       
       <div className="relative z-0 min-h-screen">
         <Routes>
-          {/* Landing Airlock - Default Home Page */}
           <Route path="/" element={<Airlock />} />
-          
-          {/* Bridge Hub */}
-          <Route path="/bridge" element={<BridgeScene />} />
-          
-          {/* Project Bay */}
           <Route path="/projects" element={<ProjectBay />} />
-          
-          {/* About Page */}
           <Route path="/about" element={<About />} />
-          
-          {/* Contact Page */}
           <Route path="/contact" element={<Contact />} />
-          
-          {/* Catch-all route - redirect to home page */}
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </div>
 
-      {/* Development Tools */}
       {process.env.NODE_ENV === 'development' && (
         <Leva
           titleBar={{

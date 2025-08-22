@@ -298,6 +298,7 @@ const Airlock = () => {
                   stiffness: 200
                 }}
                 whileHover={{ scale: 1.05, y: -5 }}
+                onClick={() => navigate('/about')}
                 className="relative group cursor-pointer"
               >
                 {/* Glitch Effect */}
@@ -314,15 +315,15 @@ const Airlock = () => {
                   }}
                 />
                 
-                <div className="w-40 h-40 bg-black/80 border-2 border-cyan-400 rounded-lg p-6 backdrop-blur-sm shadow-lg shadow-cyan-500/30">
-                  {/* Glowing Portrait */}
-                  <div className="w-full h-24 bg-gradient-to-br from-purple-400 to-pink-400 rounded-md mb-3 relative overflow-hidden">
-                    <div className="absolute inset-0 bg-gradient-to-br from-purple-400/60 to-pink-400/60 animate-pulse"></div>
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center">
-                        <span className="text-3xl">👩‍💻</span>
-                      </div>
-                    </div>
+                <div className="w-40 h-40 bg-black/80 border-2 border-cyan-400 rounded-lg p-4 backdrop-blur-sm shadow-lg shadow-cyan-500/30 overflow-hidden">
+                  {/* About Image */}
+                  <div className="w-full h-32 rounded-md mb-3 relative overflow-hidden">
+                    <img 
+                      src="/src/assets/about.png" 
+                      alt="About Me" 
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-br from-cyan-400/20 to-purple-400/20 group-hover:from-cyan-400/40 group-hover:to-purple-400/40 transition-all duration-300"></div>
                   </div>
                   <div className="text-center">
                     <div className="text-cyan-400 font-mono text-base font-bold">ABOUT ME</div>
@@ -359,17 +360,15 @@ const Airlock = () => {
                   }}
                 />
                 
-                <div className="w-40 h-40 bg-black/80 border-2 border-green-400 rounded-lg p-6 backdrop-blur-sm shadow-lg shadow-green-500/30">
-                  <div className="w-full h-24 bg-gradient-to-br from-green-400 to-blue-400 rounded-md mb-3 relative overflow-hidden">
-                    <div className="absolute inset-0 bg-gradient-to-br from-green-400/60 to-blue-400/60 animate-pulse"></div>
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="grid grid-cols-2 gap-2">
-                        <div className="w-6 h-6 bg-white/30 rounded"></div>
-                        <div className="w-6 h-6 bg-white/30 rounded"></div>
-                        <div className="w-6 h-6 bg-white/30 rounded"></div>
-                        <div className="w-6 h-6 bg-white/30 rounded"></div>
-                      </div>
-                    </div>
+                <div className="w-40 h-40 bg-black/80 border-2 border-green-400 rounded-lg p-4 backdrop-blur-sm shadow-lg shadow-green-500/30 overflow-hidden">
+                  {/* Projects Image */}
+                  <div className="w-full h-32 rounded-md mb-3 relative overflow-hidden">
+                    <img 
+                      src="/src/assets/project.png" 
+                      alt="Projects" 
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-br from-green-400/20 to-blue-400/20 group-hover:from-green-400/40 group-hover:to-blue-400/40 transition-all duration-300"></div>
                   </div>
                   <div className="text-center">
                     <div className="text-green-400 font-mono text-base font-bold">PROJECTS</div>
@@ -406,16 +405,15 @@ const Airlock = () => {
                   }}
                 />
                 
-                <div className="w-40 h-40 bg-black/80 border-2 border-blue-400 rounded-lg p-6 backdrop-blur-sm shadow-lg shadow-blue-500/30">
-                  <div className="w-full h-24 bg-gradient-to-br from-blue-400 to-purple-400 rounded-md mb-3 relative overflow-hidden">
-                    <div className="absolute inset-0 bg-gradient-to-br from-blue-400/60 to-purple-400/60 animate-pulse"></div>
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="flex space-x-2">
-                        <div className="w-3 h-3 bg-white/40 rounded-full"></div>
-                        <div className="w-3 h-3 bg-white/40 rounded-full"></div>
-                        <div className="w-3 h-3 bg-white/40 rounded-full"></div>
-                      </div>
-                    </div>
+                <div className="w-40 h-40 bg-black/80 border-2 border-blue-400 rounded-lg p-4 backdrop-blur-sm shadow-lg shadow-blue-500/30 overflow-hidden">
+                  {/* Contact Image */}
+                  <div className="w-full h-32 rounded-md mb-3 relative overflow-hidden">
+                    <img 
+                      src="/src/assets/contact.png" 
+                      alt="Contact" 
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-br from-blue-400/20 to-purple-400/20 group-hover:from-blue-400/40 group-hover:to-purple-400/40 transition-all duration-300"></div>
                   </div>
                   <div className="text-center">
                     <div className="text-blue-400 font-mono text-base font-bold">CONTACT</div>

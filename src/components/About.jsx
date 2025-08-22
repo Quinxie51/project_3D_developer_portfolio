@@ -11,17 +11,17 @@ const About = () => {
       <div className="absolute inset-0 starfield opacity-20"></div>
       
       <div className="relative z-10 container mx-auto px-8 py-16">
-        {/* Back Button */}
-        <motion.button
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
-          onClick={() => navigate('/bridge')}
-          className="mb-8 px-6 py-3 bg-cyan-600/20 border border-cyan-400/30 text-cyan-300 rounded-full hover:bg-cyan-600/30 transition-colors"
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-        >
-          ← Back to Bridge
-        </motion.button>
+        {/* Back to Home Button */}
+        <div className="absolute top-8 left-8">
+          <motion.button
+            onClick={() => navigate('/')}
+            className="px-6 py-3 bg-cyan-600/20 border border-cyan-400/30 text-cyan-300 rounded-full hover:bg-cyan-600/30 transition-colors"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            ← Back to Home
+          </motion.button>
+        </div>
 
         {/* Main Content */}
         <motion.div
