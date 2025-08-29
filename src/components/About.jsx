@@ -119,10 +119,10 @@ const About = () => {
               </h2>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                 {[
-                  { badge: "🏆", title: "Hackathon Winner", desc: "First Place" },
-                  { badge: "🚀", title: "Project Launches", desc: "20+ Deployed" },
-                  { badge: "💻", title: "Code Reviews", desc: "100+ Completed" },
-                  { badge: "🎯", title: "Client Satisfaction", desc: "98% Rating" },
+                  { title: "Hackathon Winner", desc: "First Place" },
+                  { title: "Project Launches", desc: "20+ Deployed" },
+                  { title: "Code Reviews", desc: "100+ Completed" },
+                  { title: "Client Satisfaction", desc: "98% Rating" },
                 ].map((achievement, index) => (
                   <motion.div
                     key={index}
@@ -130,7 +130,6 @@ const About = () => {
                     whileHover={{ scale: 1.05, y: -5 }}
                     transition={{ duration: 0.2 }}
                   >
-                    <div className="text-4xl mb-3">{achievement.badge}</div>
                     <h3 className="text-white font-semibold mb-1">{achievement.title}</h3>
                     <p className="text-cyan-400 text-sm">{achievement.desc}</p>
                   </motion.div>
@@ -153,7 +152,6 @@ const About = () => {
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <span className="mr-3">📄</span>
                 Download Full Mission Report
               </motion.a>
             </motion.div>

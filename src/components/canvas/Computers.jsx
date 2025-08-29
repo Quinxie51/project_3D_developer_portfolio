@@ -8,7 +8,6 @@ const Computers = ({ isMobile }) => {
   const { scene, animations } = useGLTF("./desktop_pc/scene.gltf");
   const group = useRef();
   const mixer = useRef();
-  const [tilt, setTilt] = useState(0);
 
   useEffect(() => {
     scene.traverse((child) => {
@@ -43,12 +42,7 @@ const Computers = ({ isMobile }) => {
 
   useFrame((state, delta) => {
     mixer.current?.update(delta);
-
-    const time = state.clock.getElapsedTime();
-    setTilt(Math.sin(time) * 0.1);
-    if (group.current) {
-      group.current.rotation.x = tilt;
-    }
+    // Removed rotation and movement - keeping it stationary
   });
 
   return (
@@ -65,9 +59,9 @@ const Computers = ({ isMobile }) => {
       <pointLight intensity={1.5} position={[10, 10, 10]} />
       <primitive
         object={scene}
-        scale={isMobile ? 0.5 : 1.7}  // Adjust for smaller screen
-        position={isMobile ? [8.5, -0.9, 0] : [4, 0.5, 0]}  // Move for mobile
-        rotation={[Math.PI / 6, 0, 0]}
+        scale={isMobile ? 0.2 : 0.6}  // Further reduced scale for smaller size
+        position={isMobile ? [0, -0.9, 0] : [0, 0.5, 0]}  // Centered position
+        rotation={[Math.PI / 6, Math.PI / 4, 0]}  // 45 degrees clockwise rotation (Y-axis)
       />
     </group>
   );
@@ -94,18 +88,20 @@ const ComputersCanvas = () => {
       shadows
       dpr={[1, 2]}
       camera={{
-        position: isMobile ? [15, 2, 5] : [20, 3, 5],  // Adjust camera for mobile
-        fov: isMobile ? 35 : 25,  // Widen field of view for mobile
+        position: isMobile ? [0, 2, 5] : [0, 3, 5],  // Centered camera position
+        fov: isMobile ? 35 : 25,
       }}
       gl={{ preserveDrawingBuffer: true }}
     >
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls
           enableZoom={false}
+          enablePan={false}
+          enableRotate={false}  // Disable rotation
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
         />
-        {!isMobile && <Computers />} {/* Only render Computers if not mobile */}
+        <Computers />
       </Suspense>
       <Preload all />
     </Canvas>

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { useNavigate, useLocation } from "react-router-dom";
 import { styles } from "../styles";
-import { UniverseCanvas } from "./canvas";
+import { UniverseCanvas, ComputersCanvas } from "./canvas";
 import AnimatedText from "./AnimatedText";
 import CosmicNavigation from "./CosmicNavigation";
 
@@ -93,6 +93,13 @@ const Hero = () => {
           <UniverseCanvas />
         </div> */}
 
+        {/* 3D Computer Model - Stationary in Center */}
+        <div className="absolute inset-0 z-5 flex items-center justify-center">
+          <div className="w-full h-full max-w-2xl">
+            <ComputersCanvas />
+          </div>
+        </div>
+
         {/* Main Content - Always on Top */}
         <div className="relative z-10 flex flex-col items-center justify-center h-full">
           {/* Cosmic Navigation */}
@@ -157,9 +164,9 @@ const Hero = () => {
               className="mt-16 grid grid-cols-3 gap-8 max-w-md mx-auto"
             >
               {[
-                { number: "3+", label: "Years Experience", icon: "⭐" },
-                { number: "20+", label: "Projects Completed", icon: "🚀" },
-                { number: "15+", label: "Technologies", icon: "⚡" },
+                { number: "3+", label: "Years Experience" },
+                { number: "20+", label: "Projects Completed" },
+                { number: "15+", label: "Technologies" },
               ].map((stat, index) => (
                 <motion.div
                   key={index}
@@ -167,7 +174,6 @@ const Hero = () => {
                   whileHover={{ scale: 1.1, y: -5 }}
                   transition={{ duration: 0.2 }}
                 >
-                  <div className="text-2xl mb-2">{stat.icon}</div>
                   <div className="text-2xl font-bold text-white mb-1">{stat.number}</div>
                   <div className="text-sm text-gray-400">{stat.label}</div>
                 </motion.div>

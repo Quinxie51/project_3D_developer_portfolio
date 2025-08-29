@@ -29,6 +29,14 @@ import pastport from "./pastport.jpg";
 import expiro from "./expiro.png";
 import orbit from "./orbit.jpg";
 
+// PasPort project images
+import pasportThumbnail from "./PasPort/thumbnail.jpg";
+import pasportDashboard from "./PasPort/dashboard.png";
+import pasportTalk from "./PasPort/talk.png";
+import pasportChat from "./PasPort/chat.png";
+import pasportSave from "./PasPort/save.png";
+import pasportSet from "./PasPort/set.png";
+
 export {
   logo,
   backend,
@@ -57,4 +65,10 @@ export {
   pastport,
   expiro,
   orbit,
+  pasportThumbnail,
+  pasportDashboard,
+  pasportTalk,
+  pasportChat,
+  pasportSave,
+  pasportSet,
 };

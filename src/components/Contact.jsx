@@ -180,33 +180,30 @@ const Contact = () => {
                     Direct Channels
                   </h3>
                   <div className="space-y-4">
-                    <div className="flex items-center space-x-4">
-                      <div className="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center">
-                        <span className="text-2xl">📧</span>
-                      </div>
-                      <div>
-                        <p className="text-cyan-400 font-mono text-sm">Email</p>
-                        <p className="text-white">quinxie@starship.com</p>
-                      </div>
-                    </div>
-                    <div className="flex items-center space-x-4">
-                      <div className="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center">
-                        <span className="text-2xl">📱</span>
-                      </div>
-                      <div>
-                        <p className="text-cyan-400 font-mono text-sm">Comm Link</p>
-                        <p className="text-white">+1 (555) 123-4567</p>
-                      </div>
-                    </div>
-                    <div className="flex items-center space-x-4">
-                      <div className="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center">
-                        <span className="text-2xl">🌍</span>
-                      </div>
-                      <div>
-                        <p className="text-cyan-400 font-mono text-sm">Location</p>
-                        <p className="text-white">Digital Space, Earth Orbit</p>
-                      </div>
-                    </div>
+                                         <div className="flex items-center space-x-4">
+                       <div className="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center">
+                       </div>
+                       <div>
+                         <p className="text-cyan-400 font-mono text-sm">Email</p>
+                         <p className="text-white">quinxie@starship.com</p>
+                       </div>
+                     </div>
+                     <div className="flex items-center space-x-4">
+                       <div className="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center">
+                       </div>
+                       <div>
+                         <p className="text-cyan-400 font-mono text-sm">Comm Link</p>
+                         <p className="text-white">+1 (555) 123-4567</p>
+                       </div>
+                     </div>
+                     <div className="flex items-center space-x-4">
+                       <div className="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center">
+                       </div>
+                       <div>
+                         <p className="text-cyan-400 font-mono text-sm">Location</p>
+                         <p className="text-white">Digital Space, Earth Orbit</p>
+                       </div>
+                     </div>
                   </div>
                 </div>
 
@@ -216,23 +213,22 @@ const Contact = () => {
                     Social Networks
                   </h3>
                   <div className="grid grid-cols-2 gap-4">
-                    {[
-                      { name: 'GitHub', icon: '🐙', url: '#' },
-                      { name: 'LinkedIn', icon: '💼', url: '#' },
-                      { name: 'Twitter', icon: '🐦', url: '#' },
-                      { name: 'Portfolio', icon: '🚀', url: '#' }
-                    ].map((social, index) => (
-                      <motion.a
-                        key={index}
-                        href={social.url}
-                        className="flex items-center space-x-3 p-4 border border-cyan-400/30 rounded-lg hover:border-cyan-400/60 transition-colors"
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                      >
-                        <span className="text-2xl">{social.icon}</span>
-                        <span className="text-white font-space-grotesk">{social.name}</span>
-                      </motion.a>
-                    ))}
+                                         {[
+                       { name: 'GitHub', url: '#' },
+                       { name: 'LinkedIn', url: '#' },
+                       { name: 'Twitter', url: '#' },
+                       { name: 'Portfolio', url: '#' }
+                     ].map((social, index) => (
+                       <motion.a
+                         key={index}
+                         href={social.url}
+                         className="flex items-center space-x-3 p-4 border border-cyan-400/30 rounded-lg hover:border-cyan-400/60 transition-colors"
+                         whileHover={{ scale: 1.05 }}
+                         whileTap={{ scale: 0.95 }}
+                       >
+                         <span className="text-white font-space-grotesk">{social.name}</span>
+                       </motion.a>
+                     ))}
                   </div>
                 </div>
 

@@ -12,10 +12,10 @@ const CosmicNavigation = () => {
   }, []);
 
   const navItems = [
-    { id: "/", label: "Home", icon: "🌌" },
-    { id: "/projects", label: "Projects", icon: "🚀" },
-    { id: "/about", label: "About Me", icon: "⭐" },
-    { id: "/contact", label: "Contact", icon: "📡" },
+    { id: "/", label: "Home" },
+    { id: "/projects", label: "Projects" },
+    { id: "/about", label: "About Me" },
+    { id: "/contact", label: "Contact" },
   ];
 
   const handleNavClick = (path) => {
@@ -60,8 +60,7 @@ const CosmicNavigation = () => {
               )}
               
               {/* Text content - always on top */}
-              <span className="relative z-10 flex items-center">
-                <span className="mr-1">{item.icon}</span>
+              <span className="relative z-10">
                 {item.label}
               </span>
             </motion.button>
@@ -72,10 +71,9 @@ const CosmicNavigation = () => {
             onClick={handleResumeClick}
             className="relative px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 text-gray-300 hover:text-white hover:bg-white/10"
             whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
+            whileTap={{ scale: 0.98 }}
           >
-            <span className="relative z-10 flex items-center">
-              <span className="mr-1">📄</span>
+            <span className="relative z-10">
               Resume
             </span>
           </motion.button>
