@@ -23,6 +23,11 @@ const CosmicNavigation = () => {
     navigate(path);
   };
 
+  const handleResumeClick = () => {
+    console.log('CosmicNavigation: Opening Resume');
+    window.open("https://drive.google.com/file/d/1-ntgFbUvVx1QzBhJhtPa0L2otZOOalux/view?usp=drive_link", "_blank");
+  };
+
   return (
     <motion.div
       initial={{ opacity: 0, y: -50 }}
@@ -61,6 +66,19 @@ const CosmicNavigation = () => {
               </span>
             </motion.button>
           ))}
+          
+          {/* Resume Button */}
+          <motion.button
+            onClick={handleResumeClick}
+            className="relative px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 text-gray-300 hover:text-white hover:bg-white/10"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <span className="relative z-10 flex items-center">
+              <span className="mr-1">📄</span>
+              Resume
+            </span>
+          </motion.button>
         </div>
       </div>
     </motion.div>
