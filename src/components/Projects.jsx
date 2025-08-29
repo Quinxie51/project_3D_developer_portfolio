@@ -48,6 +48,10 @@ const ProjectCategory = ({ title, description, icon, color, link }) => {
 };
 
 const Projects = () => {
+  const navigate = useNavigate();
+  
+  console.log('Projects component rendered');
+
   const projectCategories = [
     {
       title: "Full Stack Projects",
@@ -74,29 +78,63 @@ const Projects = () => {
 
   return (
     <>
-      <motion.div variants={textVariant()}>
-        <p className={styles.sectionSubText}>My Work</p>
-        <h2 className={styles.sectionHeadText}>Projects.</h2>
-      </motion.div>
+      <div className="relative w-full min-h-screen bg-space-bg">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 starfield opacity-20"></div>
+        
+        <div className="relative z-10 container mx-auto px-8 py-16">
+          {/* Back to Home Button */}
+          <div className="absolute top-8 left-8">
+            <motion.button
+              onClick={() => navigate('/')}
+              className="px-6 py-3 bg-cyan-600/20 border border-cyan-400/30 text-cyan-300 rounded-full hover:bg-cyan-600/30 transition-colors"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              ← Back to Home
+            </motion.button>
+          </div>
 
-      <motion.p
-        variants={fadeIn("", "", 0.1, 1)}
-        className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px] mb-16"
-      >
-        Explore my diverse portfolio of projects across different domains. Each category represents a unique aspect of my skills and creativity in software development and design.
-      </motion.p>
+          {/* Main Content */}
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="max-w-6xl mx-auto"
+          >
+            {/* Header */}
+            <div className="text-center mb-16">
+              <h1 className="text-5xl font-space-grotesk font-bold text-white mb-4">
+                Project Portfolio
+              </h1>
+              <p className="text-xl text-cyan-400 font-mono">
+                Explore My Digital Creations
+              </p>
+            </div>
 
-      <div className="w-full flex flex-col lg:flex-row gap-8">
-        {projectCategories.map((category, index) => (
-          <ProjectCategory
-            key={category.title}
-            index={index}
-            {...category}
-          />
-        ))}
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.2 }}
+              className="text-gray-300 text-lg mb-16 max-w-3xl mx-auto text-center leading-relaxed"
+            >
+              Explore my diverse portfolio of projects across different domains. Each category represents a unique aspect of my skills and creativity in software development and design.
+            </motion.p>
+
+            <div className="w-full flex flex-col lg:flex-row gap-8">
+              {projectCategories.map((category, index) => (
+                <ProjectCategory
+                  key={category.title}
+                  index={index}
+                  {...category}
+                />
+              ))}
+            </div>
+          </motion.div>
+        </div>
       </div>
     </>
   );
 };
 
-export default SectionWrapper(Projects, "projects");
+export default Projects;

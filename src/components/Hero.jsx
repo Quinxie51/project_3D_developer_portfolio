@@ -1,12 +1,19 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import { useNavigate, useLocation } from "react-router-dom";
 import { styles } from "../styles";
 import { UniverseCanvas } from "./canvas";
 import AnimatedText from "./AnimatedText";
 import CosmicNavigation from "./CosmicNavigation";
 
 const Hero = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+
+  useEffect(() => {
+    console.log('Current location:', location.pathname);
+  }, [location]);
 
   useEffect(() => {
     const handleMouseMove = (e) => {
@@ -98,17 +105,7 @@ const Hero = () => {
             transition={{ duration: 1, delay: 0.5 }}
             className="text-center max-w-4xl mx-auto px-4"
           >
-            {/* Cosmic Greeting */}
-            <motion.div
-              initial={{ scale: 0 }}
-              animate={{ scale: 1 }}
-              transition={{ duration: 0.8, delay: 1 }}
-              className="mb-8"
-            >
-              <div className="inline-block p-4 rounded-full bg-gradient-to-r from-purple-500/30 to-pink-500/30 border border-purple-400/50 backdrop-blur-sm shadow-2xl">
-                <span className="text-4xl">🌌</span>
-              </div>
-            </motion.div>
+
 
             {/* Main Title */}
             <motion.h1
@@ -180,16 +177,19 @@ const Hero = () => {
                 />
               </motion.a>
 
-              {/* Explore Projects Button */}
-              <motion.a
-                href="#works"
+              {/* About Me Button */}
+              <motion.button
+                onClick={() => {
+                  console.log('About Me button clicked');
+                  navigate('/about');
+                }}
                 className="group relative px-8 py-4 border-2 border-purple-400/50 text-white font-semibold rounded-full backdrop-blur-sm overflow-hidden bg-black/20"
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
               >
                 <span className="relative z-10 flex items-center">
-                  <span className="mr-2">🚀</span>
-                  Explore Projects
+                  <span className="mr-2">👤</span>
+                  About Me
                 </span>
                 <motion.div
                   className="absolute inset-0 bg-purple-500/20"
@@ -197,7 +197,29 @@ const Hero = () => {
                   whileHover={{ x: "0%" }}
                   transition={{ duration: 0.3 }}
                 />
-              </motion.a>
+              </motion.button>
+
+              {/* Projects Button */}
+              <motion.button
+                onClick={() => {
+                  console.log('Projects button clicked');
+                  navigate('/projects');
+                }}
+                className="group relative px-8 py-4 border-2 border-purple-400/50 text-white font-semibold rounded-full backdrop-blur-sm overflow-hidden bg-black/20"
+                whileHover={{ scale: 1.05, y: -2 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <span className="relative z-10 flex items-center">
+                  <span className="mr-2">🚀</span>
+                  View Projects
+                </span>
+                <motion.div
+                  className="absolute inset-0 bg-purple-500/20"
+                  initial={{ x: "-100%" }}
+                  whileHover={{ x: "0%" }}
+                  transition={{ duration: 0.3 }}
+                />
+              </motion.button>
             </motion.div>
 
             {/* Cosmic Stats */}
@@ -227,28 +249,7 @@ const Hero = () => {
           </motion.div>
         </div>
 
-        {/* Scroll Indicator */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 3 }}
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20"
-        >
-          <motion.a
-            href="#about"
-            className="block"
-            animate={{ y: [0, 10, 0] }}
-            transition={{ duration: 2, repeat: Infinity }}
-          >
-            <div className="w-6 h-10 border-2 border-purple-400/50 rounded-full flex justify-center backdrop-blur-sm bg-black/20">
-              <motion.div
-                className="w-1 h-3 bg-gradient-to-b from-purple-400 to-pink-400 rounded-full mt-2"
-                animate={{ y: [0, 12, 0] }}
-                transition={{ duration: 1.5, repeat: Infinity }}
-              />
-            </div>
-          </motion.a>
-        </motion.div>
+
       </section>
     </>
   );

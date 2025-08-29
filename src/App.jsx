@@ -33,15 +33,17 @@ const App = () => {
         <CosmicCursor />
         
         <Routes>
-          {/* Main Portfolio Page */}
-          <Route path="/" element={
-            <>
-              <Hero />
-              <Projects />
-              <About />
-              <Contact />
-            </>
-          } />
+          {/* Main Portfolio Page - Only Hero */}
+          <Route path="/" element={<Hero />} />
+          
+          {/* About Page */}
+          <Route path="/about" element={<About />} />
+          
+          {/* Projects Page */}
+          <Route path="/projects" element={<Projects />} />
+          
+          {/* Contact Page */}
+          <Route path="/contact" element={<Contact />} />
           
           {/* Project Category Pages */}
           <Route path="/fullstack-projects" element={<FullStackProjects />} />
