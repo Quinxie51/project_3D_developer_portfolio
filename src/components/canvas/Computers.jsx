@@ -24,7 +24,7 @@ const Computers = ({ isMobile }) => {
           emissiveIntensity: 0.5,
           side: THREE.DoubleSide,
           transparent: true,
-          opacity: 0.9,
+          opacity: 0,
           depthWrite: true,
           clearcoat: 1.0,
           clearcoatRoughness: 0.1,
@@ -57,12 +57,12 @@ const Computers = ({ isMobile }) => {
         shadow-mapSize={1024}
       />
       <pointLight intensity={1.5} position={[10, 10, 10]} />
-      <primitive
-        object={scene}
-        scale={isMobile ? 0.2 : 0.6}  // Further reduced scale for smaller size
-        position={isMobile ? [0, -0.9, 0] : [0, 0.5, 0]}  // Centered position
-        rotation={[Math.PI / 6, Math.PI / 4, 0]}  // 45 degrees clockwise rotation (Y-axis)
-      />
+              <primitive
+          object={scene}
+          scale={isMobile ? 0.2 : 0.6}  // Further reduced scale for smaller size
+          position={isMobile ? [0, -0.9, 0] : [0, 0.5, 0]}  // Centered position
+          rotation={[Math.PI / 6, Math.PI + Math.PI / 4, 0]}  // 225 degrees rotation (Y-axis) - rotated 45 degrees from left to right
+        />
     </group>
   );
 };

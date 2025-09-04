@@ -5,6 +5,7 @@ import { styles } from "../styles";
 import { UniverseCanvas, ComputersCanvas } from "./canvas";
 import AnimatedText from "./AnimatedText";
 import CosmicNavigation from "./CosmicNavigation";
+import Projects from "./Projects";
 
 const Hero = () => {
   const navigate = useNavigate();
@@ -48,6 +49,7 @@ const Hero = () => {
         }}
       />
       
+      {/* Hero Section */}
       <section 
         id="home" 
         className="relative w-full h-screen mx-auto overflow-hidden"
@@ -184,6 +186,9 @@ const Hero = () => {
 
 
       </section>
+
+      {/* Projects Section - Integrated below Hero */}
+      <Projects />
     </>
   );
 };

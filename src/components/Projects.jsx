@@ -364,23 +364,11 @@ const Projects = () => {
 
   return (
     <>
-      <div className="relative w-full min-h-screen bg-space-bg">
+      <div className="relative w-full min-h-screen bg-transparent">
         {/* Background Pattern */}
         <div className="absolute inset-0 starfield opacity-20"></div>
         
         <div className="relative z-10 container mx-auto px-8 py-16">
-          {/* Back to Home Button */}
-          <div className="absolute top-8 left-8">
-            <motion.button
-              onClick={() => navigate('/')}
-              className="px-6 py-3 bg-cyan-600/20 border border-cyan-400/30 text-cyan-300 rounded-full hover:bg-cyan-600/30 transition-colors"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              ← Back to Home
-            </motion.button>
-          </div>
-
           {/* Main Content */}
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -402,7 +390,7 @@ const Projects = () => {
             <div className="flex gap-8">
               {/* Left Sidebar - Category Filters */}
               <div className="w-80 flex-shrink-0">
-                <div className="sticky top-8">
+                <div className="sticky top-24">
                   <h2 className="text-2xl font-space-grotesk font-bold text-white mb-6">
                     Categories
                   </h2>

@@ -13,7 +13,6 @@ const CosmicNavigation = () => {
 
   const navItems = [
     { id: "/", label: "Home" },
-    { id: "/projects", label: "Projects" },
     { id: "/about", label: "About Me" },
     { id: "/contact", label: "Contact" },
   ];
@@ -33,7 +32,8 @@ const CosmicNavigation = () => {
       initial={{ opacity: 0, y: -50 }}
       animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : -50 }}
       transition={{ duration: 0.8, delay: 0.5 }}
-      className="fixed top-8 left-1/2 transform -translate-x-1/2 z-50"
+      className="fixed top-8 left-1/2 transform -translate-x-1/2 z-[9999] cosmic-navigation"
+      style={{ zIndex: 99999, position: 'fixed' }}
     >
       <div className="bg-black/20 backdrop-blur-md rounded-full border border-white/20 p-2">
         <div className="flex space-x-2">

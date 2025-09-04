@@ -44,6 +44,42 @@ html, body {
 .z-3 { z-index: 3; }
 .z-4 { z-index: 4; }
 
+/* Override any conflicting z-index values */
+.cosmic-navigation {
+  z-index: 99999 !important;
+  position: fixed !important;
+  pointer-events: auto !important;
+}
+
+/* Force navigation to stay on top with highest specificity */
+body .cosmic-navigation,
+html body .cosmic-navigation,
+#root .cosmic-navigation {
+  z-index: 999999 !important;
+  position: fixed !important;
+  pointer-events: auto !important;
+}
+
+/* Ensure all navigation elements stay on top */
+.cosmic-navigation,
+.cosmic-navigation *,
+.cosmic-navigation > div,
+.cosmic-navigation button,
+.cosmic-navigation span {
+  z-index: 999999 !important;
+  position: relative !important;
+}
+
+/* Override any glass-panel or other component z-index values */
+.glass-panel {
+  z-index: 1 !important;
+}
+
+/* Ensure Projects component doesn't interfere with navigation */
+.relative.z-10 {
+  z-index: 1 !important;
+}
+
 /* Ensure background stays visible */
 .cosmic-background {
   background: linear-gradient(135deg, #000000 0%, #1a0033 25%, #330066 50%, #4d0099 75%, #6600cc 100%);

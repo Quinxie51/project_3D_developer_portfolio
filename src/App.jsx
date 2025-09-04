@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { About, Contact, Hero, Projects, ProjectDetail, FullStackProjects, UIUXProjects, CreativeProjects, StarsCanvas } from "./components";
+import { About, Contact, Hero, ProjectDetail, FullStackProjects, UIUXProjects, CreativeProjects, StarsCanvas } from "./components";
 import CosmicLoader from "./components/CosmicLoader";
 import CosmicCursor from "./components/CosmicCursor";
 
@@ -33,14 +33,11 @@ const App = () => {
         <CosmicCursor />
         
         <Routes>
-          {/* Main Portfolio Page - Only Hero */}
+          {/* Main Portfolio Page - Hero + Projects */}
           <Route path="/" element={<Hero />} />
           
           {/* About Page */}
           <Route path="/about" element={<About />} />
-          
-          {/* Projects Page */}
-          <Route path="/projects" element={<Projects />} />
           
           {/* Individual Project Page */}
           <Route path="/project/:id" element={<ProjectDetail />} />
