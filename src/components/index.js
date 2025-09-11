@@ -8,6 +8,9 @@ import Works from "./Works";
 import Feedbacks from "./Feedbacks";
 import Contact from "./Contact";
 import CanvasLoader from "./Loader";
+import HomePage from "./HomePage";
+import AboutPage from "./AboutPage";
+import WorkPage from "./WorkPage";
 
 
 export {
@@ -20,6 +23,9 @@ export {
   Feedbacks,
   Contact,
   CanvasLoader,
+  HomePage,
+  AboutPage,
+  WorkPage,
   EarthCanvas, 
   BallCanvas, 
   ComputersCanvas, 

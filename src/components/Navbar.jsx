@@ -42,12 +42,12 @@ const Navbar = () => {
             window.scrollTo(0, 0);
           }}
         >
-          <p className='text-white text-[18px] font-bold cursor-pointer flex '>
-            Quinxie &nbsp;
-          </p>
+          <div className='w-10 h-10 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center'>
+            <span className='text-white text-[18px] font-bold'>Q</span>
+          </div>
         </Link>
 
-        <ul className='list-none hidden sm:flex flex-row gap-10'>
+        <ul className='list-none hidden sm:flex flex-row gap-10 items-center'>
           {navLinks.map((nav) => (
             <li
               key={nav.id}
@@ -56,9 +56,21 @@ const Navbar = () => {
               } hover:text-white text-[18px] font-medium cursor-pointer`}
               onClick={() => setActive(nav.title)}
             >
-              <a href={`#${nav.id}`}>{nav.title}</a>
+              <Link to={nav.id}>{nav.title}</Link>
             </li>
           ))}
+          
+          {/* Resume Button */}
+          <li>
+            <a
+              href="https://drive.google.com/file/d/1kQaamS1BAiFSFUfmwsIJPt7kD0OzXlhl/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block px-4 py-2 bg-[#915EFF] text-white font-semibold rounded-lg shadow-lg hover:bg-[#7c3aed] transition-colors duration-200 text-[16px]"
+            >
+              Resume
+            </a>
+          </li>
         </ul>
 
         <div className='sm:hidden flex flex-1 justify-end items-center'>
@@ -86,9 +98,22 @@ const Navbar = () => {
                     setActive(nav.title);
                   }}
                 >
-                  <a href={`#${nav.id}`}>{nav.title}</a>
+                  <Link to={nav.id}>{nav.title}</Link>
                 </li>
               ))}
+              
+              {/* Resume Button for Mobile */}
+              <li className="mt-2">
+                <a
+                  href="https://drive.google.com/file/d/1kQaamS1BAiFSFUfmwsIJPt7kD0OzXlhl/view?usp=sharing"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block px-4 py-2 bg-[#915EFF] text-white font-semibold rounded-lg shadow-lg hover:bg-[#7c3aed] transition-colors duration-200 text-[14px]"
+                  onClick={() => setToggle(!toggle)}
+                >
+                  Resume
+                </a>
+              </li>
             </ul>
           </div>
         </div>

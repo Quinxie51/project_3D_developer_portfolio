@@ -1,6 +1,9 @@
-import { BrowserRouter } from "react-router-dom";
-import { About, Contact, Experience, Hero, Navbar, Tech, Works, StarsCanvas } from "./components";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Navbar, StarsCanvas } from "./components";
 import CustomCursor from "./components/CustomCursor";
+import HomePage from "./components/HomePage";
+import AboutPage from "./components/AboutPage";
+import WorkPage from "./components/WorkPage";
 
 const App = () => {
   return (
@@ -11,14 +14,12 @@ const App = () => {
         <div className="relative z-10">
           <Navbar />
         </div>
-        <Hero />
-        <About />
-        <Works />
-        <Experience />
-        <Tech />
-        <div className="relative z-10">
-          <Contact />
-        </div>
+        
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/work" element={<WorkPage />} />
+          <Route path="/about" element={<AboutPage />} />
+        </Routes>
       </div>
     </BrowserRouter>
   );

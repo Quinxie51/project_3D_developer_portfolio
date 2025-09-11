@@ -17,17 +17,6 @@ const Hero = () => {
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
             I'm a <AnimatedText />
           </p>
-          {/* Add Resume Button */}
-          <div className="mt-20">
-          <a
-              href="https://drive.google.com/file/d/1kQaamS1BAiFSFUfmwsIJPt7kD0OzXlhl/view?usp=sharing" // Updated resume link
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block px-6 py-3 bg-[#915EFF] text-white font-semibold rounded-lg shadow-lg"
-            >
-              My Resume
-            </a>
-          </div>
         </div>
       </div>
 

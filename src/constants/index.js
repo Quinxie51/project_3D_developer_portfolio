@@ -27,25 +27,12 @@ import {
 // constants.js
 export const navLinks = [
   {
-    id: "home",
-    title: "Home",
-  },
-  {
-    id: "about",
-    title: "About",
-  },
-  {
-    id: "project",
-    title: "Projects",
-  },
-  {
-    id: "work",
+    id: "/work",
     title: "Work",
   },
-
   {
-    id: "contact",
-    title: "Contact",
+    id: "/about",
+    title: "About",
   },
 ];
 
