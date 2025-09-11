@@ -20,7 +20,7 @@ const Hero = () => {
           {/* Add Resume Button */}
           <div className="mt-20">
           <a
-              href="https://drive.google.com/file/d/1-ntgFbUvVx1QzBhJhtPa0L2otZOOalux/view?usp=drive_link" // Replace with the actual URL to your resume
+              href="https://drive.google.com/file/d/1kQaamS1BAiFSFUfmwsIJPt7kD0OzXlhl/view?usp=sharing" // Updated resume link
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block px-6 py-3 bg-[#915EFF] text-white font-semibold rounded-lg shadow-lg"
