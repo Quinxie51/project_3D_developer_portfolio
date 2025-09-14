@@ -25,7 +25,19 @@ import skimble from "./company/skimble.jpg";
 import edge from "./company/edge.jpg";
 import augustana from "./company/augustana.png";
 
-import pastport from "./pastport.jpg";
+import pastport from "./PasPort/thumbnail.jpg";
+import pastportChat from "./PasPort/chat.png";
+import pastportDashboard from "./PasPort/dashboard.png";
+import pastportSave from "./PasPort/save.png";
+import pastportSet from "./PasPort/set.png";
+import pastportTalk from "./PasPort/talk.png";
+import pastportPitchDeck from "./PasPort/PastPort Mobile App (1).pdf";
+import zeroKm from "./0km/thumbnail 0km.png";
+import zeroKmCalendar from "./0km/calendar.png";
+import zeroKmChat from "./0km/chat 0km.png";
+import zeroKmDiary from "./0km/diary.png";
+import zeroKmHome from "./0km/home.png";
+import zeroKmMusic from "./0km/music.png";
 import expiro from "./expiro.png";
 import orbit from "./orbit.jpg";
 
@@ -55,6 +67,18 @@ export {
   edge,
   augustana,
   pastport,
+  pastportChat,
+  pastportDashboard,
+  pastportSave,
+  pastportSet,
+  pastportTalk,
+  pastportPitchDeck,
+  zeroKm,
+  zeroKmCalendar,
+  zeroKmChat,
+  zeroKmDiary,
+  zeroKmHome,
+  zeroKmMusic,
   expiro,
   orbit,
 };

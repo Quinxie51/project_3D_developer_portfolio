@@ -4,6 +4,8 @@ import CustomCursor from "./components/CustomCursor";
 import HomePage from "./components/HomePage";
 import AboutPage from "./components/AboutPage";
 import WorkPage from "./components/WorkPage";
+import ProjectDetailPastPort from "./components/ProjectDetail-PastPort";
+import ProjectDetail0KM from "./components/ProjectDetail-0KM";
 
 const App = () => {
   return (
@@ -19,6 +21,8 @@ const App = () => {
           <Route path="/" element={<HomePage />} />
           <Route path="/work" element={<WorkPage />} />
           <Route path="/about" element={<AboutPage />} />
+          <Route path="/project/pastport" element={<ProjectDetailPastPort />} />
+          <Route path="/project/0km" element={<ProjectDetail0KM />} />
         </Routes>
       </div>
     </BrowserRouter>
