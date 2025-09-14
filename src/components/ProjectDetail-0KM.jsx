@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import { useNavigate, useLocation } from "react-router-dom";
 
@@ -7,10 +7,15 @@ const ProjectDetail0KM = () => {
   const location = useLocation();
   const project = location.state?.project;
 
+  // Scroll to top when component mounts
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   if (!project || !project.detailedInfo) {
     return (
       <div className="relative w-full min-h-screen bg-black">
-        <div className="relative z-10 container mx-auto px-8 pt-24 pb-16">
+        <div className="relative z-0 container mx-auto px-8 pt-24 pb-16">
           <div className="text-center">
             <h1 className="text-4xl font-bold text-white mb-4">
               Project Not Found
@@ -31,7 +36,7 @@ const ProjectDetail0KM = () => {
 
   return (
     <div className="relative w-full min-h-screen bg-black text-white">
-      <div className="relative z-10 container mx-auto px-8 pt-24 pb-16">
+      <div className="relative z-0 container mx-auto px-8 pt-24 pb-16">
         {/* Hero Section */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}

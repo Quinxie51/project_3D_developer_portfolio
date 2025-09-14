@@ -424,23 +424,126 @@ const projects = [
   {
     name: "Expiro",
     description:
-      "Mobile applications that keeps track of your food's expired dates",
+      "Award-winning sustainability app that helps users reduce food waste through smart tracking and notifications",
     tags: [
       {
-        name: "flutter",
+        name: "Flutter",
         color: "blue-text-gradient",
       },
       {
-        name: "dart",
+        name: "Dart",
         color: "green-text-gradient",
       },
       {
-        name: "css",
+        name: "ML Kit",
         color: "pink-text-gradient",
+      },
+      {
+        name: "Design",
+        color: "purple-text-gradient",
       },
     ],
     image: expiro,
-    source_code_link: "https://devpost.com/software/expiro-fgp3nq?ref_content=user-portfolio&ref_feature=in_progress",
+    source_code_link: "https://github.com/Quinxie51/ExpiRo-App",
+    demoVideo: "https://drive.google.com/file/d/1EMUVnpkdRoA88RSh4-Jh9z9p7MlQRxmv/view?resourcekey",
+    figmaLink: "https://www.figma.com/design/6T384Ps3lKP51BUjwXAVsG/Hackathon?node-id=0-1&t=B6JOiwY5mOgCRoEp-1",
+    pitchDeck: "https://docs.google.com/presentation/d/163TyuhHehFlLheRFHTREbNeB-dsO74dY72ifkgCxSbc/edit?usp=sharing",
+    // Additional project details for detailed view
+    detailedInfo: {
+      title: "ExpiRo - Track Food. Cut Waste. Eat Better.",
+      subtitle: "Award-Winning Sustainability App • Product Designer & Flutter Developer",
+      heroImage: expiro,
+      heroQuote: "How I designed a food tracking app that won 2nd place at CCSC Midwest Regional Competition by solving real household food waste problems",
+      quickStats: {
+        award: "2nd Place, CCSC Midwest Regional Competition",
+        timeline: "12 weeks (Feb-May 2024)",
+        role: "Product Designer, Flutter Developer, Project Manager",
+        impact: "40% waste reduction during testing period"
+      },
+      challenge: "Food waste isn't about not caring—it's about broken systems in our daily lives. Through preliminary research, I discovered that $1,500 average amount US households waste on spoiled food annually, 30-40% of food supply goes to waste in America, and 80 billion lbs of food is wasted annually in US households.",
+      vision: "Create an offline-first, scan-focused app that makes food waste prevention feel effortless and rewarding through smart camera scanning, visual urgency systems, and positive progress tracking.",
+      roleDescription: "As Product Designer, Flutter Developer, and Project Manager, I led end-to-end product strategy, conducted comprehensive user research, designed the complete UX/UI system, built the technical architecture with offline-first approach, and delivered a working MVP that won 2nd place in regional competition.",
+      features: [
+        {
+          title: "Smart Camera Scanning",
+          description: "Progressive scanning intelligence with real-time feedback, confidence indicators, and graceful degradation when scanning fails.",
+          image: "/src/assets/0km/Expiro/ingredient.png",
+          highlights: [
+            "Real-time feedback with green overlay when text is detected",
+            "Confidence indicators show which fields were auto-detected vs. manual",
+            "Learning system gets better at recognizing user's common products",
+            "Easy corrections with tap-to-edit auto-filled information"
+          ]
+        },
+        {
+          title: "Visual Priority Dashboard",
+          description: "Intelligent visual hierarchy with urgency-based sorting, color-coded status indicators, and smart filtering options.",
+          image: "/src/assets/0km/Expiro/main.png",
+          highlights: [
+            "Critical items (0-1 days) at top with red accent",
+            "Soon items (2-3 days) with amber accent", 
+            "Fresh items (4+ days) with green accent",
+            "Color-coded left borders for quick scanning"
+          ]
+        },
+        {
+          title: "Smart Notification System",
+          description: "Contextual notification intelligence with timing algorithms, personalized content, and user-controlled settings.",
+          image: "/src/assets/0km/Expiro/notification.png",
+          highlights: [
+            "Fresh Items (7+ days): No notifications",
+            "Use Soon (3-4 days): Gentle reminder with meal suggestions",
+            "Urgent (1-2 days): Action-focused notification with specific next steps",
+            "Batched notifications for multiple expiring items"
+          ]
+        },
+        {
+          title: "Positive Progress Tracking",
+          description: "Gamified impact metrics celebrating food saved rather than shame for waste, with visual progress indicators and achievement systems.",
+          image: "/src/assets/0km/Expiro/calendar.png",
+          highlights: [
+            "Items Saved: Total count with weekly trends",
+            "Money Preserved: Dollar estimates based on item values",
+            "Environmental Impact: CO2 saved, water conserved",
+            "Achievement badges for milestones and streaks"
+          ]
+        }
+      ],
+      techStack: {
+        frontend: "Flutter + Dart - Single codebase for iOS/Android with native performance",
+        storage: "Local CSV Storage - Human-readable, easily exportable, no database overhead",
+        vision: "Camera ML Kit - On-device text recognition for privacy and speed",
+        notifications: "Local Notifications - Reliable delivery without push notification infrastructure"
+      },
+      results: {
+        quantitative: [
+          "40% reduction in food waste among test users over 4 weeks",
+          "$67 average savings per household per month",
+          "5.8 days/week average app usage (high engagement for utility app)",
+          "92% task success rate for core user flows",
+          "2nd Place, CCSC Midwest Regional Competition"
+        ],
+        testimonials: [
+          "Finally, a food app that doesn't make me plan every meal. I just scan stuff and it tells me when to use it.",
+          "The traffic light system is genius—I can see what needs attention immediately.",
+          "Love seeing how much money I'm saving by not wasting food. It's actually motivating!"
+        ]
+      },
+      learnings: {
+        design: [
+          "Systems thinking creates sustainable behavior change better than willpower",
+          "Progressive disclosure in complex applications prevents overwhelm",
+          "Visual communication matches users' natural information processing patterns",
+          "Positive reinforcement works better than shame-based motivation"
+        ],
+        technical: [
+          "Offline-first architecture teaches advanced state management and data synchronization",
+          "Computer vision integration requires elegant error handling and graceful degradation",
+          "Performance optimization at scale teaches mobile efficiency principles",
+          "Local storage can be a feature, not just a constraint"
+        ]
+      }
+    }
   },
   {
     name: "Orbit Guardian",
