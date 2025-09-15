@@ -5,13 +5,103 @@ import { useNavigate } from 'react-router-dom';
 import SectionHeader from './SectionHeader';
 import ProjectCard from './ProjectCard';
 import GlassPanel from './GlassPanel';
-import { pastport, pastportChat, pastportDashboard, pastportSave, pastportSet, pastportTalk, pastportPitchDeck, zeroKm, zeroKmCalendar, zeroKmChat, zeroKmDiary, zeroKmHome, zeroKmMusic } from '../assets';
+import { pastport, pastportChat, pastportDashboard, pastportSave, pastportSet, pastportTalk, pastportPitchDeck, zeroKm, zeroKmCalendar, zeroKmChat, zeroKmDiary, zeroKmHome, zeroKmMusic, expiro, agentopsThumbnail, agentopsVendor, agentopsAnalys, agentopsChart } from '../assets';
 
 const HomePage = () => {
   const navigate = useNavigate();
   
-  // Selective projects for home page - only the best 3-4 projects
+  // Selective projects for home page - only the best projects
   const featuredProjects = [
+    {
+      title: "AgentOps",
+      year: "2024",
+      summary: "Enterprise AI Workflow Visualization & Audit Platform that makes black-box AI systems auditable for enterprise compliance. 2nd Place winner at Hack-Nation's Global AI Hackathon.",
+      cover: agentopsThumbnail,
+      tags: ["React", "LangGraph", "AI Engineering", "Enterprise"],
+      roles: ["Full-Stack Developer", "AI Engineer", "UX Contributor"],
+      detailedInfo: {
+        title: "AgentOps - Making AI Decisions Transparent",
+        subtitle: "Enterprise AI Workflow Visualization & Audit Platform • Full-Stack Developer & AI Engineer",
+        heroImage: agentopsThumbnail,
+        heroQuote: "How I built an AI transparency platform that visualizes 1,200+ agent decisions simultaneously, making black-box AI systems auditable for enterprise compliance",
+        quickStats: {
+          problem: "AI Transparency for Enterprise Compliance",
+          timeline: "8 weeks (Hackathon/Sprint Format)",
+          role: "Full-Stack Developer, AI Engineer, UX Contributor",
+          impact: "2nd Place - Hack-Nation's Global AI Hackathon"
+        },
+        challenge: "As AI systems handle increasingly critical business decisions, lack of visibility into their reasoning creates massive risks. AI makes thousands of decisions daily with zero audit trail, regulatory bodies demand explainable AI for financial/healthcare decisions, and one wrong AI decision can cost companies millions in compliance violations.",
+        vision: "Create an enterprise-grade platform that makes complex AI workflows as understandable as a flowchart, with real-time compliance monitoring and deterministic replay capabilities.",
+        roleDescription: "As Full-Stack Developer and AI Engineer, I led the technical architecture, built the interactive workflow visualization engine, implemented the compliance monitoring system, and delivered a working MVP that handles 1,200+ simultaneous agent decisions.",
+        features: [
+          {
+            title: "Interactive Workflow Visualization Engine",
+            description: "Hierarchical visualization with smart clustering for complex multi-agent workflows. Real-time updates with WebSocket integration for live status changes.",
+            image: agentopsVendor,
+            highlights: [
+              "XYFlow integration with custom node types for smooth pan/zoom",
+              "Virtual rendering for workflows with 100+ nodes",
+              "90% reduction in render time, 60 FPS maintained",
+              "Real-time updates with WebSocket integration"
+            ]
+          },
+          {
+            title: "Real-Time Compliance Monitoring",
+            description: "Intelligent compliance engine with configurable rules. 1,200 vendors evaluated in 3.2 seconds with 95% cache hit rate for repeated evaluations.",
+            image: agentopsAnalys,
+            highlights: [
+              "Live violation heat map with geographic/categorical views",
+              "Smart alert system with severity-based routing",
+              "Real-time alerts with <500ms latency",
+              "Configurable compliance rules with automated evaluation"
+            ]
+          },
+          {
+            title: "Deterministic Replay & Time Travel Debugging",
+            description: "Time travel interface with state snapshots for reviewing and debugging complex AI decision sequences. Every replay generates detailed audit logs.",
+            image: agentopsChart,
+            highlights: [
+              "Timeline scrubber with major decision points marked",
+              "State visualization showing what each agent 'knew'",
+              "Automatic documentation with evidence preservation",
+              "Alternative path exploration with 'what if' scenarios"
+            ]
+          }
+        ],
+        techStack: {
+          frontend: "React 18 with TypeScript, XYFlow/ReactFlow for interactive node visualization, shadcn/ui components, Tailwind CSS styling",
+          backend: "LangGraph for multi-agent workflow orchestration, LangChain for LLM integration, Azure OpenAI GPT-4, FastAPI with PostgreSQL",
+          performance: "Virtual rendering for large workflows, debounced real-time updates, WebSocket integration, Redis caching for compliance evaluation",
+          security: "OAuth 2.0 + RBAC, API rate limiting, end-to-end encryption, complete audit logging for security compliance"
+        },
+        results: {
+          quantitative: [
+            "75% faster compliance audits (8 hours → 2 hours average)",
+            "96% accuracy in identifying compliance violations",
+            "$2.3M estimated savings from prevented violations",
+            "3.2 second evaluation of 1,200 vendor compliance",
+            "99.7% system uptime during pilot deployment"
+          ],
+          testimonials: [
+            "AgentOps transformed how we think about AI accountability. For the first time, I can confidently explain our AI decisions to regulators.",
+            "The visual workflow helped us identify a critical bottleneck in our vendor selection that was costing us weeks of delays.",
+            "Before AgentOps, AI was a black box. Now it's a transparent process I can trust and defend to our board."
+          ]
+        },
+        learnings: {
+          design: [
+            "Enterprise requirements are fundamentally different from consumer needs - audit trails and compliance aren't optional",
+            "AI explainability is a UX problem - design explanations for specific audiences rather than one-size-fits-all",
+            "Progressive complexity disclosure prevents overwhelming users with technical details"
+          ],
+          technical: [
+            "Building for enterprise scale from day one requires different architectural patterns",
+            "Multi-agent state management taught advanced event-driven architecture patterns",
+            "Performance optimization at enterprise scale requires virtual rendering and intelligent caching strategies"
+          ]
+        }
+      }
+    },
     {
       title: "0-KM",
       year: "2025",
@@ -19,6 +109,7 @@ const HomePage = () => {
       cover: zeroKm,
       tags: ["React Native", "Node.js", "Supabase", "Socket.io"],
       roles: ["Full-Stack Developer", "Product Designer", "UX Researcher"],
+      category: "product",
       detailedInfo: {
         title: "0-KM - Bridging Hearts Across Any Distance",
         subtitle: "Award-Winning Relationship App • Full-Stack Developer & Product Designer",
@@ -138,6 +229,7 @@ const HomePage = () => {
       cover: pastport,
       tags: ["AI", "Education", "Mobile", "Flutter"],
       roles: ["Product Designer", "Full-Stack Engineer"],
+      category: "product",
       tools: ["Flutter", "Dart", "OpenAI API", "SQLite"],
       detailedInfo: {
         title: "PastPort - Revolutionizing History Education",
@@ -209,33 +301,6 @@ const HomePage = () => {
           ]
         }
       }
-    },
-    {
-      title: "E-Commerce Platform",
-      year: "2024",
-      summary: "A modern e-commerce solution built with React, Node.js, and MongoDB. Features include user authentication, product management, and payment integration.",
-      cover: "/src/assets/web.png",
-      tags: ["Full Stack", "E-Commerce", "React"],
-      roles: ["Full Stack Developer", "UI/UX Designer"],
-      tools: ["React", "Node.js", "MongoDB", "Stripe", "Tailwind CSS"]
-    },
-    {
-      title: "AI Chat Application",
-      year: "2024",
-      summary: "An intelligent chat application powered by OpenAI's GPT model. Built with real-time messaging, conversation history, and smart responses.",
-      cover: "/src/assets/chat.png",
-      tags: ["AI", "Real-time", "Chat"],
-      roles: ["Backend Developer", "AI Integration"],
-      tools: ["Python", "OpenAI API", "WebSocket", "React", "FastAPI"]
-    },
-    {
-      title: "Portfolio Website",
-      year: "2024",
-      summary: "A minimalist portfolio website showcasing creative work and professional experience. Built with modern web technologies and smooth animations.",
-      cover: "/src/assets/creator.png",
-      tags: ["Portfolio", "Creative", "Modern"],
-      roles: ["Frontend Developer", "Designer"],
-      tools: ["React", "Framer Motion", "Tailwind CSS", "Three.js"]
     }
   ];
 
@@ -265,6 +330,8 @@ const HomePage = () => {
                     navigate('/project/pastport', { state: { project } });
                   } else if (project.title === "0-KM") {
                     navigate('/project/0km', { state: { project } });
+                  } else if (project.title === "AgentOps") {
+                    navigate('/project/agentops', { state: { project } });
                   } else {
                     console.log(`Clicked on ${project.title}`);
                   }

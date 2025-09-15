@@ -39,7 +39,16 @@ import zeroKmDiary from "./0km/diary.png";
 import zeroKmHome from "./0km/home.png";
 import zeroKmMusic from "./0km/music.png";
 import expiro from "./expiro.png";
+import expiroThumbnail from "./Expiro/thumbnail.png";
+import expiroMain from "./Expiro/main.png";
+import expiroIngredient from "./Expiro/ingredient.png";
+import expiroNotification from "./Expiro/notification.png";
+import expiroPresentation from "./Expiro/presentation.jpg";
 import orbit from "./orbit.jpg";
+import agentopsThumbnail from "./AgentOps/thumbnail.png";
+import agentopsVendor from "./AgentOps/vendor found.png";
+import agentopsAnalys from "./AgentOps/analys.png";
+import agentopsChart from "./AgentOps/chart.png";
 
 export {
   logo,
@@ -80,5 +89,14 @@ export {
   zeroKmHome,
   zeroKmMusic,
   expiro,
+  expiroThumbnail,
+  expiroMain,
+  expiroIngredient,
+  expiroNotification,
+  expiroPresentation,
   orbit,
+  agentopsThumbnail,
+  agentopsVendor,
+  agentopsAnalys,
+  agentopsChart,
 };

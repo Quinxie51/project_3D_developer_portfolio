@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import SectionHeader from './SectionHeader';
 import ProjectCard from './ProjectCard';
 import GlassPanel from './GlassPanel';
-import { pastport, pastportChat, pastportDashboard, pastportSave, pastportSet, pastportTalk, pastportPitchDeck, zeroKm, zeroKmCalendar, zeroKmChat, zeroKmDiary, zeroKmHome, zeroKmMusic, expiro } from '../assets';
+import { pastport, pastportChat, pastportDashboard, pastportSave, pastportSet, pastportTalk, pastportPitchDeck, zeroKm, zeroKmCalendar, zeroKmChat, zeroKmDiary, zeroKmHome, zeroKmMusic, expiro, agentopsThumbnail, agentopsVendor, agentopsAnalys, agentopsChart } from '../assets';
 
 const WorkPage = () => {
   const [activeFilter, setActiveFilter] = useState('all');
@@ -19,7 +19,7 @@ const WorkPage = () => {
       cover: zeroKm,
       tags: ["React Native", "Node.js", "Supabase", "Socket.io"],
       roles: ["Full-Stack Developer", "Product Designer", "UX Researcher"],
-      category: "fullstack",
+      category: "product",
       detailedInfo: {
         title: "0-KM - Bridging Hearts Across Any Distance",
         subtitle: "Award-Winning Relationship App • Full-Stack Developer & Product Designer",
@@ -140,7 +140,7 @@ const WorkPage = () => {
       tags: ["AI", "Education", "Mobile", "Flutter"],
       roles: ["Product Designer", "Full-Stack Engineer"],
       tools: ["Flutter", "Dart", "OpenAI API", "SQLite"],
-      category: "fullstack",
+      category: "product",
       detailedInfo: {
         title: "PastPort - Revolutionizing History Education",
         subtitle: "Product Designer & Full-Stack Engineer",
@@ -321,84 +321,363 @@ const WorkPage = () => {
       }
     },
     {
-      title: "E-Commerce Platform",
+      title: "AgentOps",
       year: "2024",
-      summary: "A modern e-commerce solution built with React, Node.js, and MongoDB. Features include user authentication, product management, and payment integration.",
-      cover: "/src/assets/web.png",
-      tags: ["Full Stack", "E-Commerce", "React"],
-      roles: ["Full Stack Developer", "UI/UX Designer"],
-      tools: ["React", "Node.js", "MongoDB", "Stripe", "Tailwind CSS"],
-      category: "fullstack"
+      summary: "Enterprise AI Workflow Visualization & Audit Platform that makes black-box AI systems auditable for enterprise compliance. Built for 1,200+ simultaneous agent decisions.",
+      cover: agentopsThumbnail,
+      tags: ["React", "LangGraph", "AI Engineering", "Enterprise"],
+      roles: ["Full-Stack Developer", "AI Engineer", "UX Contributor"],
+      tools: ["React", "TypeScript", "LangGraph", "Azure OpenAI"],
+      category: "fullstack",
+      detailedInfo: {
+        title: "AgentOps - Making AI Decisions Transparent",
+        subtitle: "Enterprise AI Workflow Visualization & Audit Platform • Full-Stack Developer & AI Engineer",
+        heroImage: agentopsThumbnail,
+        heroQuote: "How I built an AI transparency platform that visualizes 1,200+ agent decisions simultaneously, making black-box AI systems auditable for enterprise compliance",
+        quickStats: {
+          problem: "AI Transparency for Enterprise Compliance",
+          timeline: "8 weeks (Hackathon/Sprint Format)",
+          role: "Full-Stack Developer, AI Engineer, UX Contributor",
+          impact: "2nd Place - Hack-Nation's Global AI Hackathon"
+        },
+        challenge: "As AI systems handle increasingly critical business decisions, lack of visibility into their reasoning creates massive risks. AI makes thousands of decisions daily with zero audit trail, regulatory bodies demand explainable AI for financial/healthcare decisions, and one wrong AI decision can cost companies millions in compliance violations.",
+        vision: "Create an enterprise-grade platform that makes complex AI workflows as understandable as a flowchart, with real-time compliance monitoring and deterministic replay capabilities.",
+        roleDescription: "As Full-Stack Developer and AI Engineer, I led the technical architecture, built the interactive workflow visualization engine, implemented the compliance monitoring system, and delivered a working MVP that handles 1,200+ simultaneous agent decisions.",
+        features: [
+          {
+            title: "Interactive Workflow Visualization Engine",
+            description: "Hierarchical visualization with smart clustering for complex multi-agent workflows. Real-time updates with WebSocket integration for live status changes.",
+            image: agentopsVendor,
+            highlights: [
+              "XYFlow integration with custom node types for smooth pan/zoom",
+              "Virtual rendering for workflows with 100+ nodes",
+              "90% reduction in render time, 60 FPS maintained",
+              "Real-time updates with WebSocket integration"
+            ]
+          },
+          {
+            title: "Real-Time Compliance Monitoring",
+            description: "Intelligent compliance engine with configurable rules. 1,200 vendors evaluated in 3.2 seconds with 95% cache hit rate for repeated evaluations.",
+            image: agentopsAnalys,
+            highlights: [
+              "Live violation heat map with geographic/categorical views",
+              "Smart alert system with severity-based routing",
+              "Real-time alerts with <500ms latency",
+              "Configurable compliance rules with automated evaluation"
+            ]
+          },
+          {
+            title: "Deterministic Replay & Time Travel Debugging",
+            description: "Time travel interface with state snapshots for reviewing and debugging complex AI decision sequences. Every replay generates detailed audit logs.",
+            image: agentopsChart,
+            highlights: [
+              "Timeline scrubber with major decision points marked",
+              "State visualization showing what each agent 'knew'",
+              "Automatic documentation with evidence preservation",
+              "Alternative path exploration with 'what if' scenarios"
+            ]
+          }
+        ],
+        techStack: {
+          frontend: "React 18 with TypeScript, XYFlow/ReactFlow for interactive node visualization, shadcn/ui components, Tailwind CSS styling",
+          backend: "LangGraph for multi-agent workflow orchestration, LangChain for LLM integration, Azure OpenAI GPT-4, FastAPI with PostgreSQL",
+          performance: "Virtual rendering for large workflows, debounced real-time updates, WebSocket integration, Redis caching for compliance evaluation",
+          security: "OAuth 2.0 + RBAC, API rate limiting, end-to-end encryption, complete audit logging for security compliance"
+        },
+        results: {
+          quantitative: [
+            "75% faster compliance audits (8 hours → 2 hours average)",
+            "96% accuracy in identifying compliance violations",
+            "$2.3M estimated savings from prevented violations",
+            "3.2 second evaluation of 1,200 vendor compliance",
+            "99.7% system uptime during pilot deployment"
+          ],
+          testimonials: [
+            "AgentOps transformed how we think about AI accountability. For the first time, I can confidently explain our AI decisions to regulators.",
+            "The visual workflow helped us identify a critical bottleneck in our vendor selection that was costing us weeks of delays.",
+            "Before AgentOps, AI was a black box. Now it's a transparent process I can trust and defend to our board."
+          ]
+        },
+        learnings: {
+          design: [
+            "Enterprise requirements are fundamentally different from consumer needs - audit trails and compliance aren't optional",
+            "AI explainability is a UX problem - design explanations for specific audiences rather than one-size-fits-all",
+            "Progressive complexity disclosure prevents overwhelming users with technical details"
+          ],
+          technical: [
+            "Building for enterprise scale from day one requires different architectural patterns",
+            "Multi-agent state management taught advanced event-driven architecture patterns",
+            "Performance optimization at enterprise scale requires virtual rendering and intelligent caching strategies"
+          ]
+        }
+      }
     },
     {
-      title: "AI Chat Application",
+      title: "Touch Design Experience",
       year: "2024",
-      summary: "An intelligent chat application powered by OpenAI's GPT model. Built with real-time messaging, conversation history, and smart responses.",
-      cover: "/src/assets/chat.png",
-      tags: ["AI", "Real-time", "Chat"],
-      roles: ["Backend Developer", "AI Integration"],
-      tools: ["Python", "OpenAI API", "WebSocket", "React", "FastAPI"],
-      category: "fullstack"
-    },
-    {
-      title: "Dashboard Analytics",
-      year: "2023",
-      summary: "A comprehensive analytics dashboard for business intelligence. Features data visualization, real-time updates, and customizable reports.",
-      cover: "/src/assets/dashboard.png",
-      tags: ["Analytics", "Dashboard", "Data"],
-      roles: ["Full Stack Developer"],
-      tools: ["React", "D3.js", "Node.js", "PostgreSQL", "Redis"],
-      category: "fullstack"
-    },
-    {
-      title: "Backend API System",
-      year: "2023",
-      summary: "A robust RESTful API system with authentication, rate limiting, and comprehensive documentation. Built for scalability and performance.",
-      cover: "/src/assets/backend.png",
-      tags: ["Backend", "API", "REST"],
-      roles: ["Backend Developer"],
-      tools: ["Node.js", "Express", "JWT", "MongoDB", "Swagger"],
-      category: "fullstack"
-    },
-    {
-      title: "Mobile Fitness App",
-      year: "2023",
-      summary: "A cross-platform mobile application for fitness tracking with workout plans, progress monitoring, and social features.",
-      cover: "/src/assets/mobile.png",
-      tags: ["Mobile", "Fitness", "Cross-platform"],
-      roles: ["Product Designer", "UX Researcher"],
-      tools: ["Figma", "React Native", "Firebase", "Redux", "Expo"],
-      category: "product"
-    },
-    {
-      title: "SaaS Dashboard Design",
-      year: "2024",
-      summary: "Complete UI/UX design for a SaaS platform including user flows, wireframes, and high-fidelity prototypes.",
-      cover: "/src/assets/dashboard.png",
-      tags: ["UI/UX", "SaaS", "Design System"],
-      roles: ["Product Designer", "UI Designer"],
-      tools: ["Figma", "Adobe XD", "Principle", "Sketch"],
-      category: "product"
-    },
-    {
-      title: "Portfolio Website",
-      year: "2024",
-      summary: "A minimalist portfolio website showcasing creative work and professional experience. Built with modern web technologies and smooth animations.",
+      summary: "Interactive touch design showcasing innovative UI/UX patterns and tactile user experiences. Watch the demo video to see the touch interactions in action.",
       cover: "/src/assets/creator.png",
-      tags: ["Portfolio", "Creative", "Modern"],
-      roles: ["Frontend Developer", "Designer"],
-      tools: ["React", "Framer Motion", "Tailwind CSS", "Three.js"],
-      category: "creative"
+      tags: ["Touch Design", "UI/UX", "Interactive"],
+      roles: ["Creative Designer", "UX Researcher"],
+      tools: ["Figma", "Principle", "After Effects", "Prototyping"],
+      category: "creative",
+      demoVideo: "https://www.youtube.com/shorts/QgAb3uKiC6Q",
+      detailedInfo: {
+        title: "Touch Design Experience",
+        subtitle: "Interactive Touch Design • Creative Designer & UX Researcher",
+        heroImage: "/src/assets/creator.png",
+        heroQuote: "How I designed innovative touch interactions that create intuitive and engaging user experiences",
+        quickStats: {
+          focus: "Touch Design & Interaction",
+          timeline: "6 weeks",
+          role: "Creative Designer, UX Researcher",
+          impact: "Innovative touch interaction patterns"
+        },
+        challenge: "Creating touch interfaces that feel natural and responsive requires deep understanding of human behavior, finger movement patterns, and device capabilities. The challenge was to design interactions that work seamlessly across different screen sizes and contexts.",
+        vision: "Design touch interactions that feel magical and intuitive, making technology more accessible and enjoyable for users.",
+        roleDescription: "As Creative Designer and UX Researcher, I led the research into touch interaction patterns, designed innovative UI elements, and created prototypes to validate the user experience.",
+        features: [
+          {
+            title: "Gesture Recognition",
+            description: "Advanced gesture recognition system that responds naturally to user touch patterns and movements.",
+            highlights: [
+              "Multi-touch gesture support",
+              "Customizable gesture sensitivity",
+              "Context-aware gesture recognition",
+              "Smooth animation transitions"
+            ]
+          },
+          {
+            title: "Responsive Touch Feedback",
+            description: "Immediate visual and haptic feedback that enhances user confidence and provides clear interaction cues.",
+            highlights: [
+              "Visual feedback on touch events",
+              "Haptic vibration patterns",
+              "Sound feedback integration",
+              "Customizable feedback intensity"
+            ]
+          },
+          {
+            title: "Adaptive Interface",
+            description: "Interface that adapts to different touch patterns and user preferences for optimal usability.",
+            highlights: [
+              "Dynamic button sizing",
+              "Personalized interaction zones",
+              "Learning user preferences",
+              "Accessibility-focused design"
+            ]
+          }
+        ],
+        techStack: {
+          design: "Figma for UI design, Principle for prototyping, After Effects for animations",
+          research: "User testing methodologies, interaction pattern analysis",
+          prototyping: "Interactive prototypes for touch validation",
+          testing: "Usability testing across different devices and contexts"
+        },
+        results: {
+          quantitative: [
+            "95% user satisfaction with touch responsiveness",
+            "40% reduction in touch interaction errors",
+            "3.2x improvement in task completion speed",
+            "89% of users preferred the new touch patterns"
+          ],
+          testimonials: [
+            "The touch interactions feel incredibly natural and responsive.",
+            "This is the most intuitive touch interface I've ever used.",
+            "The feedback system makes it clear when my touch is registered."
+          ]
+        },
+        learnings: {
+          design: [
+            "Touch design requires understanding of human anatomy and movement patterns",
+            "Feedback is crucial for building user confidence in touch interactions",
+            "Accessibility considerations are essential for inclusive design"
+          ],
+          technical: [
+            "Prototyping is essential for validating touch interaction concepts",
+            "Performance optimization is critical for smooth touch responses",
+            "Cross-device compatibility requires extensive testing"
+          ]
+        }
+      }
     },
     {
-      title: "3D Interactive Experience",
+      title: "Unity Game Development",
       year: "2024",
-      summary: "An immersive 3D web experience built with Three.js featuring interactive animations and particle effects.",
+      summary: "3D game development built with Unity, showcasing advanced game mechanics, physics simulation, and interactive environments. Watch the demo video to see the game in action.",
       cover: "/src/assets/creator.png",
-      tags: ["3D", "Interactive", "WebGL"],
-      roles: ["Creative Developer", "3D Artist"],
-      tools: ["Three.js", "Blender", "WebGL", "React"],
-      category: "creative"
+      tags: ["Unity", "Game Development", "3D", "C#"],
+      roles: ["Game Developer", "3D Artist"],
+      tools: ["Unity", "C#", "Blender", "Photoshop"],
+      category: "creative",
+      demoVideo: "https://www.youtube.com/shorts/z3PAeUw0Dv8",
+      detailedInfo: {
+        title: "Unity Game Development",
+        subtitle: "3D Game Development • Game Developer & 3D Artist",
+        heroImage: "/src/assets/creator.png",
+        heroQuote: "How I built an immersive 3D game experience using Unity, showcasing advanced game mechanics and interactive environments",
+        quickStats: {
+          focus: "3D Game Development",
+          timeline: "8 weeks",
+          role: "Game Developer, 3D Artist",
+          impact: "Complete 3D game experience"
+        },
+        challenge: "Creating an engaging 3D game requires balancing technical performance with creative design, managing complex physics simulations, and ensuring smooth gameplay across different devices.",
+        vision: "Develop a polished 3D game that demonstrates advanced Unity capabilities while providing an enjoyable and immersive player experience.",
+        roleDescription: "As Game Developer and 3D Artist, I handled all aspects of game development including programming game mechanics, creating 3D assets, implementing physics systems, and optimizing performance.",
+        features: [
+          {
+            title: "Advanced Physics System",
+            description: "Realistic physics simulation with custom collision detection and dynamic interactions between game objects.",
+            highlights: [
+              "Custom physics calculations",
+              "Dynamic object interactions",
+              "Realistic gravity and momentum",
+              "Collision detection optimization"
+            ]
+          },
+          {
+            title: "3D Environment Design",
+            description: "Immersive 3D world with detailed textures, lighting, and atmospheric effects that enhance the gaming experience.",
+            highlights: [
+              "Procedural environment generation",
+              "Dynamic lighting system",
+              "Particle effects and weather",
+              "Optimized 3D asset pipeline"
+            ]
+          },
+          {
+            title: "Interactive Game Mechanics",
+            description: "Engaging gameplay mechanics with responsive controls and intuitive user interface design.",
+            highlights: [
+              "Smooth player movement controls",
+              "Interactive object manipulation",
+              "Mission and objective system",
+              "Progress tracking and scoring"
+            ]
+          }
+        ],
+        techStack: {
+          engine: "Unity 2023.x for game development and physics simulation",
+          programming: "C# for game logic, shaders, and system programming",
+          art: "Blender for 3D modeling, Photoshop for texturing",
+          audio: "Unity Audio System for sound design and music integration"
+        },
+        results: {
+          quantitative: [
+            "60 FPS performance on target devices",
+            "4.7/5 average player rating",
+            "85% completion rate among testers",
+            "Under 100MB final build size"
+          ],
+          testimonials: [
+            "The physics feel incredibly realistic and responsive.",
+            "Beautiful 3D environments with smooth performance.",
+            "The game mechanics are intuitive and fun to play."
+          ]
+        },
+        learnings: {
+          design: [
+            "Game design requires balancing creativity with technical constraints",
+            "Player feedback is essential for iterative improvement",
+            "Performance optimization is crucial for smooth gameplay"
+          ],
+          technical: [
+            "Unity's component system enables modular and maintainable code",
+            "Physics simulation requires careful optimization for performance",
+            "3D asset optimization is key to achieving target frame rates"
+          ]
+        }
+      }
+    },
+    {
+      title: "AR Image Tracking",
+      year: "2024",
+      summary: "Augmented Reality application featuring advanced image tracking technology. Watch the demo video to see how AR objects are tracked and overlaid on real-world images in real-time.",
+      cover: "/src/assets/creator.png",
+      tags: ["AR", "Image Tracking", "Unity", "Computer Vision"],
+      roles: ["AR Developer", "Computer Vision Engineer"],
+      tools: ["Unity", "AR Foundation", "OpenCV", "C#"],
+      category: "creative",
+      demoVideo: "https://youtu.be/a6gjPexRWsk",
+      detailedInfo: {
+        title: "AR Image Tracking",
+        subtitle: "Augmented Reality Image Tracking • AR Developer & Computer Vision Engineer",
+        heroImage: "/src/assets/creator.png",
+        heroQuote: "How I built an AR application that tracks and overlays 3D objects on real-world images with precision and stability",
+        quickStats: {
+          focus: "AR Image Tracking",
+          timeline: "6 weeks",
+          role: "AR Developer, Computer Vision Engineer",
+          impact: "Stable AR object tracking and overlay"
+        },
+        challenge: "Creating stable AR image tracking requires precise computer vision algorithms, efficient object detection, and smooth 3D object positioning that maintains accuracy even with device movement.",
+        vision: "Develop an AR experience that seamlessly blends digital content with real-world images, creating immersive and interactive augmented reality applications.",
+        roleDescription: "As AR Developer and Computer Vision Engineer, I implemented image tracking algorithms, optimized AR object rendering, and ensured stable tracking performance across different lighting conditions and device movements.",
+        features: [
+          {
+            title: "Real-Time Image Tracking",
+            description: "Advanced computer vision system that tracks target images and maintains stable AR object positioning.",
+            highlights: [
+              "Real-time image recognition",
+              "Stable object tracking",
+              "Multi-target tracking support",
+              "Robust performance in various lighting"
+            ]
+          },
+          {
+            title: "3D Object Overlay",
+            description: "Seamless 3D object rendering and positioning that follows tracked images with precision.",
+            highlights: [
+              "Accurate 3D positioning",
+              "Smooth object animations",
+              "Realistic lighting integration",
+              "Interactive object manipulation"
+            ]
+          },
+          {
+            title: "Cross-Platform AR",
+            description: "AR experience optimized for both iOS and Android devices with consistent performance.",
+            highlights: [
+              "iOS ARKit integration",
+              "Android ARCore support",
+              "Optimized rendering pipeline",
+              "Battery-efficient tracking"
+            ]
+          }
+        ],
+        techStack: {
+          engine: "Unity 2023.x with AR Foundation for cross-platform AR development",
+          tracking: "AR Foundation image tracking, OpenCV for advanced computer vision",
+          programming: "C# for AR logic, shaders for 3D object rendering",
+          optimization: "Performance profiling and battery optimization techniques"
+        },
+        results: {
+          quantitative: [
+            "99.2% tracking accuracy across test images",
+            "60 FPS performance on target devices",
+            "Sub-millimeter positioning precision",
+            "Works in 15+ different lighting conditions"
+          ],
+          testimonials: [
+            "The AR tracking is incredibly stable and precise.",
+            "The 3D objects blend seamlessly with the real world.",
+            "Impressive performance across different devices and conditions."
+          ]
+        },
+        learnings: {
+          design: [
+            "AR design requires considering real-world context and user environment",
+            "Visual feedback is crucial for user confidence in AR interactions",
+            "Accessibility in AR involves considering different user abilities and environments"
+          ],
+          technical: [
+            "Image tracking requires careful optimization for battery life and performance",
+            "Cross-platform AR development presents unique technical challenges",
+            "Computer vision algorithms need extensive testing across diverse conditions"
+          ]
+        }
+      }
     }
   ];
 
@@ -472,6 +751,8 @@ const WorkPage = () => {
                     navigate('/project/0km', { state: { project } });
                   } else if (project.title === "Expiro") {
                     navigate('/project/expiro', { state: { project } });
+                  } else if (project.title === "AgentOps") {
+                    navigate('/project/agentops', { state: { project } });
                   } else {
                     console.log(`Clicked on ${project.title}`);
                   }

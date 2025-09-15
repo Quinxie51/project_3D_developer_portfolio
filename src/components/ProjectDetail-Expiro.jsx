@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import { useNavigate, useLocation } from "react-router-dom";
+import { expiroThumbnail, expiroMain, expiroIngredient, expiroNotification, expiroPresentation } from "../assets";
 
 const ProjectDetailExpiro = () => {
   const navigate = useNavigate();
@@ -178,11 +179,11 @@ const ProjectDetailExpiro = () => {
           <h2 className="text-3xl font-bold text-white mb-8 text-center">App Interface & Award</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
             {[
-              { src: "/src/assets/0km/Expiro/thumbnail.png", alt: "ExpiRo App Thumbnail" },
-              { src: "/src/assets/0km/Expiro/main.png", alt: "Main Dashboard" },
-              { src: "/src/assets/0km/Expiro/ingredient.png", alt: "Ingredient Tracking" },
-              { src: "/src/assets/0km/Expiro/notification.png", alt: "Smart Notifications" },
-              { src: "/src/assets/0km/Expiro/presentation.jpg", alt: "2nd Place Award Certificate" }
+              { src: expiroThumbnail, alt: "ExpiRo App Thumbnail" },
+              { src: expiroMain, alt: "Main Dashboard" },
+              { src: expiroIngredient, alt: "Ingredient Tracking" },
+              { src: expiroNotification, alt: "Smart Notifications" },
+              { src: expiroPresentation, alt: "2nd Place Award Certificate" }
             ].map((img, index) => (
               <motion.div
                 key={index}
@@ -432,7 +433,7 @@ const ProjectDetailExpiro = () => {
               </div>
               <div>
                 <motion.img
-                  src="/src/assets/0km/Expiro/ingredient.png"
+                  src={expiroIngredient}
                   alt="Smart Camera Scanning"
                     className="w-full max-w-sm rounded-xl shadow-lg"
                   whileHover={{ scale: 1.02 }}
@@ -469,7 +470,7 @@ const ProjectDetailExpiro = () => {
               </div>
               <div className="lg:col-start-1 lg:row-start-1">
                 <motion.img
-                  src="/src/assets/0km/Expiro/main.png"
+                  src={expiroMain}
                   alt="Inventory Dashboard"
                     className="w-full max-w-sm rounded-xl shadow-lg"
                   whileHover={{ scale: 1.02 }}
@@ -506,7 +507,7 @@ const ProjectDetailExpiro = () => {
               </div>
               <div>
                 <motion.img
-                  src="/src/assets/0km/Expiro/notification.png"
+                  src={expiroNotification}
                   alt="Smart Notifications"
                     className="w-full max-w-sm rounded-xl shadow-lg"
                   whileHover={{ scale: 1.02 }}

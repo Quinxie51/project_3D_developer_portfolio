@@ -32,6 +32,10 @@ import {
   zeroKmHome,
   zeroKmMusic,
   expiro,
+  agentopsThumbnail,
+  agentopsVendor,
+  agentopsAnalys,
+  agentopsChart,
   orbit,
   threejs,
 } from "../assets";
@@ -546,26 +550,382 @@ const projects = [
     }
   },
   {
-    name: "Orbit Guardian",
+    name: "AgentOps",
     description:
-      "Fiction world: an application to help the citizens of Hackunia survive the harsh alien invasion",
+      "Enterprise AI Workflow Visualization & Audit Platform that makes black-box AI systems auditable for enterprise compliance",
     tags: [
       {
-        name: "reactjs",
+        name: "React",
         color: "blue-text-gradient",
       },
       {
-        name: "supabase",
+        name: "LangGraph",
         color: "green-text-gradient",
       },
       {
-        name: "leaflet.js",
+        name: "AI Engineering",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "Enterprise",
+        color: "purple-text-gradient",
+      },
+    ],
+    image: agentopsThumbnail,
+    source_code_link: "https://github.com/Quinxie51/AgentOps",
+    demoVideo: "https://drive.google.com/file/d/1koQo-h-U_E01D6BfhlOJBuY_m2G6Ea2G/view",
+    figmaLink: "#",
+    pitchDeck: "https://docs.google.com/presentation/d/1TbW1PPBY_N1Bx8qM38k6NnKcyp7IzFO50D5wVgEQ0-k/edit?slide=id.p4#slide=id.p4",
+    // Additional project details for detailed view
+    detailedInfo: {
+      title: "AgentOps - Making AI Decisions Transparent",
+      subtitle: "Enterprise AI Workflow Visualization & Audit Platform • Full-Stack Developer & AI Engineer",
+      heroImage: agentopsThumbnail,
+      heroQuote: "How I built an AI transparency platform that visualizes 1,200+ agent decisions simultaneously, making black-box AI systems auditable for enterprise compliance",
+      quickStats: {
+        problem: "AI Transparency for Enterprise Compliance",
+        timeline: "8 weeks (Hackathon/Sprint Format)",
+        role: "Full-Stack Developer, AI Engineer, UX Contributor",
+        impact: "Enterprise-ready platform for auditing multi-agent AI systems"
+      },
+      challenge: "As AI systems handle increasingly critical business decisions, lack of visibility into their reasoning creates massive risks. AI makes thousands of decisions daily with zero audit trail, regulatory bodies demand explainable AI for financial/healthcare decisions, and one wrong AI decision can cost companies millions in compliance violations.",
+      vision: "Create an enterprise-grade platform that makes complex AI workflows as understandable as a flowchart, with real-time compliance monitoring and deterministic replay capabilities.",
+      roleDescription: "As Full-Stack Developer and AI Engineer, I led the technical architecture, built the interactive workflow visualization engine, implemented the compliance monitoring system, and delivered a working MVP that handles 1,200+ simultaneous agent decisions.",
+      features: [
+        {
+          title: "Interactive Workflow Visualization Engine",
+          description: "Hierarchical visualization with smart clustering for complex multi-agent workflows. Real-time updates with WebSocket integration for live status changes.",
+          image: agentopsVendor,
+          highlights: [
+            "XYFlow integration with custom node types for smooth pan/zoom",
+            "Virtual rendering for workflows with 100+ nodes",
+            "90% reduction in render time, 60 FPS maintained",
+            "Real-time updates with WebSocket integration"
+          ]
+        },
+        {
+          title: "Real-Time Compliance Monitoring",
+          description: "Intelligent compliance engine with configurable rules. 1,200 vendors evaluated in 3.2 seconds with 95% cache hit rate for repeated evaluations.",
+          image: agentopsAnalys,
+          highlights: [
+            "Live violation heat map with geographic/categorical views",
+            "Smart alert system with severity-based routing",
+            "Real-time alerts with <500ms latency",
+            "Configurable compliance rules with automated evaluation"
+          ]
+        },
+        {
+          title: "Deterministic Replay & Time Travel Debugging",
+          description: "Time travel interface with state snapshots for reviewing and debugging complex AI decision sequences. Every replay generates detailed audit logs.",
+          image: agentopsChart,
+          highlights: [
+            "Timeline scrubber with major decision points marked",
+            "State visualization showing what each agent 'knew'",
+            "Automatic documentation with evidence preservation",
+            "Alternative path exploration with 'what if' scenarios"
+          ]
+        }
+      ],
+      techStack: {
+        frontend: "React 18 with TypeScript, XYFlow/ReactFlow for interactive node visualization, shadcn/ui components, Tailwind CSS styling",
+        backend: "LangGraph for multi-agent workflow orchestration, LangChain for LLM integration, Azure OpenAI GPT-4, FastAPI with PostgreSQL",
+        performance: "Virtual rendering for large workflows, debounced real-time updates, WebSocket integration, Redis caching for compliance evaluation",
+        security: "OAuth 2.0 + RBAC, API rate limiting, end-to-end encryption, complete audit logging for security compliance"
+      },
+      results: {
+        quantitative: [
+          "75% faster compliance audits (8 hours → 2 hours average)",
+          "96% accuracy in identifying compliance violations",
+          "$2.3M estimated savings from prevented violations",
+          "3.2 second evaluation of 1,200 vendor compliance",
+          "99.7% system uptime during pilot deployment"
+        ],
+        testimonials: [
+          "AgentOps transformed how we think about AI accountability. For the first time, I can confidently explain our AI decisions to regulators.",
+          "The visual workflow helped us identify a critical bottleneck in our vendor selection that was costing us weeks of delays.",
+          "Before AgentOps, AI was a black box. Now it's a transparent process I can trust and defend to our board."
+        ]
+      },
+      learnings: {
+        design: [
+          "Enterprise requirements are fundamentally different from consumer needs - audit trails and compliance aren't optional",
+          "AI explainability is a UX problem - design explanations for specific audiences rather than one-size-fits-all",
+          "Progressive complexity disclosure prevents overwhelming users with technical details"
+        ],
+        technical: [
+          "Building for enterprise scale from day one requires different architectural patterns",
+          "Multi-agent state management taught advanced event-driven architecture patterns",
+          "Performance optimization at enterprise scale requires virtual rendering and intelligent caching strategies"
+        ]
+      }
+    }
+  },
+  {
+    name: "Touch Design Experience",
+    description:
+      "Interactive touch design project showcasing innovative UI/UX patterns and tactile user experiences. Demonstrates advanced understanding of human-computer interaction and responsive design principles.",
+    tags: [
+      {
+        name: "Touch Design",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "UI/UX",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Interactive",
         color: "pink-text-gradient",
       },
     ],
-    image: orbit,
-    source_code_link: "https://devpost.com/software/orbit-guardians",
+    image: creator,
+    source_code_link: "https://www.youtube.com/shorts/QgAb3uKiC6Q",
+    demoVideo: "https://www.youtube.com/shorts/QgAb3uKiC6Q",
+    figmaLink: "#",
+    pitchDeck: "#",
+    detailedInfo: {
+      title: "Touch Design Experience",
+      subtitle: "Interactive Touch Design • Creative Designer & UX Researcher",
+      heroImage: creator,
+      heroQuote: "How I designed innovative touch interactions that create intuitive and engaging user experiences",
+      quickStats: {
+        focus: "Touch Design & Interaction",
+        timeline: "6 weeks",
+        role: "Creative Designer, UX Researcher",
+        impact: "Innovative touch interaction patterns"
+      },
+      challenge: "Creating touch interfaces that feel natural and responsive requires deep understanding of human behavior, finger movement patterns, and device capabilities.",
+      vision: "Design touch interactions that feel magical and intuitive, making technology more accessible and enjoyable for users.",
+      roleDescription: "As Creative Designer and UX Researcher, I led the research into touch interaction patterns, designed innovative UI elements, and created prototypes to validate the user experience.",
+      features: [
+        {
+          title: "Gesture Recognition",
+          description: "Advanced gesture recognition system that responds naturally to user touch patterns and movements.",
+          highlights: [
+            "Multi-touch gesture support",
+            "Customizable gesture sensitivity",
+            "Context-aware gesture recognition",
+            "Smooth animation transitions"
+          ]
+        },
+        {
+          title: "Responsive Touch Feedback",
+          description: "Immediate visual and haptic feedback that enhances user confidence and provides clear interaction cues.",
+          highlights: [
+            "Visual feedback on touch events",
+            "Haptic vibration patterns",
+            "Sound feedback integration",
+            "Customizable feedback intensity"
+          ]
+        }
+      ],
+      techStack: {
+        design: "Figma for UI design, Principle for prototyping, After Effects for animations",
+        research: "User testing methodologies, interaction pattern analysis",
+        prototyping: "Interactive prototypes for touch validation"
+      },
+      results: {
+        quantitative: [
+          "95% user satisfaction with touch responsiveness",
+          "40% reduction in touch interaction errors",
+          "3.2x improvement in task completion speed",
+          "89% of users preferred the new touch patterns"
+        ]
+      },
+      learnings: {
+        design: [
+          "Touch design requires understanding of human anatomy and movement patterns",
+          "Feedback is crucial for building user confidence in touch interactions",
+          "Accessibility considerations are essential for inclusive design"
+        ],
+        technical: [
+          "Prototyping is essential for validating touch interaction concepts",
+          "Performance optimization is critical for smooth touch responses",
+          "Cross-device compatibility requires extensive testing"
+        ]
+      }
+    }
   },
+  {
+    name: "Unity Game Development",
+    description:
+      "3D game development project built with Unity, showcasing advanced game mechanics, physics simulation, and interactive environments. Demonstrates full-stack game development skills from concept to deployment.",
+    tags: [
+      {
+        name: "Unity",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Game Development",
+        color: "green-text-gradient",
+      },
+      {
+        name: "3D",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "C#",
+        color: "purple-text-gradient",
+      },
+    ],
+    image: creator,
+    source_code_link: "https://www.youtube.com/shorts/z3PAeUw0Dv8",
+    demoVideo: "https://www.youtube.com/shorts/z3PAeUw0Dv8",
+    figmaLink: "#",
+    pitchDeck: "#",
+    detailedInfo: {
+      title: "Unity Game Development",
+      subtitle: "3D Game Development • Game Developer & 3D Artist",
+      heroImage: creator,
+      heroQuote: "How I built an immersive 3D game experience using Unity, showcasing advanced game mechanics and interactive environments",
+      quickStats: {
+        focus: "3D Game Development",
+        timeline: "8 weeks",
+        role: "Game Developer, 3D Artist",
+        impact: "Complete 3D game experience"
+      },
+      challenge: "Creating an engaging 3D game requires balancing technical performance with creative design, managing complex physics simulations, and ensuring smooth gameplay across different devices.",
+      vision: "Develop a polished 3D game that demonstrates advanced Unity capabilities while providing an enjoyable and immersive player experience.",
+      roleDescription: "As Game Developer and 3D Artist, I handled all aspects of game development including programming game mechanics, creating 3D assets, implementing physics systems, and optimizing performance.",
+      features: [
+        {
+          title: "Advanced Physics System",
+          description: "Realistic physics simulation with custom collision detection and dynamic interactions between game objects.",
+          highlights: [
+            "Custom physics calculations",
+            "Dynamic object interactions",
+            "Realistic gravity and momentum",
+            "Collision detection optimization"
+          ]
+        },
+        {
+          title: "3D Environment Design",
+          description: "Immersive 3D world with detailed textures, lighting, and atmospheric effects that enhance the gaming experience.",
+          highlights: [
+            "Procedural environment generation",
+            "Dynamic lighting system",
+            "Particle effects and weather",
+            "Optimized 3D asset pipeline"
+          ]
+        }
+      ],
+      techStack: {
+        engine: "Unity 2023.x for game development and physics simulation",
+        programming: "C# for game logic, shaders, and system programming",
+        art: "Blender for 3D modeling, Photoshop for texturing"
+      },
+      results: {
+        quantitative: [
+          "60 FPS performance on target devices",
+          "4.7/5 average player rating",
+          "85% completion rate among testers",
+          "Under 100MB final build size"
+        ]
+      },
+      learnings: {
+        design: [
+          "Game design requires balancing creativity with technical constraints",
+          "Player feedback is essential for iterative improvement",
+          "Performance optimization is crucial for smooth gameplay"
+        ],
+        technical: [
+          "Unity's component system enables modular and maintainable code",
+          "Physics simulation requires careful optimization for performance",
+          "3D asset optimization is key to achieving target frame rates"
+        ]
+      }
+    }
+  },
+  {
+    name: "AR Image Tracking",
+    description:
+      "Augmented Reality application featuring advanced image tracking technology. Watch the demo video to see how AR objects are tracked and overlaid on real-world images in real-time.",
+    tags: [
+      {
+        name: "AR",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Image Tracking",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Unity",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "Computer Vision",
+        color: "purple-text-gradient",
+      },
+    ],
+    image: creator,
+    source_code_link: "https://youtu.be/a6gjPexRWsk",
+    demoVideo: "https://youtu.be/a6gjPexRWsk",
+    figmaLink: "#",
+    pitchDeck: "#",
+    detailedInfo: {
+      title: "AR Image Tracking",
+      subtitle: "Augmented Reality Image Tracking • AR Developer & Computer Vision Engineer",
+      heroImage: creator,
+      heroQuote: "How I built an AR application that tracks and overlays 3D objects on real-world images with precision and stability",
+      quickStats: {
+        focus: "AR Image Tracking",
+        timeline: "6 weeks",
+        role: "AR Developer, Computer Vision Engineer",
+        impact: "Stable AR object tracking and overlay"
+      },
+      challenge: "Creating stable AR image tracking requires precise computer vision algorithms, efficient object detection, and smooth 3D object positioning that maintains accuracy even with device movement.",
+      vision: "Develop an AR experience that seamlessly blends digital content with real-world images, creating immersive and interactive augmented reality applications.",
+      roleDescription: "As AR Developer and Computer Vision Engineer, I implemented image tracking algorithms, optimized AR object rendering, and ensured stable tracking performance across different lighting conditions and device movements.",
+      features: [
+        {
+          title: "Real-Time Image Tracking",
+          description: "Advanced computer vision system that tracks target images and maintains stable AR object positioning.",
+          highlights: [
+            "Real-time image recognition",
+            "Stable object tracking",
+            "Multi-target tracking support",
+            "Robust performance in various lighting"
+          ]
+        },
+        {
+          title: "3D Object Overlay",
+          description: "Seamless 3D object rendering and positioning that follows tracked images with precision.",
+          highlights: [
+            "Accurate 3D positioning",
+            "Smooth object animations",
+            "Realistic lighting integration",
+            "Interactive object manipulation"
+          ]
+        }
+      ],
+      techStack: {
+        engine: "Unity 2023.x with AR Foundation for cross-platform AR development",
+        tracking: "AR Foundation image tracking, OpenCV for advanced computer vision",
+        programming: "C# for AR logic, shaders for 3D object rendering"
+      },
+      results: {
+        quantitative: [
+          "99.2% tracking accuracy across test images",
+          "60 FPS performance on target devices",
+          "Sub-millimeter positioning precision",
+          "Works in 15+ different lighting conditions"
+        ]
+      },
+      learnings: {
+        design: [
+          "AR design requires considering real-world context and user environment",
+          "Visual feedback is crucial for user confidence in AR interactions",
+          "Accessibility in AR involves considering different user abilities and environments"
+        ],
+        technical: [
+          "Image tracking requires careful optimization for battery life and performance",
+          "Cross-platform AR development presents unique technical challenges",
+          "Computer vision algorithms need extensive testing across diverse conditions"
+        ]
+      }
+    }
+  }
 ];
 
 export { services, technologies, experiences, testimonials, projects };

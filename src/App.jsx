@@ -7,6 +7,7 @@ import WorkPage from "./components/WorkPage";
 import ProjectDetailPastPort from "./components/ProjectDetail-PastPort";
 import ProjectDetail0KM from "./components/ProjectDetail-0KM";
 import ProjectDetailExpiro from "./components/ProjectDetail-Expiro";
+import ProjectDetailAgentOps from "./components/ProjectDetail-AgentOps";
 
 const App = () => {
   return (
@@ -25,6 +26,7 @@ const App = () => {
           <Route path="/project/pastport" element={<ProjectDetailPastPort />} />
           <Route path="/project/0km" element={<ProjectDetail0KM />} />
           <Route path="/project/expiro" element={<ProjectDetailExpiro />} />
+          <Route path="/project/agentops" element={<ProjectDetailAgentOps />} />
         </Routes>
       </div>
     </BrowserRouter>
