@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import SectionHeader from './SectionHeader';
 import ProjectCard from './ProjectCard';
 import GlassPanel from './GlassPanel';
-import { pastport, pastportChat, pastportDashboard, pastportSave, pastportSet, pastportTalk, pastportPitchDeck, zeroKm, zeroKmCalendar, zeroKmChat, zeroKmDiary, zeroKmHome, zeroKmMusic, expiro, agentopsThumbnail, agentopsVendor, agentopsAnalys, agentopsChart } from '../assets';
+import { pastport, pastportChat, pastportDashboard, pastportSave, pastportSet, pastportTalk, pastportPitchDeck, zeroKm, zeroKmCalendar, zeroKmChat, zeroKmDiary, zeroKmHome, zeroKmMusic, expiro, agentopsThumbnail, agentopsVendor, agentopsAnalys, agentopsChart, creativeGame, creativeTouch, creativeVR } from '../assets';
 
 const WorkPage = () => {
   const [activeFilter, setActiveFilter] = useState('all');
@@ -416,7 +416,7 @@ const WorkPage = () => {
       title: "Touch Design Experience",
       year: "2024",
       summary: "Interactive touch design showcasing innovative UI/UX patterns and tactile user experiences. Watch the demo video to see the touch interactions in action.",
-      cover: "/src/assets/creator.png",
+      cover: creativeTouch,
       tags: ["Touch Design", "UI/UX", "Interactive"],
       roles: ["Creative Designer", "UX Researcher"],
       tools: ["Figma", "Principle", "After Effects", "Prototyping"],
@@ -425,7 +425,7 @@ const WorkPage = () => {
       detailedInfo: {
         title: "Touch Design Experience",
         subtitle: "Interactive Touch Design • Creative Designer & UX Researcher",
-        heroImage: "/src/assets/creator.png",
+        heroImage: creativeTouch,
         heroQuote: "How I designed innovative touch interactions that create intuitive and engaging user experiences",
         quickStats: {
           focus: "Touch Design & Interaction",
@@ -505,7 +505,7 @@ const WorkPage = () => {
       title: "Unity Game Development",
       year: "2024",
       summary: "3D game development built with Unity, showcasing advanced game mechanics, physics simulation, and interactive environments. Watch the demo video to see the game in action.",
-      cover: "/src/assets/creator.png",
+      cover: creativeGame,
       tags: ["Unity", "Game Development", "3D", "C#"],
       roles: ["Game Developer", "3D Artist"],
       tools: ["Unity", "C#", "Blender", "Photoshop"],
@@ -514,7 +514,7 @@ const WorkPage = () => {
       detailedInfo: {
         title: "Unity Game Development",
         subtitle: "3D Game Development • Game Developer & 3D Artist",
-        heroImage: "/src/assets/creator.png",
+        heroImage: creativeGame,
         heroQuote: "How I built an immersive 3D game experience using Unity, showcasing advanced game mechanics and interactive environments",
         quickStats: {
           focus: "3D Game Development",
@@ -594,7 +594,7 @@ const WorkPage = () => {
       title: "AR Image Tracking",
       year: "2024",
       summary: "Augmented Reality application featuring advanced image tracking technology. Watch the demo video to see how AR objects are tracked and overlaid on real-world images in real-time.",
-      cover: "/src/assets/creator.png",
+      cover: creativeVR,
       tags: ["AR", "Image Tracking", "Unity", "Computer Vision"],
       roles: ["AR Developer", "Computer Vision Engineer"],
       tools: ["Unity", "AR Foundation", "OpenCV", "C#"],
@@ -603,7 +603,7 @@ const WorkPage = () => {
       detailedInfo: {
         title: "AR Image Tracking",
         subtitle: "Augmented Reality Image Tracking • AR Developer & Computer Vision Engineer",
-        heroImage: "/src/assets/creator.png",
+        heroImage: creativeVR,
         heroQuote: "How I built an AR application that tracks and overlays 3D objects on real-world images with precision and stability",
         quickStats: {
           focus: "AR Image Tracking",
@@ -753,6 +753,12 @@ const WorkPage = () => {
                     navigate('/project/expiro', { state: { project } });
                   } else if (project.title === "AgentOps") {
                     navigate('/project/agentops', { state: { project } });
+                  } else if (project.title === "Touch Design Experience") {
+                    window.open('https://youtube.com/shorts/QgAb3uKiC6Q', '_blank', 'noopener,noreferrer');
+                  } else if (project.title === "Unity Game Development") {
+                    window.open('https://youtube.com/shorts/z3PAeUw0Dv8', '_blank', 'noopener,noreferrer');
+                  } else if (project.title === "AR Image Tracking") {
+                    window.open('https://www.youtube.com/shorts/a6gjPexRWsk', '_blank', 'noopener,noreferrer');
                   } else {
                     console.log(`Clicked on ${project.title}`);
                   }

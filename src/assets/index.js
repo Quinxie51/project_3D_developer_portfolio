@@ -49,6 +49,9 @@ import agentopsThumbnail from "./AgentOps/thumbnail.png";
 import agentopsVendor from "./AgentOps/vendor found.png";
 import agentopsAnalys from "./AgentOps/analys.png";
 import agentopsChart from "./AgentOps/chart.png";
+import creativeGame from "./creative project/game dev.png";
+import creativeTouch from "./creative project/touch design.png";
+import creativeVR from "./creative project/VR business card.png";
 
 export {
   logo,
@@ -99,4 +102,7 @@ export {
   agentopsVendor,
   agentopsAnalys,
   agentopsChart,
+  creativeGame,
+  creativeTouch,
+  creativeVR,
 };

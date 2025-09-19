@@ -38,13 +38,13 @@ const ProjectCard = ({
         hover={false}
       >
         {/* Image Container */}
-        <div className="relative overflow-hidden rounded-xl mb-6">
+        <div className="relative overflow-hidden rounded-xl mb-6 bg-black flex items-center justify-center" style={{height: '12rem'}}>
           <motion.img
             src={cover}
             alt={title}
-            className="w-full h-48 object-cover"
+            className="max-h-full max-w-full object-contain"
             whileHover={{ 
-              scale: 1.05,
+              scale: 1.02,
               transition: { duration: 0.6, ease: "easeOut" }
             }}
           />
