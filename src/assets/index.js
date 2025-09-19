@@ -53,6 +53,13 @@ import creativeGame from "./creative project/game dev.png";
 import creativeTouch from "./creative project/touch design.png";
 import creativeVR from "./creative project/VR business card.png";
 
+import aboutMe1 from "./about me/CD64F744-5227-4F4E-B919-D420234CC2A5.jpg";
+import aboutMe2 from "./about me/IMG_0426.jpg";
+import aboutMe3 from "./about me/IMG_8886.jpg";
+import aboutMe4 from "./about me/IMG_0902.jpg";
+import aboutMe5 from "./about me/IMG_1308.jpg";
+import aboutMe6 from "./about me/presentation.jpg";
+
 export {
   logo,
   backend,
@@ -105,4 +112,10 @@ export {
   creativeGame,
   creativeTouch,
   creativeVR,
+  aboutMe1,
+  aboutMe2,
+  aboutMe3,
+  aboutMe4,
+  aboutMe5,
+  aboutMe6,
 };

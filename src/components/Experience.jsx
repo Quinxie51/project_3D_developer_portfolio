@@ -21,14 +21,10 @@ const ExperienceCard = ({ experience }) => {
       }}
       contentArrowStyle={{ borderRight: "7px solid  #232631" }}
       date={experience.date}
-      iconStyle={{ background: experience.iconBg, display: 'flex', alignItems: 'center', justifyContent: 'center' }} // Ensuring the icon container centers the content
+      iconStyle={{ background: experience.iconBg, display: 'flex', alignItems: 'center', justifyContent: 'center' }}
       icon={
-        <div className='flex justify-center items-center w-full h-full'>
-          <img
-            src={experience.icon}
-            alt={experience.company_name}
-            className='w-full h-full object-cover rounded-full' // Adjusted classes
-          />
+        <div className='flex justify-center items-center w-full h-full text-2xl'>
+          {experience.icon}
         </div>
       }
     >
@@ -61,10 +57,10 @@ const Experience = () => {
     <>
       <motion.div variants={textVariant()}>
         <p className={`${styles.sectionSubText} text-center`}>
-          What I have done so far
+          Recognition and achievements
         </p>
         <h2 className={`${styles.sectionHeadText} text-center`}>
-          Work Experience.
+          Awards & Honors.
         </h2>
       </motion.div>
 

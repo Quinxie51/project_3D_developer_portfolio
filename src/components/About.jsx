@@ -1,39 +1,10 @@
 import React from "react";
-import Tilt from "react-parallax-tilt";
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";
-import { services } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
-
-const ServiceCard = ({ index, title, icon }) => (
-  <Tilt className='xs:w-[250px] w-full'>
-    <motion.div
-      variants={fadeIn("right", "spring", index * 0.5, 0.75)}
-      className='w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card'
-    >
-      <div
-        options={{
-          max: 45,
-          scale: 1,
-          speed: 450,
-        }}
-        className='bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col'
-      >
-        <img
-          src={icon}
-          alt='web-development'
-          className='w-16 h-16 object-contain'
-        />
-
-        <h3 className='text-white text-[20px] font-bold text-center'>
-          {title}
-        </h3>
-      </div>
-    </motion.div>
-  </Tilt>
-);
+import { aboutMe1, aboutMe2, aboutMe3, aboutMe4, aboutMe5, aboutMe6 } from "../assets";
 
 const About = () => {
   return (
@@ -54,11 +25,44 @@ const About = () => {
     Team up to transform your vision into reality!
       </motion.p>
 
-      <div className='mt-20 flex flex-wrap gap-10'>
-        {services.map((service, index) => (
-          <ServiceCard key={service.title} index={index} {...service} />
-        ))}
-      </div>
+      {/* Photo Gallery Section */}
+      <motion.div
+        variants={fadeIn("", "", 0.2, 1)}
+        className='mt-16'
+      >
+        <h3 className='text-white text-[24px] font-bold mb-8'>Behind the Scenes</h3>
+        <div className='columns-2 md:columns-3 lg:columns-4 gap-6 space-y-6'>
+          {[
+            { src: aboutMe1, alt: "About me photo 1", size: "large" },
+            { src: aboutMe2, alt: "About me photo 2", size: "medium" },
+            { src: aboutMe3, alt: "About me photo 3", size: "large" },
+            { src: aboutMe4, alt: "About me photo 4", size: "medium" },
+            { src: aboutMe5, alt: "About me photo 5", size: "small" },
+            { src: aboutMe6, alt: "About me photo 6", size: "large" }
+          ].map((photo, index) => (
+            <motion.div
+              key={index}
+              variants={fadeIn("up", "spring", index * 0.1, 0.75)}
+              className='relative group cursor-pointer break-inside-avoid mb-6'
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+            >
+              <div className='relative overflow-hidden rounded-xl bg-tertiary p-3 shadow-lg'>
+                <img
+                  src={photo.src}
+                  alt={photo.alt}
+                  className={`w-full object-cover rounded-lg ${
+                    photo.size === 'large' ? 'h-80' : 
+                    photo.size === 'medium' ? 'h-64' : 'h-48'
+                  }`}
+                />
+                <div className='absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg' />
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </motion.div>
+
     </>
   );
 };
