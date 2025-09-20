@@ -30,7 +30,7 @@ const About = () => {
         variants={fadeIn("", "", 0.2, 1)}
         className='mt-16'
       >
-        <h3 className='text-white text-[24px] font-bold mb-8'>Behind the Scenes</h3>
+        <h3 className='text-white text-[48px] font-bold mb-8'>Behind the Scenes</h3>
         <div className='columns-2 md:columns-3 lg:columns-4 gap-6 space-y-6'>
           {[
             { src: aboutMe1, alt: "About me photo 1", size: "large" },
@@ -52,8 +52,8 @@ const About = () => {
                   src={photo.src}
                   alt={photo.alt}
                   className={`w-full object-cover rounded-lg ${
-                    photo.size === 'large' ? 'h-80' : 
-                    photo.size === 'medium' ? 'h-64' : 'h-48'
+                    photo.size === 'large' ? 'h-96' : 
+                    photo.size === 'medium' ? 'h-80' : 'h-64'
                   }`}
                 />
                 <div className='absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg' />

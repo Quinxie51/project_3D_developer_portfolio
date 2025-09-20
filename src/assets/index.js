@@ -53,6 +53,14 @@ import creativeGame from "./creative project/game dev.png";
 import creativeTouch from "./creative project/touch design.png";
 import creativeVR from "./creative project/VR business card.png";
 
+// TooGoodToGo Project Assets
+import tooGoodToGoThumbnail from "./TooGoodToGo/thumbnail toogood.png";
+import tooGoodToGoHome from "./TooGoodToGo/Home V.1.png";
+import tooGoodToGoOffer from "./TooGoodToGo/Offer.png";
+import tooGoodToGoDelivery from "./TooGoodToGo/DELIVERY - Bag.png";
+import tooGoodToGoEarlyReserve from "./TooGoodToGo/Early reserve.png";
+import tooGoodToGoOnboarding from "./TooGoodToGo/Onboarding_02.png";
+
 import aboutMe1 from "./about me/CD64F744-5227-4F4E-B919-D420234CC2A5.jpg";
 import aboutMe2 from "./about me/IMG_0426.jpg";
 import aboutMe3 from "./about me/IMG_8886.jpg";
@@ -112,6 +120,12 @@ export {
   creativeGame,
   creativeTouch,
   creativeVR,
+  tooGoodToGoThumbnail,
+  tooGoodToGoHome,
+  tooGoodToGoOffer,
+  tooGoodToGoDelivery,
+  tooGoodToGoEarlyReserve,
+  tooGoodToGoOnboarding,
   aboutMe1,
   aboutMe2,
   aboutMe3,

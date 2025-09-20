@@ -38,6 +38,12 @@ import {
   agentopsChart,
   orbit,
   threejs,
+  tooGoodToGoThumbnail,
+  tooGoodToGoHome,
+  tooGoodToGoOffer,
+  tooGoodToGoDelivery,
+  tooGoodToGoEarlyReserve,
+  tooGoodToGoOnboarding,
 } from "../assets";
 
 // constants.js
@@ -672,6 +678,144 @@ const projects = [
           "Building for enterprise scale from day one requires different architectural patterns",
           "Multi-agent state management taught advanced event-driven architecture patterns",
           "Performance optimization at enterprise scale requires virtual rendering and intelligent caching strategies"
+        ]
+      }
+    }
+  },
+  {
+    name: "PixelPal - Too Good To Go",
+    description:
+      "Product redesign addressing food waste and food insecurity through Amazon ecosystem integration, SNAP EBT access, and inclusive delivery design",
+    tags: [
+      {
+        name: "Product Design",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "UX Strategy",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Social Impact",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "Amazon Integration",
+        color: "purple-text-gradient",
+      },
+    ],
+    image: tooGoodToGoThumbnail,
+    source_code_link: "#",
+    demoVideo: "#",
+    figmaLink: "https://www.figma.com/design/FoZA8D9Td6pMllEVia8l8V/Rebrand-TooGoodToGo?m=dev",
+    pitchDeck: "https://docs.google.com/presentation/d/1aq0naazzvK3aGTerXs9NKUp-_32GZqrYiBLORzvJklo/edit?usp=sharing",
+    // Additional project details for detailed view
+    detailedInfo: {
+      title: "PixelPal - Too Good To Go Reimagined",
+      subtitle: "Product Redesign • UX Strategy • Social Impact Design",
+      heroImage: tooGoodToGoHome,
+      heroQuote: "How we redesigned Too Good To Go to serve 25 million food-insecure Americans through Amazon integration and inclusive access design",
+      quickStats: {
+        challenge: "Redesign existing food waste app for accessibility and social impact",
+        timeline: "Design Sprint/Hackathon Format (June 2025)",
+        team: "PixelPal Team",
+        impact: "Addressing food waste + food insecurity simultaneously"
+      },
+      problem: "The Food Waste Crisis: 92 billion pounds of food wasted annually in the US, $473 billion worth of food thrown away each year, 38% of all food in America goes to waste. The Food Insecurity Reality: Over 40 million Americans are food insecure, 50+ million people turned to food assistance in 2023 alone, 25 million Americans could be fed with just 15% waste reduction. Transportation Barriers: 2.3 million households live >1 mile from supermarket without vehicle access, 2.2% of continental US households lack both proximity and transportation.",
+      solution: "Core Innovation: Amazon Ecosystem Integration - Leverage existing infrastructure to scale social impact rather than building from scratch. Three-Pillar Approach: 1) SNAP EBT Integration for Equity with priority access windows and enhanced discounts, 2) Amazon Flex Delivery Partnership for transportation barriers, 3) AWS-Powered Community Recognition with impact badges and leaderboards.",
+      features: [
+        {
+          title: "Home Dashboard & Discovery",
+          description: "Personalized dashboard showing available early-access meals for SNAP-verified users with restaurant impact scores and community recognition.",
+          image: tooGoodToGoHome,
+          highlights: [
+            "Priority access interface for SNAP users",
+            "Restaurant community impact scores",
+            "Early access meal availability",
+            "Delivery vs pickup options"
+          ]
+        },
+        {
+          title: "Enhanced Meal Offers",
+          description: "Improved meal discovery with additional discounts for verified users, clear pricing transparency, and nutritional information.",
+          image: tooGoodToGoOffer,
+          highlights: [
+            "20-30% additional discount for SNAP users",
+            "Clear pricing with discount calculations",
+            "Nutritional information display",
+            "Restaurant impact badges"
+          ]
+        },
+        {
+          title: "Amazon Flex Delivery Integration",
+          description: "Seamless delivery experience through Amazon's existing infrastructure, eliminating transportation barriers for food-insecure users.",
+          image: tooGoodToGoDelivery,
+          highlights: [
+            "Amazon Flex delivery integration",
+            "Reliable delivery infrastructure",
+            "Real-time tracking capabilities",
+            "Flexible delivery windows"
+          ]
+        },
+        {
+          title: "Priority Early Access System",
+          description: "SNAP-verified users receive 1-hour early access to meal reservations, ensuring those with greatest need get first opportunity.",
+          image: tooGoodToGoEarlyReserve,
+          highlights: [
+            "1-hour early access for SNAP users",
+            "EBT verification through Amazon",
+            "Priority reservation system",
+            "Accessibility-first design"
+          ]
+        },
+        {
+          title: "Onboarding & Verification",
+          description: "Streamlined onboarding process with Amazon SNAP EBT verification, clear benefit explanation, and accessibility considerations.",
+          image: tooGoodToGoOnboarding,
+          highlights: [
+            "Amazon SNAP EBT verification",
+            "Clear benefit communication",
+            "Accessibility-first design",
+            "Multi-language support"
+          ]
+        }
+      ],
+      techStack: {
+        integration: "Amazon SNAP EBT Integration - No payment processing, instant verification through existing Amazon infrastructure",
+        delivery: "Amazon Flex Delivery Integration - Leveraging existing GrubHub partnership and established driver network",
+        analytics: "AWS-Powered Analytics & Recognition - Real-time impact metrics, community leaderboards, predictive analytics",
+        compliance: "SNAP Program Compliance - No direct SNAP benefit processing, maintains program integrity, full transparency with USDA regulations"
+      },
+      results: {
+        socialImpact: [
+          "25 million Americans could benefit from 15% waste reduction",
+          "Priority access system ensures those with greatest need get first opportunity",
+          "Transportation barriers eliminated for 2.3 million households",
+          "SNAP budget extension through additional 20-30% restaurant discounts"
+        ],
+        businessMetrics: [
+          "Weekly restaurant uploads indicating consistent participation",
+          "Community Impact Badge achievement rates",
+          "Verified satisfaction ratings from confirmed meal recipients",
+          "Platform retention rates for both restaurants and users"
+        ],
+        testimonials: [
+          "Finally, an app that serves those who need it most. The early access feature means I can actually get discounted meals.",
+          "As a restaurant owner, the community recognition motivates us to participate consistently - we love seeing our impact score.",
+          "The delivery option eliminates my biggest barrier to accessing discounted food. I can finally participate without transportation."
+        ]
+      },
+      learnings: {
+        design: [
+          "Equity requires intentional design - standard 'first-come-first-served' models systematically exclude those with greatest need",
+          "Infrastructure leverage over innovation - building delivery networks from scratch creates unnecessary barriers to social impact",
+          "Multi-stakeholder value creation - sustainable social impact requires aligned incentives for all parties",
+          "Trust through transparency - food assistance recipients face stigma and need clear verification systems"
+        ],
+        technical: [
+          "API integration strategy - leveraging existing platforms rather than building competing infrastructure",
+          "Compliance-first architecture - designing within SNAP program regulations while maximizing user benefit",
+          "Scalable social impact design - balancing immediate social benefit with long-term business sustainability"
         ]
       }
     }
