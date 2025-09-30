@@ -52,6 +52,7 @@ import agentopsChart from "./AgentOps/chart.png";
 import creativeGame from "./creative project/game dev.png";
 import creativeTouch from "./creative project/touch design.png";
 import creativeVR from "./creative project/VR business card.png";
+import creativeInstagram from "./creative project/nano banana.jpg";
 
 // TooGoodToGo Project Assets
 import tooGoodToGoThumbnail from "./TooGoodToGo/thumbnail toogood.png";
@@ -123,6 +124,7 @@ export {
   creativeGame,
   creativeTouch,
   creativeVR,
+  creativeInstagram,
   tooGoodToGoThumbnail,
   tooGoodToGoHome,
   tooGoodToGoOffer,

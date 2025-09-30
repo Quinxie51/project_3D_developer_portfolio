@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import SectionHeader from './SectionHeader';
 import ProjectCard from './ProjectCard';
 import GlassPanel from './GlassPanel';
-import { pastport, pastportChat, pastportDashboard, pastportSave, pastportSet, pastportTalk, pastportPitchDeck, zeroKm, zeroKmCalendar, zeroKmChat, zeroKmDiary, zeroKmHome, zeroKmMusic, expiro, agentopsThumbnail, agentopsVendor, agentopsAnalys, agentopsChart, creativeGame, creativeTouch, creativeVR, tooGoodToGoThumbnail, tooGoodToGoHome, tooGoodToGoOffer, tooGoodToGoDelivery, tooGoodToGoEarlyReserve, tooGoodToGoOnboarding } from '../assets';
+import { pastport, pastportChat, pastportDashboard, pastportSave, pastportSet, pastportTalk, pastportPitchDeck, zeroKm, zeroKmCalendar, zeroKmChat, zeroKmDiary, zeroKmHome, zeroKmMusic, expiro, agentopsThumbnail, agentopsVendor, agentopsAnalys, agentopsChart, creativeGame, creativeTouch, creativeVR, creativeInstagram, tooGoodToGoThumbnail, tooGoodToGoHome, tooGoodToGoOffer, tooGoodToGoDelivery, tooGoodToGoEarlyReserve, tooGoodToGoOnboarding } from '../assets';
 
 const WorkPage = () => {
   const [activeFilter, setActiveFilter] = useState('all');
@@ -800,6 +800,105 @@ const WorkPage = () => {
           ]
         }
       }
+    },
+    {
+      title: "Nano Banana",
+      year: "2024",
+      summary: "Artistic Instagram reel featuring the 'NANO BANANA' concept with fragmented portrait effects, vibrant color splashes, and digital glitch aesthetics. Created using Adobe After Effects and Higgfield for professional motion graphics and visual storytelling.",
+      cover: creativeInstagram,
+      tags: ["Motion Graphics", "After Effects", "Higgfield", "Digital Art"],
+      roles: ["Motion Graphics Designer", "Digital Artist"],
+      tools: ["Adobe After Effects", "Higgfield", "Premiere Pro", "Photoshop"],
+      category: "creative",
+      demoVideo: "https://www.instagram.com/p/DOuuOlmjn9-/",
+      detailedInfo: {
+        title: "Nano Banana",
+        subtitle: "Digital Art & Motion Graphics • Motion Graphics Designer & Digital Artist",
+        heroImage: creativeInstagram,
+        heroQuote: "How I created the 'NANO BANANA' Instagram reel using advanced After Effects techniques, fragmented portrait effects, and Higgfield for stunning visual storytelling",
+        quickStats: {
+          focus: "Digital Art & Motion Graphics",
+          timeline: "2 weeks",
+          role: "Motion Graphics Designer, Digital Artist",
+          impact: "Artistic Instagram content with fragmented portrait effects"
+        },
+        challenge: "Creating the 'NANO BANANA' concept required combining fragmented portrait effects, vibrant color splashes, and digital glitch aesthetics while maintaining visual coherence and Instagram platform optimization.",
+        vision: "Develop an artistic Instagram reel that showcases advanced digital art techniques, fragmented portrait manipulation, and professional motion graphics to create a unique visual experience that stands out on social media.",
+        roleDescription: "As Motion Graphics Designer and Digital Artist, I conceptualized the 'NANO BANANA' visual narrative, created fragmented portrait effects, integrated vibrant color splashes and digital glitch elements using Adobe After Effects and Higgfield.",
+        features: [
+          {
+            title: "Fragmented Portrait Effects",
+            description: "Advanced portrait manipulation creating shattered, mirror-like fragments with artistic visual impact.",
+            highlights: [
+              "Multi-fragment portrait composition",
+              "Mirror-like shattering effects",
+              "Dynamic fragment positioning",
+              "Artistic visual storytelling"
+            ]
+          },
+          {
+            title: "Vibrant Color Integration",
+            description: "Strategic use of vibrant color splashes (yellow, green, blue, red) to enhance the artistic aesthetic.",
+            highlights: [
+              "Colorful paint splatter effects",
+              "Dramatic purple and red lighting",
+              "Strategic color placement",
+              "Enhanced visual impact"
+            ]
+          },
+          {
+            title: "Digital Glitch Aesthetics",
+            description: "Digital glitch effects and code-like elements integrated seamlessly with the portrait for modern appeal.",
+            highlights: [
+              "Digital glitch line effects",
+              "Code-like visual elements",
+              "Modern digital art aesthetic",
+              "Seamless effect integration"
+            ]
+          },
+          {
+            title: "NANO BANANA Branding",
+            description: "Bold typography and branding elements that complement the fragmented portrait design.",
+            highlights: [
+              "Bold white typography with dark outline",
+              "Strategic text placement",
+              "Brand identity integration",
+              "Professional visual hierarchy"
+            ]
+          }
+        ],
+        techStack: {
+          motionGraphics: "Adobe After Effects for fragmented portrait effects and advanced motion graphics",
+          effects: "Higgfield for digital glitch effects and professional post-production",
+          editing: "Adobe Premiere Pro for final editing and audio synchronization",
+          design: "Adobe Photoshop for portrait manipulation and color splash effects"
+        },
+        results: {
+          quantitative: [
+            "Artistic fragmented portrait composition with professional quality",
+            "Vibrant color integration with strategic placement",
+            "Digital glitch aesthetics seamlessly integrated",
+            "Bold NANO BANANA branding with strong visual impact"
+          ],
+          testimonials: [
+            "The fragmented portrait effect is incredibly artistic and unique.",
+            "Amazing use of vibrant colors and digital glitch effects.",
+            "Perfect example of creative digital art and motion graphics."
+          ]
+        },
+        learnings: {
+          design: [
+            "Fragmented portrait effects create unique visual impact and artistic appeal",
+            "Vibrant color splashes enhance visual storytelling and brand recognition",
+            "Digital glitch aesthetics add modern, edgy appeal to creative content"
+          ],
+          technical: [
+            "Portrait manipulation in After Effects requires careful layer management and masking",
+            "Higgfield integration enhances digital glitch effects and post-production quality",
+            "Strategic color placement and typography create strong brand identity"
+          ]
+        }
+      }
     }
   ];
 
@@ -883,6 +982,8 @@ const WorkPage = () => {
                     window.open('https://youtube.com/shorts/z3PAeUw0Dv8', '_blank', 'noopener,noreferrer');
                   } else if (project.title === "AR Image Tracking") {
                     window.open('https://www.youtube.com/shorts/a6gjPexRWsk', '_blank', 'noopener,noreferrer');
+                  } else if (project.title === "Nano Banana") {
+                    window.open('https://www.instagram.com/p/DOuuOlmjn9-/', '_blank', 'noopener,noreferrer');
                   } else {
                     console.log(`Clicked on ${project.title}`);
                   }
