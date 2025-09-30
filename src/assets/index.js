@@ -67,6 +67,9 @@ import aboutMe3 from "./about me/IMG_8886.jpg";
 import aboutMe4 from "./about me/IMG_0902.jpg";
 import aboutMe5 from "./about me/IMG_1308.jpg";
 import aboutMe6 from "./about me/presentation.jpg";
+import aboutMe7 from "./about me/IMG_4734.jpg";
+import aboutMe8 from "./about me/IMG_9546.jpg";
+import quinxie from "./quinxie.jpg";
 
 export {
   logo,
@@ -132,4 +135,7 @@ export {
   aboutMe4,
   aboutMe5,
   aboutMe6,
+  aboutMe7,
+  aboutMe8,
+  quinxie,
 };

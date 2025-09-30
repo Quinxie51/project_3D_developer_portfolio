@@ -18,7 +18,7 @@ const WorkPage = () => {
         summary: "Award-winning relationship app that bridges hearts across any distance, unifying 6+ separate apps into one seamless experience. Won Technical Titan Award at Viet Tech Mentorship Program Demo Day.",
       cover: zeroKm,
       tags: ["React Native", "Node.js", "Supabase", "Socket.io"],
-      roles: ["Full-Stack Developer", "Product Designer", "UX Researcher"],
+      roles: ["Full Stack", "Product Design"],
       category: "product",
       detailedInfo: {
         title: "0-KM - Bridging Hearts Across Any Distance",
@@ -138,8 +138,7 @@ const WorkPage = () => {
       summary: "Revolutionizing History Education with AI-powered conversations and immersive learning experiences. Built as both Product Designer and Full-Stack Engineer.",
       cover: pastport,
       tags: ["AI", "Education", "Mobile", "Flutter"],
-      roles: ["Product Designer", "Full-Stack Engineer"],
-      tools: ["Flutter", "Dart", "OpenAI API", "SQLite"],
+      roles: ["Full Stack", "Product Design"],
       category: "product",
       detailedInfo: {
         title: "PastPort - Revolutionizing History Education",
