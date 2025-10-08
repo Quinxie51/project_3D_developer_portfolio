@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import SectionHeader from './SectionHeader';
@@ -9,6 +9,11 @@ import { pastport, pastportChat, pastportDashboard, pastportSave, pastportSet, p
 const WorkPage = () => {
   const [activeFilter, setActiveFilter] = useState('all');
   const navigate = useNavigate();
+
+  // Scroll to top when component mounts
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   // All projects data with categories
   const allProjects = [

@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import { useNavigate, useLocation } from "react-router-dom";
 import { getProjectByTitle } from "../constants";
+import { agentopsThumbnail, agentopsVendor, agentopsAnalys, agentopsChart } from "../assets";
 
 const ProjectDetailAgentOps = () => {
   const navigate = useNavigate();
@@ -98,20 +99,6 @@ const ProjectDetailAgentOps = () => {
                 </motion.a>
 
                 <motion.a
-                  href="#"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-3 px-6 py-4 bg-purple-600/20 border border-purple-400/30 text-purple-300 rounded-xl hover:bg-purple-600/30 transition-colors"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M15.852 8.981h-4.588v-2.04c0-1.04.52-1.57 1.57-1.57 1.04 0 1.57.53 1.57 1.57v2.04h1.448v-2.04c0-1.04.52-1.57 1.57-1.57s1.57.53 1.57 1.57v2.04h1.448v-2.04c0-1.04-.52-1.57-1.57-1.57s-1.57.53-1.57 1.57v2.04zm-4.588 0H9.816v-2.04c0-1.04-.52-1.57-1.57-1.57s-1.57.53-1.57 1.57v2.04H5.228v-2.04c0-1.04.52-1.57 1.57-1.57s1.57.53 1.57 1.57v2.04zm0 0v2.04c0 1.04.52 1.57 1.57 1.57s1.57-.53 1.57-1.57v-2.04zm0 0H9.816v2.04c0 1.04.52 1.57 1.57 1.57s1.57-.53 1.57-1.57v-2.04z"/>
-                  </svg>
-                  <span className="font-medium">Figma Design</span>
-                </motion.a>
-
-                <motion.a
                   href="https://github.com/Quinxie51/AgentOps"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -178,10 +165,10 @@ const ProjectDetailAgentOps = () => {
           <h2 className="text-3xl font-bold text-white mb-8 text-center">Platform Interface & Analytics</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {[
-              { src: "/src/assets/AgentOps/thumbnail.png", alt: "AgentOps Platform Overview" },
-              { src: "/src/assets/AgentOps/vendor found.png", alt: "Vendor Analysis Dashboard" },
-              { src: "/src/assets/AgentOps/analys.png", alt: "AI Decision Analysis" },
-              { src: "/src/assets/AgentOps/chart.png", alt: "Compliance Monitoring Charts" }
+              { src: agentopsThumbnail, alt: "AgentOps Platform Overview" },
+              { src: agentopsVendor, alt: "Vendor Analysis Dashboard" },
+              { src: agentopsAnalys, alt: "AI Decision Analysis" },
+              { src: agentopsChart, alt: "Compliance Monitoring Charts" }
             ].map((img, index) => (
               <motion.div
                 key={index}
@@ -240,7 +227,7 @@ const ProjectDetailAgentOps = () => {
             </div>
             <div className="flex justify-center">
               <motion.img
-                src="/src/assets/AgentOps/thumbnail.png"
+                src={agentopsThumbnail}
                 alt="AgentOps Platform Overview"
                 className="w-full max-w-xs rounded-2xl shadow-2xl"
                 whileHover={{ scale: 1.02 }}
@@ -287,7 +274,7 @@ const ProjectDetailAgentOps = () => {
               </div>
               <div>
                 <motion.img
-                  src="/src/assets/AgentOps/vendor found.png"
+                  src={agentopsVendor}
                   alt="Workflow Visualization"
                   className="w-full max-w-sm rounded-xl shadow-lg"
                   whileHover={{ scale: 1.02 }}
@@ -324,7 +311,7 @@ const ProjectDetailAgentOps = () => {
               </div>
               <div className="lg:col-start-1 lg:row-start-1">
                 <motion.img
-                  src="/src/assets/AgentOps/analys.png"
+                  src={agentopsAnalys}
                   alt="Compliance Monitoring"
                   className="w-full max-w-sm rounded-xl shadow-lg"
                   whileHover={{ scale: 1.02 }}
@@ -361,7 +348,7 @@ const ProjectDetailAgentOps = () => {
               </div>
               <div>
                 <motion.img
-                  src="/src/assets/AgentOps/chart.png"
+                  src={agentopsChart}
                   alt="Decision Analysis Charts"
                   className="w-full max-w-sm rounded-xl shadow-lg"
                   whileHover={{ scale: 1.02 }}
