@@ -62,6 +62,13 @@ import tooGoodToGoDelivery from "./TooGoodToGo/DELIVERY - Bag.png";
 import tooGoodToGoEarlyReserve from "./TooGoodToGo/Early reserve.png";
 import tooGoodToGoOnboarding from "./TooGoodToGo/Onboarding_02.png";
 
+// ConvoSense Project Assets
+import convoSenseThumbnail from "./ConvoSense/ConvoSense.jpg";
+import convoSenseHome from "./ConvoSense/Home page.png";
+import convoSenseAnalysis from "./ConvoSense/Analysis.png";
+import convoSenseHistory from "./ConvoSense/Convo History.png";
+import convoSenseTrend from "./ConvoSense/Trend Predict.png";
+
 import aboutMe1 from "./about me/CD64F744-5227-4F4E-B919-D420234CC2A5.jpg";
 import aboutMe2 from "./about me/IMG_0426.jpg";
 import aboutMe3 from "./about me/IMG_8886.jpg";
@@ -131,6 +138,11 @@ export {
   tooGoodToGoDelivery,
   tooGoodToGoEarlyReserve,
   tooGoodToGoOnboarding,
+  convoSenseThumbnail,
+  convoSenseHome,
+  convoSenseAnalysis,
+  convoSenseHistory,
+  convoSenseTrend,
   aboutMe1,
   aboutMe2,
   aboutMe3,

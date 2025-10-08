@@ -8,6 +8,7 @@ import ProjectDetailPastPort from "./components/ProjectDetail-PastPort";
 import ProjectDetail0KM from "./components/ProjectDetail-0KM";
 import ProjectDetailExpiro from "./components/ProjectDetail-Expiro";
 import ProjectDetailAgentOps from "./components/ProjectDetail-AgentOps";
+import ProjectDetailConvoSense from "./components/ProjectDetail-ConvoSense";
 import ProjectDetailTooGoodToGo from "./components/ProjectDetail-TooGoodToGo";
 
 const App = () => {
@@ -28,6 +29,7 @@ const App = () => {
           <Route path="/project/0km" element={<ProjectDetail0KM />} />
           <Route path="/project/expiro" element={<ProjectDetailExpiro />} />
           <Route path="/project/agentops" element={<ProjectDetailAgentOps />} />
+          <Route path="/project/convosense" element={<ProjectDetailConvoSense />} />
           <Route path="/project/toogoodtogo" element={<ProjectDetailTooGoodToGo />} />
         </Routes>
       </div>

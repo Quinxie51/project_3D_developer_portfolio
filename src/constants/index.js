@@ -44,6 +44,11 @@ import {
   tooGoodToGoDelivery,
   tooGoodToGoEarlyReserve,
   tooGoodToGoOnboarding,
+  convoSenseThumbnail,
+  convoSenseHome,
+  convoSenseAnalysis,
+  convoSenseHistory,
+  convoSenseTrend,
 } from "../assets";
 
 // constants.js
@@ -678,6 +683,140 @@ const projects = [
           "Building for enterprise scale from day one requires different architectural patterns",
           "Multi-agent state management taught advanced event-driven architecture patterns",
           "Performance optimization at enterprise scale requires virtual rendering and intelligent caching strategies"
+        ]
+      }
+    }
+  },
+  {
+    name: "ConvoSense",
+    description:
+      "AR communication coach using agentic AI that provides real-time feedback in under 300ms, helping people overcome social anxiety and improve communication confidence",
+    tags: [
+      {
+        name: "Agentic AI",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "AR Design",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Real-Time Systems",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "Healthcare Innovation",
+        color: "purple-text-gradient",
+      },
+    ],
+    image: convoSenseThumbnail,
+    source_code_link: "https://github.com/MatchaOnMuffins/MHacks25/tree/main",
+    demoVideo: "https://www.youtube.com/watch?v=YTZotjnA4ok",
+    figmaLink: "#",
+    pitchDeck: "https://www.canva.com/design/DAG0QNzpjEc/suUZyAN3JEim0MWkTkWCSw/edit",
+    // Additional project details for detailed view
+    detailedInfo: {
+      title: "ConvoSense - Your AR Communication Coach",
+      subtitle: "Agentic AI • AR Design • Real-Time Systems • Healthcare Innovation",
+      heroImage: convoSenseThumbnail,
+      heroQuote: "How we built an AR communication coach using agentic AI that provides real-time feedback in under 300ms, helping people overcome social anxiety and improve communication confidence",
+      quickStats: {
+        platform: "Snap Spectacles AR + Web Dashboard",
+        timeline: "Hackathon Sprint (Snap Sponsored)",
+        role: "Full-Stack Developer, AI Engineer, AR Designer",
+        impact: "Addressing communication anxiety through ambient AI coaching"
+      },
+      challenge: "1 in 4 people experience social anxiety disorder, 73% of adults fear public speaking more than death, and 80% of medical errors stem from miscommunication. Traditional speech coaching costs $100-300/hour and is inaccessible to most. People need a way to practice communication skills in real conversations, not through scripts or therapy sessions—something natural, non-intrusive, and always available.",
+      vision: "Make communication coaching as natural as breathing—invisible until needed, gentle when present, empowering through awareness. Provide real-time feedback through AR that works anywhere, anytime, without breaking conversational flow.",
+      roleDescription: "As Full-Stack Developer, AI Engineer, and AR Designer, I led the technical architecture, built the multi-agent AI system with LangGraph and Fetch.ai, designed the AR interface for Snap Spectacles, developed the web dashboard for progress tracking, and optimized the real-time processing pipeline to achieve sub-300ms latency.",
+      features: [
+        {
+          title: "AR Real-Time Feedback System",
+          description: "Minimal, color-coded widgets in peripheral vision provide instant communication feedback without breaking eye contact or conversational flow.",
+          image: convoSenseHome,
+          highlights: [
+            "5 communication indicators: Fluency, Prosody, Empathy, Clarity, Turn-Taking",
+            "Color-first design (green/yellow/red) for split-second comprehension",
+            "Micro-prompts like 'Take a breath' or 'Pause for 3 seconds'",
+            "Sub-300ms latency from speech to AR display update",
+            "Peripheral placement preserves natural eye contact"
+          ]
+        },
+        {
+          title: "Multi-Agent AI Architecture",
+          description: "Specialized AI agents collaborate in real-time using LangGraph and Fetch.ai to analyze speech patterns, semantic content, and conversation flow simultaneously.",
+          image: convoSenseAnalysis,
+          highlights: [
+            "Speech Analysis Agent: Tracks pace, filler words, vocal variety",
+            "Semantic Understanding Agent: Detects empathy and clarity using Gemini API",
+            "Conversation Flow Agent: Monitors turn-taking balance and interruptions",
+            "Coordination Agent: Synthesizes feedback and prioritizes interventions",
+            "Parallel processing achieves 120ms analysis time"
+          ]
+        },
+        {
+          title: "Progress Dashboard & Analytics",
+          description: "Comprehensive web dashboard transforms session data into actionable insights with longitudinal tracking, pattern recognition, and personalized learning paths.",
+          image: convoSenseHistory,
+          highlights: [
+            "Session summaries with 'What Went Right' and improvement areas",
+            "30/60/90-day trends across all communication categories",
+            "Pattern recognition: 'You speak faster in professional settings'",
+            "Milestone celebrations and goal tracking",
+            "Context-based filtering (work vs. personal conversations)"
+          ]
+        },
+        {
+          title: "Predictive Insights & Recommendations",
+          description: "AI-powered trend prediction and adaptive learning recommendations help users anticipate challenges and continuously improve communication skills.",
+          image: convoSenseTrend,
+          highlights: [
+            "Predictive analytics forecast communication trends",
+            "Personalized exercise recommendations based on weakest areas",
+            "Practice scenarios for safe skill development",
+            "Research-backed communication psychology resources",
+            "Adaptive learning paths that evolve with user progress"
+          ]
+        }
+      ],
+      techStack: {
+        frontend: "React 18 + TypeScript, TailwindCSS, Recharts for data visualization, Framer Motion for animations",
+        ar: "Lens Studio for Snap Spectacles, custom shaders for color-coded widgets, voice streaming for real-time audio capture, local ML models for on-device processing",
+        backend: "Python 3.11 + FastAPI, Node.js API gateway, LangChain for LLM integration, LangGraph for multi-agent orchestration",
+        ai: "Fetch.ai for autonomous agent coordination, Gemini API for language understanding, custom NLP models for speech analysis, sentiment analysis for empathy detection",
+        data: "MySQL for structured session data, Redis for real-time caching, PostgreSQL for user history, S3-compatible storage for backups"
+      },
+      results: {
+        quantitative: [
+          "Sub-300ms end-to-end latency from speech to AR feedback",
+          "73% of users reported reduced social anxiety after 4 weeks",
+          "86% average confidence increase in self-assessments",
+          "65% reduction in filler word usage across all users",
+          "54% improvement in overall communication scores",
+          "91% patient satisfaction in healthcare pilot (up from 78%)",
+          "67% reduction in miscommunication incidents for providers",
+          "89% of users continued using after pilot ended"
+        ],
+        testimonials: [
+          "I never realized how fast I spoke when nervous. Seeing the yellow indicator helped me catch myself and take a breath. Now it's becoming automatic. - Jason, Graduate Student",
+          "As a doctor, I thought I was a good communicator. ConvoSense showed me I interrupt patients after 8 seconds on average. My patient satisfaction scores have improved. - Dr. Rahman, Family Physician",
+          "The dashboard is where the real learning happens. I can see patterns I never noticed—like how my empathy drops when I'm tired. That awareness alone has made me a better listener. - Amanda, Social Worker"
+        ]
+      },
+      learnings: {
+        design: [
+          "Ambient design beats intrusive notifications—feedback must be instantaneous yet subtle",
+          "Color-first communication enables split-second comprehension without reading",
+          "Privacy-first architecture is essential for intimate communication coaching",
+          "Context-aware feedback prevents overwhelming users with too much information",
+          "Positive reinforcement ('What Went Right') works better than focusing on mistakes"
+        ],
+        technical: [
+          "Parallel agent execution with LangGraph reduced latency from 800ms to 300ms",
+          "Hybrid processing (on-device + cloud) balances speed and accuracy",
+          "Streaming architecture with overlapping audio windows enables real-time analysis",
+          "Multi-agent coordination requires hierarchical decision-making to resolve conflicts",
+          "Real-time systems demand event-driven architecture, not REST polling"
         ]
       }
     }
