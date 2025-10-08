@@ -523,14 +523,14 @@ const ProjectDetailAgentOps = () => {
           <div className="flex justify-center space-x-6">
             <motion.button
               onClick={() => {
-                const nextProject = getProjectByTitle("ConvoSense");
-                navigate('/project/convosense', { state: { project: nextProject } });
+                const nextProject = getProjectByTitle("PixelPal - Too Good To Go");
+                navigate('/project/toogoodtogo', { state: { project: nextProject } });
               }}
               className="px-8 py-4 bg-white/10 border border-white/30 text-white rounded-full hover:bg-white/20 transition-colors"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              Next Project: ConvoSense
+              Next Project: TooGoodToGo
             </motion.button>
           </div>
         </motion.div>

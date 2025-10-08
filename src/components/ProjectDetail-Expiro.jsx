@@ -652,14 +652,14 @@ const ProjectDetailExpiro = () => {
           <div className="flex justify-center space-x-6">
             <motion.button
               onClick={() => {
-                const nextProject = getProjectByTitle("AgentOps");
-                navigate('/project/agentops', { state: { project: nextProject } });
+                const nextProject = getProjectByTitle("0-KM");
+                navigate('/project/0km', { state: { project: nextProject } });
               }}
               className="px-8 py-4 bg-white/10 border border-white/30 text-white rounded-full hover:bg-white/20 transition-colors"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              Next Project: AgentOps
+              Next Project: 0-KM
             </motion.button>
           </div>
         </motion.div>
