@@ -24,7 +24,7 @@ const CosmicNavigation = () => {
 
   const handleResumeClick = () => {
     console.log('CosmicNavigation: Opening Resume');
-    window.open("https://drive.google.com/file/d/1kQaamS1BAiFSFUfmwsIJPt7kD0OzXlhl/view?usp=sharing", "_blank");
+    window.open("https://drive.google.com/file/d/1f0OIeRp6i0EBdMqEqw9ePam247MfE14o/view?usp=sharing", "_blank");
   };
 
   return (

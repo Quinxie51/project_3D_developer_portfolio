@@ -64,7 +64,7 @@ const Navbar = () => {
           {/* Resume Button */}
           <li>
             <a
-              href="https://drive.google.com/file/d/1kQaamS1BAiFSFUfmwsIJPt7kD0OzXlhl/view?usp=sharing"
+              href="https://drive.google.com/file/d/1f0OIeRp6i0EBdMqEqw9ePam247MfE14o/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block px-4 py-2 bg-[#915EFF] text-white font-semibold rounded-lg shadow-lg hover:bg-[#7c3aed] transition-colors duration-200 text-[16px]"
@@ -106,7 +106,7 @@ const Navbar = () => {
               {/* Resume Button for Mobile */}
               <li className="mt-2">
                 <a
-                  href="https://drive.google.com/file/d/1kQaamS1BAiFSFUfmwsIJPt7kD0OzXlhl/view?usp=sharing"
+                  href="https://drive.google.com/file/d/1f0OIeRp6i0EBdMqEqw9ePam247MfE14o/view?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-block px-4 py-2 bg-[#915EFF] text-white font-semibold rounded-lg shadow-lg hover:bg-[#7c3aed] transition-colors duration-200 text-[14px]"
