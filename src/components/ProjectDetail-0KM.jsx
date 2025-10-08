@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import { useNavigate, useLocation } from "react-router-dom";
+import { getProjectByTitle } from "../constants";
 
 const ProjectDetail0KM = () => {
   const navigate = useNavigate();
@@ -394,7 +395,10 @@ const ProjectDetail0KM = () => {
         >
           <div className="flex justify-center space-x-6">
             <motion.button
-              onClick={() => navigate('/project/expiro')}
+              onClick={() => {
+                const nextProject = getProjectByTitle("Expiro");
+                navigate('/project/expiro', { state: { project: nextProject } });
+              }}
               className="px-8 py-4 bg-white/10 border border-white/30 text-white rounded-full hover:bg-white/20 transition-colors"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}

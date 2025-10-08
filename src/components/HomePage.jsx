@@ -470,8 +470,8 @@ const HomePage = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <motion.a
-              href="/work"
+            <motion.button
+              onClick={() => navigate('/work')}
               className="inline-flex items-center gap-3 px-8 py-4 border border-white/20 text-white font-heading font-medium tracking-wide rounded-2xl hover:bg-white/5 transition-colors duration-200"
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
@@ -480,7 +480,7 @@ const HomePage = () => {
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
-            </motion.a>
+            </motion.button>
           </motion.div>
         </div>
       </section>

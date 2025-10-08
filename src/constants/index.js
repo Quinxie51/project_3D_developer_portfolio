@@ -1089,3 +1089,8 @@ const projects = [
 ];
 
 export { services, technologies, experiences, testimonials, projects };
+
+// Helper function to get project data by title for navigation
+export const getProjectByTitle = (title) => {
+  return projects.find(project => project.title === title);
+};

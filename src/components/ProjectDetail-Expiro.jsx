@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import { useNavigate, useLocation } from "react-router-dom";
 import { expiroThumbnail, expiroMain, expiroIngredient, expiroNotification, expiroPresentation } from "../assets";
+import { getProjectByTitle } from "../constants";
 
 const ProjectDetailExpiro = () => {
   const navigate = useNavigate();
@@ -650,7 +651,10 @@ const ProjectDetailExpiro = () => {
         >
           <div className="flex justify-center space-x-6">
             <motion.button
-              onClick={() => navigate('/project/agentops')}
+              onClick={() => {
+                const nextProject = getProjectByTitle("AgentOps");
+                navigate('/project/agentops', { state: { project: nextProject } });
+              }}
               className="px-8 py-4 bg-white/10 border border-white/30 text-white rounded-full hover:bg-white/20 transition-colors"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}

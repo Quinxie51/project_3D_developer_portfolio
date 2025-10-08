@@ -9,6 +9,7 @@ import {
   tooGoodToGoEarlyReserve, 
   tooGoodToGoOnboarding 
 } from "../assets";
+import { getProjectByTitle } from "../constants";
 
 const ProjectDetailTooGoodToGo = () => {
   const navigate = useNavigate();
@@ -429,7 +430,10 @@ const ProjectDetailTooGoodToGo = () => {
         >
           <div className="flex justify-center gap-6">
             <motion.button
-              onClick={() => navigate('/project/pastport')}
+              onClick={() => {
+                const nextProject = getProjectByTitle("PastPort");
+                navigate('/project/pastport', { state: { project: nextProject } });
+              }}
               className="px-8 py-4 bg-white/10 border border-white/30 text-white rounded-full hover:bg-white/20 transition-colors"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
