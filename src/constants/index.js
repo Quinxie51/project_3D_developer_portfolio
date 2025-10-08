@@ -1088,9 +1088,10 @@ const projects = [
   }
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+  export { services, technologies, experiences, testimonials, projects };
 
-// Helper function to get project data by title for navigation
-export const getProjectByTitle = (title) => {
-  return projects.find(project => project.title === title);
-};
+  // Helper function to get project data by title for navigation
+  export const getProjectByTitle = (title) => {
+    // Projects are keyed by `name` at the top level (e.g., "0-KM", "PastPort", "Expiro", "AgentOps", "PixelPal - Too Good To Go")
+    return projects.find((project) => project.name.replace(/-/g, '') === title.replace(/-/g, ''));
+  };
