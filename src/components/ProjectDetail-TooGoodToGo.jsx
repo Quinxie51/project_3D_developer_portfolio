@@ -29,7 +29,7 @@ const ProjectDetailTooGoodToGo = () => {
               Project Not Found
             </h1>
             <button
-              onClick={() => navigate('/projects')}
+              onClick={() => navigate('/work')}
               className="px-6 py-3 bg-white/10 border border-white/30 text-white rounded-full hover:bg-white/20 transition-colors"
             >
               Back to Projects
@@ -420,19 +420,29 @@ const ProjectDetailTooGoodToGo = () => {
           </div>
         </motion.div>
 
-        {/* Back Button */}
+        {/* Navigation Buttons */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 3.8 }}
           className="text-center"
         >
-          <button
-            onClick={() => navigate('/projects')}
-            className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-full font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl"
-          >
-            ← Back to Projects
-          </button>
+          <div className="flex justify-center gap-6">
+            <motion.button
+              onClick={() => navigate('/project/pastport')}
+              className="px-8 py-4 bg-white/10 border border-white/30 text-white rounded-full hover:bg-white/20 transition-colors"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              Next Project: PastPort
+            </motion.button>
+            <button
+              onClick={() => navigate('/work')}
+              className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-full font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl"
+            >
+              ← Back to Projects
+            </button>
+          </div>
         </motion.div>
       </div>
     </div>

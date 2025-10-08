@@ -21,7 +21,7 @@ const ProjectDetailPastPort = () => {
               Project Not Found
             </h1>
             <button
-              onClick={() => navigate('/projects')}
+              onClick={() => navigate('/work')}
               className="px-6 py-3 bg-white/10 border border-white/30 text-white rounded-full hover:bg-white/20 transition-colors"
             >
               Back to Projects
@@ -377,16 +377,14 @@ const ProjectDetailPastPort = () => {
           className="text-center"
         >
           <div className="flex justify-center space-x-6">
-            <motion.a
-              href={project.source_code_link}
-              target="_blank"
-              rel="noopener noreferrer"
+            <motion.button
+              onClick={() => navigate('/project/0km')}
               className="px-8 py-4 bg-white/10 border border-white/30 text-white rounded-full hover:bg-white/20 transition-colors"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              Next Project
-            </motion.a>
+              Next Project: 0-KM
+            </motion.button>
           </div>
         </motion.div>
       </div>
