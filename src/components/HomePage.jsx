@@ -191,6 +191,96 @@ const HomePage = () => {
       }
     },
     {
+      title: "AgentOps",
+      year: "2025",
+      summary: "Enterprise AI Workflow Visualization & Audit Platform that makes black-box AI systems auditable for enterprise compliance. 2nd Place winner at Hack-Nation's Global AI Hackathon.",
+      cover: agentopsThumbnail,
+      tags: ["React", "LangGraph", "AI Engineering", "Enterprise"],
+      roles: ["Full-Stack Developer", "AI Engineer", "UX Contributor"],
+      detailedInfo: {
+        title: "AgentOps - Making AI Decisions Transparent",
+        subtitle: "Enterprise AI Workflow Visualization & Audit Platform • Full-Stack Developer & AI Engineer",
+        heroImage: agentopsThumbnail,
+        heroQuote: "How I built an AI transparency platform that visualizes 1,200+ agent decisions simultaneously, making black-box AI systems auditable for enterprise compliance",
+        quickStats: {
+          problem: "AI Transparency for Enterprise Compliance",
+          timeline: "8 weeks (Hackathon/Sprint Format)",
+          role: "Full-Stack Developer, AI Engineer, UX Contributor",
+          impact: "2nd Place - Hack-Nation's Global AI Hackathon"
+        },
+        challenge: "As AI systems handle increasingly critical business decisions, lack of visibility into their reasoning creates massive risks. AI makes thousands of decisions daily with zero audit trail, regulatory bodies demand explainable AI for financial/healthcare decisions, and one wrong AI decision can cost companies millions in compliance violations.",
+        vision: "Create an enterprise-grade platform that makes complex AI workflows as understandable as a flowchart, with real-time compliance monitoring and deterministic replay capabilities.",
+        roleDescription: "As Full-Stack Developer and AI Engineer, I led the technical architecture, built the interactive workflow visualization engine, implemented the compliance monitoring system, and delivered a working MVP that handles 1,200+ simultaneous agent decisions.",
+        features: [
+          {
+            title: "Interactive Workflow Visualization Engine",
+            description: "Hierarchical visualization with smart clustering for complex multi-agent workflows. Real-time updates with WebSocket integration for live status changes.",
+            image: agentopsVendor,
+            highlights: [
+              "XYFlow integration with custom node types for smooth pan/zoom",
+              "Virtual rendering for workflows with 100+ nodes",
+              "90% reduction in render time, 60 FPS maintained",
+              "Real-time updates with WebSocket integration"
+            ]
+          },
+          {
+            title: "Real-Time Compliance Monitoring",
+            description: "Intelligent compliance engine with configurable rules. 1,200 vendors evaluated in 3.2 seconds with 95% cache hit rate for repeated evaluations.",
+            image: agentopsAnalys,
+            highlights: [
+              "Live violation heat map with geographic/categorical views",
+              "Smart alert system with severity-based routing",
+              "Real-time alerts with <500ms latency",
+              "Configurable compliance rules with automated evaluation"
+            ]
+          },
+          {
+            title: "Deterministic Replay & Time Travel Debugging",
+            description: "Time travel interface with state snapshots for reviewing and debugging complex AI decision sequences. Every replay generates detailed audit logs.",
+            image: agentopsChart,
+            highlights: [
+              "Timeline scrubber with major decision points marked",
+              "State visualization showing what each agent 'knew'",
+              "Automatic documentation with evidence preservation",
+              "Alternative path exploration with 'what if' scenarios"
+            ]
+          }
+        ],
+        techStack: {
+          frontend: "React 18 with TypeScript, XYFlow/ReactFlow for interactive node visualization, shadcn/ui components, Tailwind CSS styling",
+          backend: "LangGraph for multi-agent workflow orchestration, LangChain for LLM integration, Azure OpenAI GPT-4, FastAPI with PostgreSQL",
+          performance: "Virtual rendering for large workflows, debounced real-time updates, WebSocket integration, Redis caching for compliance evaluation",
+          security: "OAuth 2.0 + RBAC, API rate limiting, end-to-end encryption, complete audit logging for security compliance"
+        },
+        results: {
+          quantitative: [
+            "75% faster compliance audits (8 hours → 2 hours average)",
+            "96% accuracy in identifying compliance violations",
+            "$2.3M estimated savings from prevented violations",
+            "3.2 second evaluation of 1,200 vendor compliance",
+            "99.7% system uptime during pilot deployment"
+          ],
+          testimonials: [
+            "AgentOps transformed how we think about AI accountability. For the first time, I can confidently explain our AI decisions to regulators.",
+            "The visual workflow helped us identify a critical bottleneck in our vendor selection that was costing us weeks of delays.",
+            "Before AgentOps, AI was a black box. Now it's a transparent process I can trust and defend to our board."
+          ]
+        },
+        learnings: {
+          design: [
+            "Enterprise requirements are fundamentally different from consumer needs - audit trails and compliance aren't optional",
+            "AI explainability is a UX problem - design explanations for specific audiences rather than one-size-fits-all",
+            "Progressive complexity disclosure prevents overwhelming users with technical details"
+          ],
+          technical: [
+            "Building for enterprise scale from day one requires different architectural patterns",
+            "Multi-agent state management taught advanced event-driven architecture patterns",
+            "Performance optimization at enterprise scale requires virtual rendering and intelligent caching strategies"
+          ]
+        }
+      }
+    },
+    {
       title: "TooGoodToGo",
       year: "2025",
       summary: "Product redesign addressing food waste and food insecurity through Amazon ecosystem integration, SNAP EBT access, and inclusive delivery design. Addressing 25 million food-insecure Americans through strategic partnerships.",
@@ -307,96 +397,6 @@ const HomePage = () => {
         },
         figmaLink: "https://www.figma.com/design/FoZA8D9Td6pMllEVia8l8V/Rebrand-TooGoodToGo?m=dev",
         pitchDeck: "https://docs.google.com/presentation/d/1aq0naazzvK3aGTerXs9NKUp-_32GZqrYiBLORzvJklo/edit?usp=sharing"
-      }
-    },
-    {
-      title: "AgentOps",
-      year: "2025",
-      summary: "Enterprise AI Workflow Visualization & Audit Platform that makes black-box AI systems auditable for enterprise compliance. 2nd Place winner at Hack-Nation's Global AI Hackathon.",
-      cover: agentopsThumbnail,
-      tags: ["React", "LangGraph", "AI Engineering", "Enterprise"],
-      roles: ["Full-Stack Developer", "AI Engineer", "UX Contributor"],
-      detailedInfo: {
-        title: "AgentOps - Making AI Decisions Transparent",
-        subtitle: "Enterprise AI Workflow Visualization & Audit Platform • Full-Stack Developer & AI Engineer",
-        heroImage: agentopsThumbnail,
-        heroQuote: "How I built an AI transparency platform that visualizes 1,200+ agent decisions simultaneously, making black-box AI systems auditable for enterprise compliance",
-        quickStats: {
-          problem: "AI Transparency for Enterprise Compliance",
-          timeline: "8 weeks (Hackathon/Sprint Format)",
-          role: "Full-Stack Developer, AI Engineer, UX Contributor",
-          impact: "2nd Place - Hack-Nation's Global AI Hackathon"
-        },
-        challenge: "As AI systems handle increasingly critical business decisions, lack of visibility into their reasoning creates massive risks. AI makes thousands of decisions daily with zero audit trail, regulatory bodies demand explainable AI for financial/healthcare decisions, and one wrong AI decision can cost companies millions in compliance violations.",
-        vision: "Create an enterprise-grade platform that makes complex AI workflows as understandable as a flowchart, with real-time compliance monitoring and deterministic replay capabilities.",
-        roleDescription: "As Full-Stack Developer and AI Engineer, I led the technical architecture, built the interactive workflow visualization engine, implemented the compliance monitoring system, and delivered a working MVP that handles 1,200+ simultaneous agent decisions.",
-        features: [
-          {
-            title: "Interactive Workflow Visualization Engine",
-            description: "Hierarchical visualization with smart clustering for complex multi-agent workflows. Real-time updates with WebSocket integration for live status changes.",
-            image: agentopsVendor,
-            highlights: [
-              "XYFlow integration with custom node types for smooth pan/zoom",
-              "Virtual rendering for workflows with 100+ nodes",
-              "90% reduction in render time, 60 FPS maintained",
-              "Real-time updates with WebSocket integration"
-            ]
-          },
-          {
-            title: "Real-Time Compliance Monitoring",
-            description: "Intelligent compliance engine with configurable rules. 1,200 vendors evaluated in 3.2 seconds with 95% cache hit rate for repeated evaluations.",
-            image: agentopsAnalys,
-            highlights: [
-              "Live violation heat map with geographic/categorical views",
-              "Smart alert system with severity-based routing",
-              "Real-time alerts with <500ms latency",
-              "Configurable compliance rules with automated evaluation"
-            ]
-          },
-          {
-            title: "Deterministic Replay & Time Travel Debugging",
-            description: "Time travel interface with state snapshots for reviewing and debugging complex AI decision sequences. Every replay generates detailed audit logs.",
-            image: agentopsChart,
-            highlights: [
-              "Timeline scrubber with major decision points marked",
-              "State visualization showing what each agent 'knew'",
-              "Automatic documentation with evidence preservation",
-              "Alternative path exploration with 'what if' scenarios"
-            ]
-          }
-        ],
-        techStack: {
-          frontend: "React 18 with TypeScript, XYFlow/ReactFlow for interactive node visualization, shadcn/ui components, Tailwind CSS styling",
-          backend: "LangGraph for multi-agent workflow orchestration, LangChain for LLM integration, Azure OpenAI GPT-4, FastAPI with PostgreSQL",
-          performance: "Virtual rendering for large workflows, debounced real-time updates, WebSocket integration, Redis caching for compliance evaluation",
-          security: "OAuth 2.0 + RBAC, API rate limiting, end-to-end encryption, complete audit logging for security compliance"
-        },
-        results: {
-          quantitative: [
-            "75% faster compliance audits (8 hours → 2 hours average)",
-            "96% accuracy in identifying compliance violations",
-            "$2.3M estimated savings from prevented violations",
-            "3.2 second evaluation of 1,200 vendor compliance",
-            "99.7% system uptime during pilot deployment"
-          ],
-          testimonials: [
-            "AgentOps transformed how we think about AI accountability. For the first time, I can confidently explain our AI decisions to regulators.",
-            "The visual workflow helped us identify a critical bottleneck in our vendor selection that was costing us weeks of delays.",
-            "Before AgentOps, AI was a black box. Now it's a transparent process I can trust and defend to our board."
-          ]
-        },
-        learnings: {
-          design: [
-            "Enterprise requirements are fundamentally different from consumer needs - audit trails and compliance aren't optional",
-            "AI explainability is a UX problem - design explanations for specific audiences rather than one-size-fits-all",
-            "Progressive complexity disclosure prevents overwhelming users with technical details"
-          ],
-          technical: [
-            "Building for enterprise scale from day one requires different architectural patterns",
-            "Multi-agent state management taught advanced event-driven architecture patterns",
-            "Performance optimization at enterprise scale requires virtual rendering and intelligent caching strategies"
-          ]
-        }
       }
     },
     {
