@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import SectionHeader from './SectionHeader';
 import ProjectCard from './ProjectCard';
 import GlassPanel from './GlassPanel';
-import { pastport, pastportChat, pastportDashboard, pastportSave, pastportSet, pastportTalk, pastportPitchDeck, zeroKm, zeroKmCalendar, zeroKmChat, zeroKmDiary, zeroKmHome, zeroKmMusic, expiro, agentopsThumbnail, agentopsVendor, agentopsAnalys, agentopsChart, tooGoodToGoThumbnail, tooGoodToGoHome, tooGoodToGoOffer, tooGoodToGoDelivery, tooGoodToGoEarlyReserve, tooGoodToGoOnboarding } from '../assets';
+import { pastport, pastportChat, pastportDashboard, pastportSave, pastportSet, pastportTalk, pastportPitchDeck, zeroKm, zeroKmCalendar, zeroKmChat, zeroKmDiary, zeroKmHome, zeroKmMusic, expiro, agentopsThumbnail, agentopsVendor, agentopsAnalys, agentopsChart, convoSenseThumbnail, convoSenseHome, convoSenseAnalysis, convoSenseHistory, convoSenseTrend, tooGoodToGoThumbnail, tooGoodToGoHome, tooGoodToGoOffer, tooGoodToGoDelivery, tooGoodToGoEarlyReserve, tooGoodToGoOnboarding } from '../assets';
 
 const HomePage = () => {
   const navigate = useNavigate();
@@ -128,6 +128,64 @@ const HomePage = () => {
             "Real-time architecture complexity - synchronizing multiple data streams across devices",
             "Cross-platform performance - balancing rich animations with battery life across iOS/Android",
             "Advanced state management - WebSocket optimization and offline-first architecture"
+          ]
+        }
+      }
+    },
+    {
+      title: "ConvoSense",
+      year: "2025",
+      summary: "AR communication coach using agentic AI that provides real-time feedback in under 300ms, helping people overcome social anxiety and improve communication confidence. Built for Snap Spectacles.",
+      cover: convoSenseThumbnail,
+      tags: ["Agentic AI", "AR Design", "Real-Time Systems", "Healthcare Innovation"],
+      roles: ["Full-Stack Developer", "AI Engineer", "AR Designer"],
+      detailedInfo: {
+        title: "ConvoSense - Your AR Communication Coach",
+        subtitle: "Agentic AI • AR Design • Real-Time Systems • Healthcare Innovation",
+        heroImage: convoSenseThumbnail,
+        heroQuote: "How we built an AR communication coach using agentic AI that provides real-time feedback in under 300ms, helping people overcome social anxiety and improve communication confidence",
+        quickStats: {
+          platform: "Snap Spectacles AR + Web Dashboard",
+          timeline: "Hackathon Sprint (Snap Sponsored)",
+          role: "Full-Stack Developer, AI Engineer, AR Designer",
+          impact: "Addressing communication anxiety through ambient AI coaching"
+        },
+        challenge: "1 in 4 people experience social anxiety disorder, 73% of adults fear public speaking more than death, and 80% of medical errors stem from miscommunication. Traditional speech coaching costs $100-300/hour and is inaccessible to most.",
+        features: [
+          {
+            title: "AR Real-Time Feedback System",
+            description: "Minimal, color-coded widgets in peripheral vision provide instant communication feedback without breaking eye contact or conversational flow.",
+            image: convoSenseHome,
+            highlights: [
+              "5 communication indicators: Fluency, Prosody, Empathy, Clarity, Turn-Taking",
+              "Sub-300ms latency from speech to AR display update"
+            ]
+          },
+          {
+            title: "Multi-Agent AI Architecture",
+            description: "Specialized AI agents collaborate in real-time using LangGraph and Fetch.ai.",
+            image: convoSenseAnalysis,
+            highlights: [
+              "Parallel processing achieves 120ms analysis time",
+              "Coordination Agent synthesizes feedback"
+            ]
+          }
+        ],
+        results: {
+          quantitative: [
+            "Sub-300ms end-to-end latency from speech to AR feedback",
+            "73% of users reported reduced social anxiety after 4 weeks",
+            "91% patient satisfaction in healthcare pilot"
+          ]
+        },
+        learnings: {
+          design: [
+            "Ambient design beats intrusive notifications",
+            "Color-first communication enables split-second comprehension"
+          ],
+          technical: [
+            "Parallel agent execution with LangGraph reduced latency from 800ms to 300ms",
+            "Real-time systems demand event-driven architecture"
           ]
         }
       }
@@ -437,8 +495,8 @@ const HomePage = () => {
             className="mb-20"
           />
 
-          {/* Projects Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {/* Projects Grid - 1 column, 3 rows */}
+          <div className="grid grid-cols-1 gap-8 max-w-3xl mx-auto">
             {featuredProjects.map((project, index) => (
               <ProjectCard
                 key={project.title}
@@ -448,6 +506,8 @@ const HomePage = () => {
                     navigate('/project/pastport', { state: { project } });
                   } else if (project.title === "0-KM") {
                     navigate('/project/0km', { state: { project } });
+                  } else if (project.title === "ConvoSense") {
+                    navigate('/project/convosense', { state: { project } });
                   } else if (project.title === "AgentOps") {
                     navigate('/project/agentops', { state: { project } });
                   } else if (project.title === "TooGoodToGo") {
