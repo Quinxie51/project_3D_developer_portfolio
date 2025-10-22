@@ -5,6 +5,7 @@ import SectionHeader from './SectionHeader';
 import ProjectCard from './ProjectCard';
 import GlassPanel from './GlassPanel';
 import { pastport, pastportChat, pastportDashboard, pastportSave, pastportSet, pastportTalk, pastportPitchDeck, zeroKm, zeroKmCalendar, zeroKmChat, zeroKmDiary, zeroKmHome, zeroKmMusic, expiro, agentopsThumbnail, agentopsVendor, agentopsAnalys, agentopsChart, convoSenseThumbnail, convoSenseHome, convoSenseAnalysis, convoSenseHistory, convoSenseTrend, creativeGame, creativeTouch, creativeVR, creativeInstagram, tooGoodToGoThumbnail, tooGoodToGoHome, tooGoodToGoOffer, tooGoodToGoDelivery, tooGoodToGoEarlyReserve, tooGoodToGoOnboarding } from '../assets';
+import creativeSora from '../assets/creative project/Sora.jpg';
 
 const WorkPage = () => {
   const [activeFilter, setActiveFilter] = useState('all');
@@ -1022,6 +1023,91 @@ const WorkPage = () => {
           ]
         }
       }
+    },
+    {
+      title: "Sora Social Media Impact",
+      year: "2025",
+      summary: "Creative video exploring how Sora, a new social media platform, can affect emotional well-being and mental health. Combines AI-generated content with motion graphics to tell a compelling story about digital wellness.",
+      cover: creativeSora,
+      tags: ["After Effects", "AI", "Sora", "Motion Graphics"],
+      roles: ["Creative Director", "Video Editor", "AI Content Creator"],
+      tools: ["After Effects", "Sora AI", "Motion Graphics", "Video Editing"],
+      category: "creative",
+      demoVideo: "https://www.instagram.com/p/DPcgbKUDjJL/",
+      detailedInfo: {
+        title: "Sora Social Media Impact",
+        subtitle: "Creative Video • AI Content • Motion Graphics",
+        heroImage: creativeSora,
+        heroQuote: "Exploring how new social media platforms like Sora can impact our emotions and mental well-being through creative storytelling",
+        quickStats: {
+          focus: "Social Media & Mental Health Awareness",
+          timeline: "Creative Project (2025)",
+          role: "Creative Director, Video Editor, AI Content Creator",
+          impact: "Raising awareness about digital wellness"
+        },
+        challenge: "As new social media platforms emerge, understanding their psychological impact becomes crucial. This project explores how Sora's unique features can influence user emotions, mental health, and social connections through creative visual storytelling.",
+        vision: "Create an engaging video that combines AI-generated content with motion graphics to spark conversation about digital wellness and mindful social media use.",
+        roleDescription: "As Creative Director and Video Editor, I conceptualized the narrative, generated AI content using Sora, designed motion graphics in After Effects, and crafted a compelling story about the emotional impact of social media.",
+        features: [
+          {
+            title: "AI-Generated Content",
+            description: "Leveraged Sora AI to create unique visual content that represents different emotional states and social media experiences.",
+            highlights: [
+              "AI-powered visual storytelling",
+              "Emotional representation through generated imagery",
+              "Seamless integration of AI content with motion graphics"
+            ]
+          },
+          {
+            title: "Motion Graphics Design",
+            description: "Crafted dynamic motion graphics in After Effects to enhance the narrative and create visual impact.",
+            highlights: [
+              "Professional motion design and animation",
+              "Typography and text animation",
+              "Color grading for emotional resonance",
+              "Smooth transitions and visual effects"
+            ]
+          },
+          {
+            title: "Narrative Storytelling",
+            description: "Developed a compelling narrative that explores the relationship between social media use and emotional well-being.",
+            highlights: [
+              "Clear message about digital wellness",
+              "Engaging visual metaphors",
+              "Thought-provoking content structure",
+              "Call to action for mindful social media use"
+            ]
+          }
+        ],
+        techStack: {
+          video: "Adobe After Effects - Professional motion graphics and video editing",
+          ai: "Sora AI - AI-generated visual content and imagery",
+          design: "Motion graphics design, typography, and visual effects",
+          distribution: "Instagram platform for social media reach"
+        },
+        results: {
+          creative: [
+            "Successfully sparked conversation about digital wellness",
+            "Demonstrated innovative use of AI in creative storytelling",
+            "Showcased professional motion graphics skills",
+            "Engaged audience on important mental health topic"
+          ]
+        },
+        learnings: {
+          design: [
+            "AI tools like Sora can enhance creative storytelling when used thoughtfully",
+            "Motion graphics are powerful for conveying emotional concepts",
+            "Social media content requires balance between aesthetics and message",
+            "Visual metaphors can make complex topics more accessible"
+          ],
+          technical: [
+            "Integrating AI-generated content requires careful curation and editing",
+            "After Effects motion graphics demand attention to timing and pacing",
+            "Color grading significantly impacts emotional tone",
+            "Platform-specific optimization is crucial for social media distribution"
+          ]
+        }
+      }
     }
   ];
 
@@ -1111,6 +1197,8 @@ const WorkPage = () => {
                     window.open('https://www.youtube.com/shorts/a6gjPexRWsk', '_blank', 'noopener,noreferrer');
                   } else if (project.title === "Nano Banana") {
                     window.open('https://www.instagram.com/p/DOuuOlmjn9-/', '_blank', 'noopener,noreferrer');
+                  } else if (project.title === "Sora Social Media Impact") {
+                    window.open('https://www.instagram.com/p/DPcgbKUDjJL/', '_blank', 'noopener,noreferrer');
                   } else {
                     console.log(`Clicked on ${project.title}`);
                   }
