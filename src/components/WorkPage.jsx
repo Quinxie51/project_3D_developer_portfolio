@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import SectionHeader from './SectionHeader';
 import ProjectCard from './ProjectCard';
 import GlassPanel from './GlassPanel';
-import { pastport, pastportChat, pastportDashboard, pastportSave, pastportSet, pastportTalk, pastportPitchDeck, zeroKm, zeroKmCalendar, zeroKmChat, zeroKmDiary, zeroKmHome, zeroKmMusic, expiro, agentopsThumbnail, agentopsVendor, agentopsAnalys, agentopsChart, convoSenseThumbnail, convoSenseHome, convoSenseAnalysis, convoSenseHistory, convoSenseTrend, creativeGame, creativeTouch, creativeVR, creativeInstagram, tooGoodToGoThumbnail, tooGoodToGoHome, tooGoodToGoOffer, tooGoodToGoDelivery, tooGoodToGoEarlyReserve, tooGoodToGoOnboarding } from '../assets';
+import { pastport, pastportChat, pastportDashboard, pastportSave, pastportSet, pastportTalk, pastportPitchDeck, zeroKm, zeroKmCalendar, zeroKmChat, zeroKmDiary, zeroKmHome, zeroKmMusic, expiro, agentopsThumbnail, agentopsVendor, agentopsAnalys, agentopsChart, convoSenseThumbnail, convoSenseHome, convoSenseAnalysis, convoSenseHistory, convoSenseTrend, creativeGame, creativeTouch, creativeVR, creativeInstagram, creativeAR, tooGoodToGoThumbnail, tooGoodToGoHome, tooGoodToGoOffer, tooGoodToGoDelivery, tooGoodToGoEarlyReserve, tooGoodToGoOnboarding, hauntedManorThumbnail, hauntedManorScreen1, hauntedManorScreen2, hauntedManorScreen3, hauntedManorScreen4, hauntedManorScreen5, holoSingThumbnail, holoSingScreen1, holoSingScreen2, holoSingScreen3 } from '../assets';
 import creativeSora from '../assets/creative project/Sora.jpg';
 
 const WorkPage = () => {
@@ -346,6 +346,271 @@ const WorkPage = () => {
             "Real-time systems demand event-driven architecture, not REST polling"
           ]
         }
+      }
+    },
+    {
+      title: "The Haunted Manor",
+      year: "2024",
+      summary: "An immersive adventure puzzle game set in a mysterious and eerie mansion. Players uncover secrets, solve 20+ intricate puzzles, and face formidable foes in a quest to escape. Won Most Creative Project, Most Artistic Project, and Second Best Favorite Game.",
+      cover: hauntedManorThumbnail,
+      tags: ["Game Development", "Godot", "AI", "GDScript"],
+      roles: ["Game Developer", "Game Designer"],
+      tools: ["Godot", "GDScript", "JavaScript", "C#", "PLSQL", "AI"],
+      category: "fullstack",
+      demoVideo: "https://www.youtube.com/watch?v=spgnXKbY4Og",
+      trailerVideo: "https://youtu.be/dkkll3RW-tM",
+      githubLink: "https://github.com/Quinxie51/Game-The-Haunted-Manor",
+      devpostLink: "https://devpost.com/software/the-haunted-manor",
+      detailedInfo: {
+        title: "The Haunted Manor - Immersive Adventure Puzzle Game",
+        subtitle: "Game Development • AI-Driven Content • Godot Engine",
+        heroImage: hauntedManorThumbnail,
+        heroQuote: "How I built an immersive adventure puzzle game with 20+ puzzles, AI-driven content generation, and a chilling narrative that achieved 80%+ player retention",
+        demoVideo: "https://www.youtube.com/watch?v=spgnXKbY4Og",
+        trailerVideo: "https://youtu.be/dkkll3RW-tM",
+        githubLink: "https://github.com/Quinxie51/Game-The-Haunted-Manor",
+        devpostLink: "https://devpost.com/software/the-haunted-manor",
+        quickStats: {
+          award: "Most Creative Project, Most Artistic Project, Second Best Favorite Game",
+          timeline: "Academic Project (2024)",
+          role: "Game Developer, Game Designer",
+          impact: "80%+ player retention rate"
+        },
+        challenge: "Creating an adventure puzzle game requires balancing immersive storytelling with engaging gameplay mechanics. The challenge was to build 20+ interactive puzzles while maintaining narrative depth, managing 500+ game assets efficiently, and implementing AI-driven procedural content generation to ensure dynamic and unpredictable gameplay that keeps players engaged.",
+        vision: "Create an adventure that draws players into a world of mystery, where every corner of the mansion holds a new secret or challenge. The story of a historian, driven by curiosity and aided by an anonymous woman, provided the perfect backdrop for a chilling and engaging experience.",
+        roleDescription: "As Game Developer and Designer, I developed over 20 interactive puzzles using the Godot game engine, implemented AI-driven procedural content generation for dynamic game assets, managed efficient version control for 500+ project assets, and crafted a compelling narrative that seamlessly integrates with gameplay mechanics.",
+        features: [
+          {
+            title: "20+ Interactive Puzzles & Narrative Elements",
+            description: "Over 20 intricately designed puzzles integrated seamlessly with the narrative, providing players with challenging yet rewarding gameplay experiences.",
+            image: hauntedManorScreen1,
+            highlights: [
+              "Diverse puzzle mechanics from logic to environmental challenges",
+              "Narrative-driven puzzle progression",
+              "Intuitive yet challenging puzzle design",
+              "Rich environmental storytelling",
+              "Seamless integration of puzzles with mansion exploration"
+            ]
+          },
+          {
+            title: "AI-Driven Procedural Content Generation",
+            description: "Implementation of AI-driven tools for procedural content generation ensuring dynamic game assets and streamlining production processes.",
+            image: hauntedManorScreen2,
+            highlights: [
+              "Dynamic and unpredictable game assets",
+              "AI-powered content generation for enhanced replayability",
+              "Streamlined production process through automation",
+              "Procedural generation of environmental elements",
+              "Adaptive difficulty based on player behavior"
+            ]
+          },
+          {
+            title: "Immersive Mansion Environment",
+            description: "A mysterious and eerie mansion environment with atmospheric design, chilling audio, and detailed visual elements that enhance the horror-adventure experience.",
+            image: hauntedManorScreen3,
+            highlights: [
+              "Atmospheric lighting and shadow effects",
+              "Chilling audio design and sound effects",
+              "Detailed environmental textures and assets",
+              "Dynamic weather and ambient effects",
+              "Multiple interconnected mansion areas to explore"
+            ]
+          },
+          {
+            title: "Character-Driven Storyline",
+            description: "Players take on the role of a historian who uncovers secrets, solves puzzles, and faces formidable foes including a fearsome wolf in a quest to escape the mansion's grip.",
+            image: hauntedManorScreen4,
+            highlights: [
+              "Rich character development and backstory",
+              "Dynamic NPC interactions and dialogue",
+              "Multiple story branches based on player choices",
+              "Compelling antagonist encounters",
+              "Cinematic cutscenes and story reveals"
+            ]
+          },
+          {
+            title: "Efficient Asset Management System",
+            description: "Managed over 500 project assets using version control systems like GitHub, ensuring seamless collaboration, consistent visual quality, and cohesive audio experience.",
+            image: hauntedManorScreen5,
+            highlights: [
+              "Version control integration with GitHub",
+              "Organized asset pipeline and naming conventions",
+              "Efficient sprite and texture management",
+              "Audio asset optimization and streaming",
+              "Collaborative development workflow"
+            ]
+          }
+        ],
+        techStack: {
+          engine: "Godot Game Engine for 2D/3D game development and physics simulation",
+          programming: "GDScript for game logic and mechanics, JavaScript for web integration, C# for advanced systems, PLSQL for data management",
+          ai: "AI-driven procedural content generation tools for dynamic game assets",
+          versionControl: "GitHub for version control and asset management (500+ assets)",
+          audio: "Custom audio system for atmospheric sound design and music"
+        },
+        results: {
+          quantitative: [
+            "80%+ player retention rate across testing sessions",
+            "20+ interactive puzzles and narrative elements",
+            "500+ managed project assets through version control",
+            "AI-driven procedural content generation implemented",
+            "Multiple award wins: Most Creative, Most Artistic, Second Best Favorite Game"
+          ],
+          testimonials: [
+            "The Haunted Manor combines storytelling and puzzle-solving in a way that keeps you engaged from start to finish.",
+            "The atmosphere is incredible - every corner of the mansion feels alive with mystery and danger.",
+            "The AI-driven content generation makes each playthrough feel unique and unpredictable."
+          ]
+        },
+        learnings: {
+          design: [
+            "Balancing narrative and gameplay ensures one complements the other for immersive experiences",
+            "Intuitive puzzle design rewards players without frustrating them",
+            "Atmospheric design elements (lighting, audio, visuals) are crucial for horror-adventure games",
+            "Player feedback during development is essential for refining game mechanics",
+            "Cohesive visual and audio design maintains immersion throughout the experience"
+          ],
+          technical: [
+            "AI-driven procedural generation enhances replayability and streamlines production",
+            "Efficient asset management is critical when handling 500+ game assets",
+            "Version control systems like GitHub enable seamless collaboration on large projects",
+            "Godot's GDScript provides flexible and powerful game development capabilities",
+            "Careful performance optimization is necessary for smooth gameplay across devices"
+          ]
+        },
+        futureWork: [
+          "iOS and Android versions in development for mobile gaming",
+          "Expanding the story with new levels and challenges",
+          "Refining gameplay based on player feedback",
+          "Adding multiplayer co-op mode for shared exploration",
+          "Implementing VR support for enhanced immersion"
+        ]
+      }
+    },
+    {
+      title: "HoloSing",
+      year: "2025",
+      summary: "AR karaoke experience built with Unity and XREAL glasses that transforms karaoke into an immersive spatial computing experience. Search YouTube songs, extract audio, and display synchronized lyrics in AR—bringing karaoke into the world of XR.",
+      cover: holoSingThumbnail,
+      tags: ["AR", "Unity", "XR", "Node.js", "XREAL"],
+      roles: ["Full-Stack Developer", "AR Developer"],
+      tools: ["Unity", "C#", "Node.js", "JavaScript", "AR Foundation", "XREAL SDK", "YouTube API"],
+      category: "fullstack",
+      demoVideo: "https://www.youtube.com/watch?v=UZTKXV6FHAw&t=2s",
+      githubLink: "https://github.com/StevenLe2012/immerse-the-bay-25/tree/main",
+      detailedInfo: {
+        title: "HoloSing - AR Karaoke Experience for XREAL Glasses",
+        subtitle: "Immersive AR Karaoke • Unity & XREAL XR Development",
+        heroImage: holoSingThumbnail,
+        heroQuote: "How we built an end-to-end AR karaoke experience that brings spatial computing to music entertainment—from YouTube search to real-time synchronized lyrics in AR",
+        demoVideo: "https://www.youtube.com/watch?v=UZTKXV6FHAw&t=2s",
+        githubLink: "https://github.com/StevenLe2012/immerse-the-bay-25/tree/main",
+        quickStats: {
+          event: "Immerse the Bay 2025 Hackathon",
+          timeline: "Hackathon Sprint (2025)",
+          role: "Full-Stack Developer, AR Developer",
+          impact: "Full end-to-end AR karaoke pipeline for XREAL glasses"
+        },
+        challenge: "Karaoke is fun—but it becomes magic when it blends with immersive technology. We wanted to make karaoke more than just reading lyrics on a screen. We imagined singing inside an AR environment where lyrics float in front of you, allowing people to sing, entertain, and practice songs whenever, wherever. The challenge was building a seamless pipeline from YouTube search to backend processing to Unity playback with real-time lyric synchronization, all while integrating AR Foundation with the XREAL SDK.",
+        vision: "Bring karaoke into the world of spatial computing and build the foundation for an XR-powered social music experience. Imagine singing with floating holographic lyrics anywhere—your room becomes the stage.",
+        roleDescription: "As Full-Stack Developer and AR Developer, I built the complete karaoke experience in Unity including search UI, playback controls, subtitle parsing, and lyric display. I developed the Node.js backend for audio extraction and subtitle fetching, integrated AR Foundation with XREAL XR support, and optimized the entire pipeline for seamless performance.",
+        features: [
+          {
+            title: "YouTube Integration & Search",
+            description: "Search for karaoke songs directly from YouTube within the AR experience, providing access to millions of songs with real-time search results.",
+            image: holoSingScreen1,
+            highlights: [
+              "Direct YouTube search integration within Unity",
+              "Real-time search results with thumbnails and metadata",
+              "Intuitive search UI optimized for AR interaction",
+              "Access to millions of karaoke tracks",
+              "Song preview and selection interface"
+            ]
+          },
+          {
+            title: "Automated Audio Extraction",
+            description: "Backend system automatically extracts clean audio from YouTube videos using ytdl-core, providing high-quality audio streams for karaoke playback.",
+            image: holoSingScreen2,
+            highlights: [
+              "Automatic audio extraction using ytdl-core",
+              "High-quality audio stream processing",
+              "Optimized caching system for performance",
+              "REST API for Unity integration",
+              "Error handling and fallback mechanisms"
+            ]
+          },
+          {
+            title: "Synchronized Lyrics Display",
+            description: "Real-time synchronized lyrics pulled from YouTube captions (SRT, VTT, JSON) and displayed in AR space using TextMesh Pro for crisp typography.",
+            image: holoSingScreen3,
+            highlights: [
+              "Multi-format subtitle support (SRT, VTT, JSON)",
+              "Real-time lyric synchronization",
+              "TextMesh Pro for crisp AR typography",
+              "Automatic caption fetching via youtube-captions-scraper",
+              "Smooth lyric transitions and highlighting"
+            ]
+          },
+          {
+            title: "AR Foundation & XREAL Integration",
+            description: "Seamless integration with AR Foundation and XREAL SDK to create an immersive spatial computing karaoke experience with floating holographic lyrics.",
+            image: holoSingThumbnail,
+            highlights: [
+              "AR Foundation integration for cross-platform XR",
+              "XREAL XR support for XREAL Beam and glasses",
+              "Spatial lyrics positioning in AR space",
+              "Optimized for XREAL's AR viewing experience",
+              "Foundation for future multiplayer AR features"
+            ]
+          }
+        ],
+        techStack: {
+          frontend: "Unity 2021+ with AR Foundation, XREAL XR SDK, TextMesh Pro for typography",
+          backend: "Node.js with Express, ytdl-core for audio extraction, youtube-captions-scraper for subtitles",
+          ar: "AR Foundation for cross-platform XR, XREAL SDK for XREAL Beam integration, custom shaders for AR overlays",
+          api: "REST API for Unity-backend communication, YouTube Data API v3 for search",
+          optimization: "Audio and subtitle caching, optimized backend→Unity pipelines, efficient Android build system"
+        },
+        results: {
+          quantitative: [
+            "Full end-to-end karaoke pipeline from YouTube search to AR playback",
+            "Multi-format subtitle support (SRT, VTT, JSON) with real-time sync",
+            "Seamless Unity + XREAL SDK integration for AR experience",
+            "Optimized caching system for demonstration performance",
+            "Cross-platform Android build compatibility"
+          ],
+          testimonials: [
+            "HoloSing transforms karaoke from a screen-based activity into an immersive spatial experience.",
+            "The seamless pipeline from YouTube search to AR lyrics display is incredibly smooth.",
+            "Seeing lyrics float in front of you in AR completely changes the karaoke experience."
+          ]
+        },
+        learnings: {
+          design: [
+            "AR karaoke requires careful consideration of lyric positioning and readability",
+            "Spatial computing opens new possibilities for social music experiences",
+            "User interface design for AR differs significantly from traditional 2D interfaces",
+            "Immersive technology enhances entertainment experiences beyond traditional screens",
+            "Typography and text rendering are critical for AR readability"
+          ],
+          technical: [
+            "Best practices for clean backend → Unity pipelines and API integration",
+            "AR Foundation + XREAL plugin setup requires careful coordination",
+            "Managing Unity's Android build ecosystem for XR applications",
+            "Syncing lyrics across different caption formats (SRT, VTT, JSON) requires robust parsing",
+            "Optimizing latency between backend audio extraction and Unity playback",
+            "Caching strategies significantly improve demonstration performance"
+          ]
+        },
+        futureWork: [
+          "Multiplayer integration for remote singing with friends",
+          "Audio input capture for karaoke scoring system",
+          "Real-time pitch detection and feedback",
+          "Social features for sharing performances",
+          "Expanded AR visualizations and effects",
+          "Voice effects and audio processing (reverb, echo)",
+          "Global leaderboards and competitive karaoke modes"
+        ]
       }
     },
     {
@@ -926,6 +1191,96 @@ const WorkPage = () => {
       }
     },
     {
+      title: "AR Business Card",
+      year: "2024",
+      summary: "AR developer - 3D modeling. An innovative augmented reality business card experience built with MindAR and ThreeJS, featuring interactive 3D models and immersive AR interactions.",
+      cover: creativeAR,
+      tags: ["AR", "MindAR", "ThreeJS", "3D Modeling"],
+      roles: ["AR Developer", "3D Modeler"],
+      tools: ["MindAR", "ThreeJS", "3D Modeling", "WebAR"],
+      category: "creative",
+      demoVideo: "https://youtu.be/0fl5OME06Ho",
+      detailedInfo: {
+        title: "AR Business Card",
+        subtitle: "AR Developer - 3D Modeling • MindAR & ThreeJS",
+        heroImage: creativeAR,
+        heroQuote: "How I created an interactive AR business card experience using MindAR and ThreeJS, bringing 3D models to life through augmented reality",
+        quickStats: {
+          focus: "AR Development & 3D Modeling",
+          timeline: "4 weeks",
+          role: "AR Developer, 3D Modeler",
+          impact: "Interactive AR business card experience"
+        },
+        challenge: "Creating a seamless AR business card experience requires precise image tracking, optimized 3D model rendering, and smooth AR interactions that work across different devices and lighting conditions.",
+        vision: "Develop an innovative AR business card that showcases professional work through interactive 3D models and immersive augmented reality, creating a memorable first impression.",
+        roleDescription: "As AR Developer and 3D Modeler, I implemented MindAR for image tracking, created and optimized 3D models, integrated ThreeJS for rendering, and ensured smooth AR performance across devices.",
+        features: [
+          {
+            title: "Image-Based AR Tracking",
+            description: "Advanced image tracking using MindAR that recognizes business card images and maintains stable AR object positioning.",
+            highlights: [
+              "Precise image recognition and tracking",
+              "Stable AR object positioning",
+              "Works in various lighting conditions",
+              "Real-time tracking performance"
+            ]
+          },
+          {
+            title: "Interactive 3D Models",
+            description: "Custom 3D models rendered with ThreeJS, featuring smooth animations and interactive elements.",
+            highlights: [
+              "Custom 3D model creation and optimization",
+              "Smooth 3D animations and transitions",
+              "Interactive object manipulation",
+              "Realistic lighting and materials"
+            ]
+          },
+          {
+            title: "Web-Based AR Experience",
+            description: "Browser-based AR experience that works without requiring app installation, accessible through web browsers.",
+            highlights: [
+              "No app installation required",
+              "Cross-platform compatibility",
+              "WebAR technology integration",
+              "Easy sharing and accessibility"
+            ]
+          }
+        ],
+        techStack: {
+          ar: "MindAR for image tracking and AR foundation",
+          rendering: "ThreeJS for 3D model rendering and scene management",
+          modeling: "3D modeling tools for creating custom assets",
+          web: "WebAR technology for browser-based AR experience"
+        },
+        results: {
+          quantitative: [
+            "Stable AR tracking with 95%+ accuracy",
+            "Smooth 60 FPS performance on target devices",
+            "Works across iOS and Android browsers",
+            "Interactive 3D models with realistic rendering"
+          ],
+          testimonials: [
+            "The AR business card creates a memorable and impressive first impression.",
+            "The 3D models are beautifully rendered and interactive.",
+            "Innovative use of AR technology for professional networking."
+          ]
+        },
+        learnings: {
+          design: [
+            "AR design requires considering real-world context and user environment",
+            "3D model optimization is crucial for smooth AR performance",
+            "User experience in AR should be intuitive and engaging"
+          ],
+          technical: [
+            "MindAR provides robust image tracking for WebAR applications",
+            "ThreeJS integration requires careful performance optimization",
+            "WebAR enables accessible AR experiences without app installation",
+            "3D model optimization is essential for mobile device performance"
+          ]
+        }
+      }
+    },
+    {
       title: "Nano Banana",
       year: "2024",
       summary: "Artistic Instagram reel featuring the 'NANO BANANA' concept with fragmented portrait effects, vibrant color splashes, and digital glitch aesthetics. Created using Adobe After Effects and Higgfield for professional motion graphics and visual storytelling.",
@@ -1185,6 +1540,12 @@ const WorkPage = () => {
                     navigate('/project/0km', { state: { project } });
                   } else if (project.title === "Expiro") {
                     navigate('/project/expiro', { state: { project } });
+                  } else if (project.title === "HoloSing") {
+                    navigate('/project/holosing', { state: { project } });
+                  } else if (project.title === "The Haunted Manor") {
+                    navigate('/project/hauntedmanor', { state: { project } });
+                  } else if (project.title === "ConvoSense") {
+                    navigate('/project/convosense', { state: { project } });
                   } else if (project.title === "AgentOps") {
                     navigate('/project/agentops', { state: { project } });
                   } else if (project.title === "PixelPal - Too Good To Go") {
@@ -1199,6 +1560,8 @@ const WorkPage = () => {
                     window.open('https://www.instagram.com/p/DOuuOlmjn9-/', '_blank', 'noopener,noreferrer');
                   } else if (project.title === "Sora Social Media Impact") {
                     window.open('https://www.instagram.com/p/DPcgbKUDjJL/', '_blank', 'noopener,noreferrer');
+                  } else if (project.title === "AR Business Card") {
+                    window.open('https://youtu.be/0fl5OME06Ho', '_blank', 'noopener,noreferrer');
                   } else {
                     console.log(`Clicked on ${project.title}`);
                   }

@@ -53,6 +53,7 @@ import creativeGame from "./creative project/game dev.png";
 import creativeTouch from "./creative project/touch design.png";
 import creativeVR from "./creative project/VR business card.png";
 import creativeInstagram from "./creative project/nano banana.jpg";
+import creativeAR from "./creative project/AR Project.png";
 
 // TooGoodToGo Project Assets
 import tooGoodToGoThumbnail from "./TooGoodToGo/thumbnail toogood.png";
@@ -68,6 +69,20 @@ import convoSenseHome from "./ConvoSense/Home page.png";
 import convoSenseAnalysis from "./ConvoSense/Analysis.png";
 import convoSenseHistory from "./ConvoSense/Convo History.png";
 import convoSenseTrend from "./ConvoSense/Trend Predict.png";
+
+// The Haunted Manor Project Assets
+import hauntedManorThumbnail from "./The Haunted Manor/This Thumbnail.png";
+import hauntedManorScreen1 from "./The Haunted Manor/Screenshot 2026-01-08 174548.png";
+import hauntedManorScreen2 from "./The Haunted Manor/Screenshot 2026-01-08 174559.png";
+import hauntedManorScreen3 from "./The Haunted Manor/Screenshot 2026-01-08 174613.png";
+import hauntedManorScreen4 from "./The Haunted Manor/Screenshot 2026-01-08 174634.png";
+import hauntedManorScreen5 from "./The Haunted Manor/Screenshot 2026-01-08 174706.png";
+
+// HoloSing Project Assets
+import holoSingThumbnail from "./HoloSing/This thumbnail.png";
+import holoSingScreen1 from "./HoloSing/Screenshot 2026-01-08 175311.png";
+import holoSingScreen2 from "./HoloSing/Screenshot 2026-01-08 175316.png";
+import holoSingScreen3 from "./HoloSing/Screenshot 2026-01-08 175321.png";
 
 import aboutMe1 from "./about me/CD64F744-5227-4F4E-B919-D420234CC2A5.jpg";
 import aboutMe2 from "./about me/IMG_0426.jpg";
@@ -132,6 +147,7 @@ export {
   creativeTouch,
   creativeVR,
   creativeInstagram,
+  creativeAR,
   tooGoodToGoThumbnail,
   tooGoodToGoHome,
   tooGoodToGoOffer,
@@ -143,6 +159,16 @@ export {
   convoSenseAnalysis,
   convoSenseHistory,
   convoSenseTrend,
+  hauntedManorThumbnail,
+  hauntedManorScreen1,
+  hauntedManorScreen2,
+  hauntedManorScreen3,
+  hauntedManorScreen4,
+  hauntedManorScreen5,
+  holoSingThumbnail,
+  holoSingScreen1,
+  holoSingScreen2,
+  holoSingScreen3,
   aboutMe1,
   aboutMe2,
   aboutMe3,

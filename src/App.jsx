@@ -10,6 +10,8 @@ import ProjectDetailExpiro from "./components/ProjectDetail-Expiro";
 import ProjectDetailAgentOps from "./components/ProjectDetail-AgentOps";
 import ProjectDetailConvoSense from "./components/ProjectDetail-ConvoSense";
 import ProjectDetailTooGoodToGo from "./components/ProjectDetail-TooGoodToGo";
+import ProjectDetailHauntedManor from "./components/ProjectDetail-HauntedManor";
+import ProjectDetailHoloSing from "./components/ProjectDetail-HoloSing";
 
 const App = () => {
   return (
@@ -31,6 +33,8 @@ const App = () => {
           <Route path="/project/agentops" element={<ProjectDetailAgentOps />} />
           <Route path="/project/convosense" element={<ProjectDetailConvoSense />} />
           <Route path="/project/toogoodtogo" element={<ProjectDetailTooGoodToGo />} />
+          <Route path="/project/hauntedmanor" element={<ProjectDetailHauntedManor />} />
+          <Route path="/project/holosing" element={<ProjectDetailHoloSing />} />
         </Routes>
       </div>
     </BrowserRouter>
